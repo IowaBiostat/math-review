@@ -1,0 +1,14 @@
+[book]
+authors = ["Patrick Breheny"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Math review for new biostatistics students"
+
+[output.html]
+mathjax-support = true
+curly-quotes = true
+default-theme = "coal"
+
+[build]
+build-dir = "docs"
