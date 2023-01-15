@@ -146,11 +146,30 @@
                     <main>
                         <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
 <p>This guide is intended as a review of fundamental math concepts for students who will be starting an MS or PhD program in biostatistics. More specifically, its intended audience is new students at the University of Iowa, but the material here is quite general and I would expect it to be useful to any new student in a biostatistics program regardless of where it is.</p>
-<p>At present, this guide is very much a work in progress – in places, not much more than an outline. However, our hope is to continue adding to it and making it more useful over the years.</p>
-<p>Math: not necessarily the most important thing, but the thing most likely to cause problems in year 1.</p>
-<p>Calculus and matrix. Calculus because big. <a href="matrix.html">Matrix</a> because poorly taught.</p>
-<p>Focus on things most relevant. For example, exp not trig.</p>
+<p>At present, this guide is very much a work in progress – in places, not much more than an outline. However, our hope is to continue adding to it and making it more useful over the years. In particular, we realize that exercises and solutions would be very helpful, and we have not yet added any.</p>
+<p>Why a math review? Is math the most important skill for a statistician? Not necessarily. However, in our experience, a shaky/rusty foundation in math is the thing most likely to lead to problems in the first year of graduate school. When you encounter new statistical concepts, instructors will introduce and explain them. But the mathematical techniques this guide covers, they will just assume you already know.</p>
+<p>This guide focuses in particular on two areas of mathematics, and for different reasons. <a href="calculus.html">Calculus</a>, because it is a big topic – students often take Calc I, Calc II, and Calc III. That’s a lot of material and it’s not clear what needs to be reviewed and what can be skipped. Also <a href="matrix.html">matrix algebra</a>, because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that one uses in statistics.</p>
+<p>Finally, this guide focuses on skills and topics most relevant to statistics. In principle, any idea from math <em>could</em> come up and be helpful to a statistician. In reality, however, certain ideas come up far more often than others. A good example is trigonometry: this almost never comes up in statistics. There is really no need to spent any time whatsoever reviewing it prior to stating a graduate program in statistics. On the other hand, properties of exponents and logarithms come up <em>constantly</em>. You need to know every property, because you will use them more or less every day, and if you don’t know them, you will be constantly making errors on all of your homework and tests.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="calculus"><a class="header" href="#calculus">Calculus</a></h1>
+<p>Intro: Why important to statistics? Lots of reasons, but three huge ones:</p>
+<ol>
+<li>Derivative/optimization/MLE</li>
+<li>Probability = integral. </li>
+<li>Products from independent observations, logs turn that into sums.</li>
+</ol>
+<p>Rough outline:</p>
+<ul>
+<li>Functions and maps</li>
+<li>Limits and continuity</li>
+<li>Log and exp</li>
+<li>Derivatives</li>
+<li>Optimization</li>
+<li>Integration</li>
+<li>Kernel trick</li>
+<li>Sequences and series</li>
+<li>Partial derivatives</li>
+<li>Multiple integrals; non-rectangular boundaries</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><p>\(
 \newcommand{\M}{\mathbf{M}}
 \newcommand{\X}{\mathbf{X}}
