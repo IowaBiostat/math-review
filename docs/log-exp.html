@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Introduction - Math review for new biostatistics students</title>
+        <title>Log and exp - Math review for new biostatistics students</title>
 
 
         <!-- Custom HTML head -->
@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions and maps</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions and maps</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html" class="active"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -143,20 +143,17 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="introduction"><a class="header" href="#introduction">Introduction</a></h1>
-<p>This guide is intended as a review of fundamental math concepts for students who will be starting an MS or PhD program in biostatistics. More specifically, its intended audience is new students at the University of Iowa, but the material here is quite general and I would expect it to be useful to any new student in a biostatistics program regardless of where it is.</p>
-<p>Why a math review? Is math the most important skill for a statistician? Not necessarily. However, in our experience, a shaky/rusty foundation in math is the thing most likely to lead to problems in the first year of graduate school. When you encounter new statistical concepts, instructors will introduce and explain them. But the mathematical techniques this guide covers, they will assume you already know.</p>
-<p>This guide focuses in particular on two areas of mathematics, and for different reasons. <a href="calculus.html">Calculus</a>, because it is a big topic – students often take Calc I, Calc II, and Calc III. That’s a lot of material and it’s not clear what needs to be reviewed and what can be skipped. Also <a href="matrix.html">matrix algebra</a>, because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that one uses in statistics.</p>
-<p>In principle, any idea from math <em>could</em> come up and be helpful to a statistician. In reality, however, certain ideas come up far more often than others, and this guide focuses on topics of greatest relevance. A good example is trigonometry: this almost never comes up in statistics. There is really no need to spent any time whatsoever reviewing it prior to stating a graduate program in statistics. On the other hand, properties of exponents and logarithms come up <em>constantly</em>. You need to know every property, because you will use them more or less every day, and if you don’t know them, you will be constantly making errors on all of your homework and tests.</p>
-<p>Finally, the focus here is really on the math – as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you’ve taken statistics in the past and terms like “independent events” and “regression model” mean something to you, great. If not, however, don’t worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.</p>
-<p>At present, this guide is very much a work in progress – in places, not much more than an outline. However, our hope is to continue adding to it and making it more useful over the years. In particular, we realize that exercises and solutions would be very helpful, and we have not yet added any.</p>
+                        <h1 id="log-and-exp"><a class="header" href="#log-and-exp">Log and exp</a></h1>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="integration.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
 
-                            <a rel="next" href="calculus.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="techniques.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -166,8 +163,11 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="integration.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
 
-                    <a rel="next" href="calculus.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="techniques.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>

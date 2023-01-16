@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html" class="active"><strong aria-hidden="true">2.</strong> Calculus</a></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html" class="active"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions and maps</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -144,25 +144,12 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="calculus"><a class="header" href="#calculus">Calculus</a></h1>
-<p>Intro: Why important to statistics? Lots of reasons, but three huge ones:</p>
-<ol>
-<li>Derivative/optimization/MLE</li>
-<li>Probability = integral. </li>
-<li>Products from independent observations, logs turn that into sums.</li>
-</ol>
-<p>Rough outline:</p>
-<ul>
-<li>Functions and maps</li>
-<li>Limits and continuity</li>
-<li>Log and exp</li>
-<li>Derivatives</li>
-<li>Optimization</li>
-<li>Integration</li>
-<li>Kernel trick</li>
-<li>Sequences and series</li>
-<li>Partial derivatives</li>
-<li>Multiple integrals; non-rectangular boundaries</li>
-</ul>
+<p>Calculus is important to statistics for lots of reasons, but I would like to point out three major ones before we begin the review.</p>
+<h2 id="finding-most-likely-solutions"><a class="header" href="#finding-most-likely-solutions">Finding most likely solutions</a></h2>
+<p>A statistical analysis typically begins with some sort of model for how the data (which I’ll call \(d\)) depends on an unknown parameter (which I’ll call \(\theta\)). We observe the data, but what’s \(\theta\)? To estimate it, we typically create some <a href="functions.html">function</a> (which I’ll call \(f\)) that is large when \(\theta\) is in agreement with the data we’ve seen. To find the “best” value of \(\theta\), we can take the <a href="derivatives.html">derivative</a> of \(f\) to find the <a href="optimization.html">optimal value</a>. Note that this is actually a <a href="partial.html">partial derivative</a>, since \(f\) would be a function of both \(\theta\) and \(d\).</p>
+<h2 id="probability-and-density"><a class="header" href="#probability-and-density">Probability and density</a></h2>
+<h2 id="products"><a class="header" href="#products">Products</a></h2>
+<p>from independent observations, logs turn that into sums.</p>
 
                     </main>
 
@@ -172,7 +159,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="matrix.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next" href="functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -186,13 +173,29 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="matrix.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next" href="functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
 
         </div>
 
+        <!-- Livereload script (if served using the cli tool) -->
+        <script>
+            const wsProtocol = location.protocol === 'https:' ? 'wss:' : 'ws:';
+            const wsAddress = wsProtocol + "//" + location.host + "/" + "__livereload";
+            const socket = new WebSocket(wsAddress);
+            socket.onmessage = function (event) {
+                if (event.data === "reload") {
+                    socket.close();
+                    location.reload();
+                }
+            };
+
+            window.onbeforeunload = function() {
+                socket.close();
+            }
+        </script>
 
 
 
