@@ -2,7 +2,7 @@
 
 - [Introduction](./intro.md)
 - [Calculus](./calculus.md)
-  - [Functions and maps](./functions.md)
+  - [Functions](./functions.md)
   - [Limits and continuity](./limits.md)
   - [Derivatives](./derivatives.md)
   - [Optimization](./optimization.md)

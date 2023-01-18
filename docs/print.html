@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions and maps</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -152,18 +152,74 @@
 <p>Finally, the focus here is really on the math – as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you’ve taken statistics in the past and terms like “independent events” and “regression model” mean something to you, great. If not, however, don’t worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.</p>
 <p>At present, this guide is very much a work in progress – in places, not much more than an outline. However, our hope is to continue adding to it and making it more useful over the years. In particular, we realize that exercises and solutions would be very helpful, and we have not yet added any.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="calculus"><a class="header" href="#calculus">Calculus</a></h1>
+<p>In this chapter, we will review/collect a large number of results that you should know and be familiar with from calculus. I’m not going to prove them or provide a bunch of details and explanations and graphs, so if anything strikes you as unfamiliar or you want more details, please consult your calculus textbook.</p>
 <p>Calculus is important to statistics for lots of reasons, but I would like to point out three major ones before we begin the review.</p>
 <h2 id="finding-most-likely-solutions"><a class="header" href="#finding-most-likely-solutions">Finding most likely solutions</a></h2>
 <p>A statistical analysis typically begins with some sort of model for how the data (which I’ll call \(d\)) depends on an unknown parameter (which I’ll call \(\theta\)). We observe the data, but what’s \(\theta\)? To estimate it, we typically create some <a href="functions.html">function</a> (which I’ll call \(f\)) that is large when \(\theta\) is in agreement with the data we’ve seen. To find the “best” value of \(\theta\), we can take the <a href="derivatives.html">derivative</a> of \(f\) to find the <a href="optimization.html">optimal value</a>. Note that this is actually a <a href="partial.html">partial derivative</a>, since \(f\) would be a function of both \(\theta\) and \(d\).</p>
 <h2 id="probability-and-density"><a class="header" href="#probability-and-density">Probability and density</a></h2>
-<h2 id="products"><a class="header" href="#products">Products</a></h2>
-<p>from independent observations, logs turn that into sums.</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="functions-and-maps"><a class="header" href="#functions-and-maps">Functions and maps</a></h1>
+<p>For continuous quantities such as height, the distribution of likely values is specified in terms of a probability density \(f\). Calculating the probability from a probability density involves <a href="integration.html">integration</a>. For example, if we wanted to know the probability that a person’s height was between 63 and 66 inches:</p>
+<p>\[ \int_{63}^{66} f(x) \, dx . \]</p>
+<h2 id="independent-observations"><a class="header" href="#independent-observations">Independent observations</a></h2>
+<p>Suppose we are interested in the probability of events \(A_1, A_2, \ldots, A_n\). If those events are independent, this is given by</p>
+<p>\[ P(A_1) P(A_2) \cdots P(A_n) = \prod_{i=1}^n P(A_i) . \]</p>
+<p>However, it is almost <em>always</em> easier to deal with this kind of quantity after taking the <a href="log-exp.html">log</a>:</p>
+<p>\[ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). \]</p>
+<p>To see why, go ahead and multiply a bunch of probabilities together and see how useful the result is to work with. The same trick can be used with dependent terms as well, although the results are messier.</p>
+<p>It is hard to overstate how often you will do this. This isn’t some occasional trick – this is standard operating procedure, so it is critical that you know the properties of <a href="log-exp.html">exponents and logs</a> extremely well.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="functions"><a class="header" href="#functions">Functions</a></h1>
+<p>The concept of a function is not difficult or foreign, but since it’s the most important concept in all of mathematics, it’s worth reviewing and knowing the formal definition.</p>
+<p><strong>Definition:</strong> Given two sets, \(A\) and \(B\), a <em>function</em> (or <em>map</em>) is a rule that assigns, to each element in \(A\), exactly one element from \(B\). The set \(A\) is called the <em>domain</em> of the function and the set \(B\) is called the <em>range</em>.</p>
+<p>Two things to keep in mind:</p>
+<ol>
+<li>This is an <em>extremely</em> general definition. \(A\) and \(B\) could be single numbers, but they could collections of numbers…\(A\) could consist of sets of 7 numbers and \(B\) could consist of intervals, which are themselves infinite collections of numbers. Or \(A\) and \(B\) might not involve numbers at all. They can be <em>anything</em>. The only restriction is that given the same input \(x \in A\), we always get the same output \(f(x) \in B\).</li>
+<li>Sometimes domains are obvious from context and not explicitly specified, but it’s an important part of the function. For example, consider the function \(f(x) = \sqrt{x}\). This is not a function that works for all numbers – in particular, it doesn’t work for negative numbers. The domain, then, is the set of non-negative numbers \( \{x:x \ge 0\} \). Functions don’t have to be defined everywhere, they just need to work on their domain. As a footnote, we <em>could</em> extend the domain of the function to include negative numbers, but then the range would have to include complex numbers.</li>
+</ol>
+<p>If this seems very abstract, don’t worry too much about it – for the purposes of this review, domain and range will almost always be sets of single numbers, but it’s worth keeping an open mind about what functions can represent, since at various points in your education you may encounter other kinds of functions.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="limits-and-continuity"><a class="header" href="#limits-and-continuity">Limits and continuity</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="derivatives"><a class="header" href="#derivatives">Derivatives</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="optimization"><a class="header" href="#optimization">Optimization</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integration"><a class="header" href="#integration">Integration</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="log-and-exp"><a class="header" href="#log-and-exp">Log and exp</a></h1>
+<h2 id="exp-definition"><a class="header" href="#exp-definition">Exp definition</a></h2>
+<h2 id="exp-rules"><a class="header" href="#exp-rules">Exp rules</a></h2>
+<p>\[\begin{align}
+a^{x+y} &amp;= a^x a^y \\
+a^{x-y} &amp;= \frac{a^x}{a^y} \\
+(a^x)^y &amp;= a^{xy} \\
+(ab)^x &amp;= a^x b^x
+\end{align}\]</p>
+<h2 id="exp-limits"><a class="header" href="#exp-limits">Exp limits</a></h2>
+<p>\[\begin{align}
+\lim_{x \to \infty} a^x &amp;= \infty \quad \text{if } a &gt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= 0 \quad \text{if } a &gt; 1 \\
+\lim_{x \to \infty} a^x &amp;= 0 \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= \infty \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{h \to 0} \frac{e^h - 1}{h} &amp;= 1 \\
+\frac{d}{dx} e^x &amp;= e^x \\
+\frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
+\int e^x \, dx &amp;= e^x
+\end{align}\]</p>
+<h2 id="log-definition"><a class="header" href="#log-definition">Log definition</a></h2>
+<p>The logarithmic function with base \(a\) is defined as the function satisfying</p>
+<p>\[ \log_a x = y \iff a^y = x \]</p>
+<p>If we leave off the base, it is assumed to be base \(e\), the “natural logarithm”:</p>
+<p>\[ \log x = \log_e x \]</p>
+<p>in other words,</p>
+<p>\[ \log x = y \iff e^y = x; \]</p>
+<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines.</p>
+<h2 id="log-rules"><a class="header" href="#log-rules">Log rules</a></h2>
+<p>\[\begin{align}
+\log_a(xy) &amp;= \log_a x + \log_a y \\
+\log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
+\log_a (x^y) &amp;= y \log_a x
+\end{align}\]</p>
+<h2 id="log-limits"><a class="header" href="#log-limits">Log limits</a></h2>
+<p>If \(a &gt; 1\), then</p>
+<p>\[\begin{align}
+\lim_{x \to \infty} \log_a x = \infty \\
+\lim_{x \to 0^+} \log_a x = -\infty \\
+\end{align}\]</p>
+<h2 id="natural-log"><a class="header" href="#natural-log">Natural log</a></h2>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integration-techniques"><a class="header" href="#integration-techniques">Integration techniques</a></h1>
 <p>Substitution + Jacobian</p>
 <p>Integration by parts</p>

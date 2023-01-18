@@ -82,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions and maps</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html" class="active"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html" class="active"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -144,6 +144,46 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="log-and-exp"><a class="header" href="#log-and-exp">Log and exp</a></h1>
+<h2 id="exp-definition"><a class="header" href="#exp-definition">Exp definition</a></h2>
+<h2 id="exp-rules"><a class="header" href="#exp-rules">Exp rules</a></h2>
+<p>\[\begin{align}
+a^{x+y} &amp;= a^x a^y \\
+a^{x-y} &amp;= \frac{a^x}{a^y} \\
+(a^x)^y &amp;= a^{xy} \\
+(ab)^x &amp;= a^x b^x
+\end{align}\]</p>
+<h2 id="exp-limits"><a class="header" href="#exp-limits">Exp limits</a></h2>
+<p>\[\begin{align}
+\lim_{x \to \infty} a^x &amp;= \infty \quad \text{if } a &gt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= 0 \quad \text{if } a &gt; 1 \\
+\lim_{x \to \infty} a^x &amp;= 0 \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= \infty \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{h \to 0} \frac{e^h - 1}{h} &amp;= 1 \\
+\frac{d}{dx} e^x &amp;= e^x \\
+\frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
+\int e^x \, dx &amp;= e^x
+\end{align}\]</p>
+<h2 id="log-definition"><a class="header" href="#log-definition">Log definition</a></h2>
+<p>The logarithmic function with base \(a\) is defined as the function satisfying</p>
+<p>\[ \log_a x = y \iff a^y = x \]</p>
+<p>If we leave off the base, it is assumed to be base \(e\), the “natural logarithm”:</p>
+<p>\[ \log x = \log_e x \]</p>
+<p>in other words,</p>
+<p>\[ \log x = y \iff e^y = x; \]</p>
+<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines.</p>
+<h2 id="log-rules"><a class="header" href="#log-rules">Log rules</a></h2>
+<p>\[\begin{align}
+\log_a(xy) &amp;= \log_a x + \log_a y \\
+\log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
+\log_a (x^y) &amp;= y \log_a x
+\end{align}\]</p>
+<h2 id="log-limits"><a class="header" href="#log-limits">Log limits</a></h2>
+<p>If \(a &gt; 1\), then</p>
+<p>\[\begin{align}
+\lim_{x \to \infty} \log_a x = \infty \\
+\lim_{x \to 0^+} \log_a x = -\infty \\
+\end{align}\]</p>
+<h2 id="natural-log"><a class="header" href="#natural-log">Natural log</a></h2>
 
                     </main>
 
