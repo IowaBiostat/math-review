@@ -174,13 +174,23 @@
 <li>This is an <em>extremely</em> general definition. \(A\) and \(B\) could be single numbers, but they could collections of numbers…\(A\) could consist of sets of 7 numbers and \(B\) could consist of intervals, which are themselves infinite collections of numbers. Or \(A\) and \(B\) might not involve numbers at all. They can be <em>anything</em>. The only restriction is that given the same input \(x \in A\), we always get the same output \(f(x) \in B\).</li>
 <li>Sometimes domains are obvious from context and not explicitly specified, but it’s an important part of the function. For example, consider the function \(f(x) = \sqrt{x}\). This is not a function that works for all numbers – in particular, it doesn’t work for negative numbers. The domain, then, is the set of non-negative numbers \( \{x:x \ge 0\} \). Functions don’t have to be defined everywhere, they just need to work on their domain. As a footnote, we <em>could</em> extend the domain of the function to include negative numbers, but then the range would have to include complex numbers.</li>
 </ol>
-<p>If this seems very abstract, don’t worry too much about it – for the purposes of this review, domain and range will almost always be sets of single numbers, but it’s worth keeping an open mind about what functions can represent, since at various points in your education you may encounter other kinds of functions.</p>
+<p>If this seems very abstract, don’t worry too much about it – for the purposes of this review, domain and range will almost always be sets of single numbers, but it’s worth keeping an open mind about what functions can represent, since at various points in your education you may encounter other kinds of functions, especially functions that map <a href="matrix.html">vectors or matrices</a> to numbers (or to other vectors or matrices).</p>
+<p>Recall that for a given input \(x \in A\), the function must always return the exact same element of \B\). The converse, however, is not true: there may be lots of elements of \(A\) that all get mapped to the same element of \(B\). For example, in statistics one often encounters “indicator functions” that can have various types of things as input but always return a 0 or 1 as output (i.e., the range of an indicator function is the set \(\{0,1\}\)).</p>
+<p>Now, if it <strong>is</strong> the case that whenever \(x_1 \ne x_2\), we have \(f(x_1) \ne f(x_2)\), then this is a special class of function called a <em>1:1 function</em>. Such functions are important because they have <em>inverses</em>: there exists a function \(f^{-1}\) such that whenever \(f(a)=b\), we have \(f^{-1}(b)=a\). A function has an inverse if and only if it is 1:1. This is important to be aware of, since there are a number of important results involving inverses, but be aware that not all functions have inverses. For example, \(f(x)=x^2\) does not have an inverse: \(f^{-1}(4)\) could be either 2 or -2. As a footnote, the astute reader will point out that \(f(x)=x^2\) could be 1:1 if I change its domain.</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="limits-and-continuity"><a class="header" href="#limits-and-continuity">Limits and continuity</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="derivatives"><a class="header" href="#derivatives">Derivatives</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="optimization"><a class="header" href="#optimization">Optimization</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integration"><a class="header" href="#integration">Integration</a></h1>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="log-and-exp"><a class="header" href="#log-and-exp">Log and exp</a></h1>
 <h2 id="exp-definition"><a class="header" href="#exp-definition">Exp definition</a></h2>
+<p>The exponential function \(a^x\) actually has a pretty complicated definition:</p>
+<ol>
+<li>If \(x\) is a positive integer \(n\), then \(a^n = a \cdot a \cdots a \quad (n\) times)</li>
+<li>If \(x=0\), then \(a^0 = 1\)</li>
+<li>If \(x\) is a negative integer, then \(a^{-n} = \frac{1}{a^n}\)</li>
+<li>If \(x\) is a rational number \(p/q\), with \(q&gt;0\), then \(a^{p/q} = \sqrt[q]{a^p}\)</li>
+<li>If \(x\) is an irrational number, then it’s defined as the limit of \(a^r\), where \(r\) is a <a href="sequence.html">sequence</a> of rational numbers whose <a href="limits.html">limit</a> is \(x\).</li>
+</ol>
 <h2 id="exp-rules"><a class="header" href="#exp-rules">Exp rules</a></h2>
 <p>\[\begin{align}
 a^{x+y} &amp;= a^x a^y \\
@@ -195,10 +205,17 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \lim_{x \to \infty} a^x &amp;= 0 \quad \text{if } 0 &lt; a &lt; 1 \\
 \lim_{x \to -\infty} a^x &amp;= \infty \quad \text{if } 0 &lt; a &lt; 1 \\
 \lim_{h \to 0} \frac{e^h - 1}{h} &amp;= 1 \\
+\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n &amp;= e
+\end{align}\]</p>
+<h2 id="exp-derivatives-and-integrals"><a class="header" href="#exp-derivatives-and-integrals">Exp derivatives and integrals</a></h2>
+<p>\[\begin{align}
 \frac{d}{dx} e^x &amp;= e^x \\
 \frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
-\int e^x \, dx &amp;= e^x
+\int e^x \, dx &amp;= e^x \\
+\frac{d}{dx} a^x &amp;= a^x \log(a) \\
+\int a^x \, dx &amp;= \frac{a^x}{\log a} \quad (a \ne 1)
 \end{align}\]</p>
+<p>Note that the last two results use the logarithmic function, which we haven’t actually introduced yet (see below).</p>
 <h2 id="log-definition"><a class="header" href="#log-definition">Log definition</a></h2>
 <p>The logarithmic function with base \(a\) is defined as the function satisfying</p>
 <p>\[ \log_a x = y \iff a^y = x \]</p>
@@ -206,12 +223,18 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 <p>\[ \log x = \log_e x \]</p>
 <p>in other words,</p>
 <p>\[ \log x = y \iff e^y = x; \]</p>
-<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines.</p>
+<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines. Note that</p>
+<p>\[\begin{align}
+\log(e^x) &amp;= x \\
+e^{\log x} &amp;= x \\
+\log e &amp;= 1.
+\end{align}\]</p>
 <h2 id="log-rules"><a class="header" href="#log-rules">Log rules</a></h2>
 <p>\[\begin{align}
 \log_a(xy) &amp;= \log_a x + \log_a y \\
 \log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
-\log_a (x^y) &amp;= y \log_a x
+\log_a (x^y) &amp;= y \log_a x \\
+\log_a x &amp;= \frac{\log x}{\log a}
 \end{align}\]</p>
 <h2 id="log-limits"><a class="header" href="#log-limits">Log limits</a></h2>
 <p>If \(a &gt; 1\), then</p>
@@ -219,7 +242,13 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \lim_{x \to \infty} \log_a x = \infty \\
 \lim_{x \to 0^+} \log_a x = -\infty \\
 \end{align}\]</p>
-<h2 id="natural-log"><a class="header" href="#natural-log">Natural log</a></h2>
+<h2 id="log-derivatives-and-integrals"><a class="header" href="#log-derivatives-and-integrals">Log derivatives and integrals</a></h2>
+<p>\[\begin{align}
+\frac{d}{dx} \log x &amp;= x^{-1} \\
+\frac{d}{dx} \log u &amp;= u^{-1} \frac{du}{dx} \\
+\int \frac{1}{x} \, dx &amp;= \log|x| \\
+\frac{d}{dx} \log_a x &amp;= \frac{1}{x \log a}
+\end{align}\]</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="integration-techniques"><a class="header" href="#integration-techniques">Integration techniques</a></h1>
 <p>Substitution + Jacobian</p>
 <p>Integration by parts</p>

@@ -145,6 +145,14 @@
                     <main>
                         <h1 id="log-and-exp"><a class="header" href="#log-and-exp">Log and exp</a></h1>
 <h2 id="exp-definition"><a class="header" href="#exp-definition">Exp definition</a></h2>
+<p>The exponential function \(a^x\) actually has a pretty complicated definition:</p>
+<ol>
+<li>If \(x\) is a positive integer \(n\), then \(a^n = a \cdot a \cdots a \quad (n\) times)</li>
+<li>If \(x=0\), then \(a^0 = 1\)</li>
+<li>If \(x\) is a negative integer, then \(a^{-n} = \frac{1}{a^n}\)</li>
+<li>If \(x\) is a rational number \(p/q\), with \(q&gt;0\), then \(a^{p/q} = \sqrt[q]{a^p}\)</li>
+<li>If \(x\) is an irrational number, then it’s defined as the limit of \(a^r\), where \(r\) is a <a href="sequence.html">sequence</a> of rational numbers whose <a href="limits.html">limit</a> is \(x\).</li>
+</ol>
 <h2 id="exp-rules"><a class="header" href="#exp-rules">Exp rules</a></h2>
 <p>\[\begin{align}
 a^{x+y} &amp;= a^x a^y \\
@@ -159,10 +167,17 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \lim_{x \to \infty} a^x &amp;= 0 \quad \text{if } 0 &lt; a &lt; 1 \\
 \lim_{x \to -\infty} a^x &amp;= \infty \quad \text{if } 0 &lt; a &lt; 1 \\
 \lim_{h \to 0} \frac{e^h - 1}{h} &amp;= 1 \\
+\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n &amp;= e
+\end{align}\]</p>
+<h2 id="exp-derivatives-and-integrals"><a class="header" href="#exp-derivatives-and-integrals">Exp derivatives and integrals</a></h2>
+<p>\[\begin{align}
 \frac{d}{dx} e^x &amp;= e^x \\
 \frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
-\int e^x \, dx &amp;= e^x
+\int e^x \, dx &amp;= e^x \\
+\frac{d}{dx} a^x &amp;= a^x \log(a) \\
+\int a^x \, dx &amp;= \frac{a^x}{\log a} \quad (a \ne 1)
 \end{align}\]</p>
+<p>Note that the last two results use the logarithmic function, which we haven’t actually introduced yet (see below).</p>
 <h2 id="log-definition"><a class="header" href="#log-definition">Log definition</a></h2>
 <p>The logarithmic function with base \(a\) is defined as the function satisfying</p>
 <p>\[ \log_a x = y \iff a^y = x \]</p>
@@ -170,12 +185,18 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 <p>\[ \log x = \log_e x \]</p>
 <p>in other words,</p>
 <p>\[ \log x = y \iff e^y = x; \]</p>
-<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines.</p>
+<p>the notation \(\ln x\) can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines. Note that</p>
+<p>\[\begin{align}
+\log(e^x) &amp;= x \\
+e^{\log x} &amp;= x \\
+\log e &amp;= 1.
+\end{align}\]</p>
 <h2 id="log-rules"><a class="header" href="#log-rules">Log rules</a></h2>
 <p>\[\begin{align}
 \log_a(xy) &amp;= \log_a x + \log_a y \\
 \log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
-\log_a (x^y) &amp;= y \log_a x
+\log_a (x^y) &amp;= y \log_a x \\
+\log_a x &amp;= \frac{\log x}{\log a}
 \end{align}\]</p>
 <h2 id="log-limits"><a class="header" href="#log-limits">Log limits</a></h2>
 <p>If \(a &gt; 1\), then</p>
@@ -183,7 +204,13 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \lim_{x \to \infty} \log_a x = \infty \\
 \lim_{x \to 0^+} \log_a x = -\infty \\
 \end{align}\]</p>
-<h2 id="natural-log"><a class="header" href="#natural-log">Natural log</a></h2>
+<h2 id="log-derivatives-and-integrals"><a class="header" href="#log-derivatives-and-integrals">Log derivatives and integrals</a></h2>
+<p>\[\begin{align}
+\frac{d}{dx} \log x &amp;= x^{-1} \\
+\frac{d}{dx} \log u &amp;= u^{-1} \frac{du}{dx} \\
+\int \frac{1}{x} \, dx &amp;= \log|x| \\
+\frac{d}{dx} \log_a x &amp;= \frac{1}{x \log a}
+\end{align}\]</p>
 
                     </main>
 
