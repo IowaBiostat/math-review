@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.5 Integration | Math review for new biostatistics students</title>
-  <meta name="description" content="2.5 Integration | Math review for new biostatistics students" />
+  <title>3.4 Inversion and related concepts | Math review for new biostatistics students</title>
+  <meta name="description" content="3.4 Inversion and related concepts | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta property="og:title" content="3.4 Inversion and related concepts | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="3.4 Inversion and related concepts | Math review for new biostatistics students" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="optimization.html"/>
-<link rel="next" href="log-and-exp.html"/>
+<link rel="prev" href="special-matrices.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -105,17 +105,40 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="integration" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="inversion-and-related-concepts" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Inversion and related concepts<a href="inversion-and-related-concepts.html#inversion-and-related-concepts" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Suppose <span class="math inline">\(\mathbf{A}\mathbf{x}=\mathbf{B}\)</span> and we want to solve for <span class="math inline">\(\mathbf{x}\)</span> … can we “divide” by <span class="math inline">\(\mathbf{A}\)</span>? The answer is: “sort of”. There is no such thing as matrix division, but we can multiply both sides by the <em>inverse</em> of <span class="math inline">\(\mathbf{A}\)</span>. If a matrix <span class="math inline">\(\mathbf{A}^{-1}\)</span> satisfies <span class="math inline">\(\mathbf{A}\mathbf{A}^{-1}=\mathbf{A}^{-1}\mathbf{A}=\mathbf{I}\)</span>, then <span class="math inline">\(\mathbf{A}^{-1}\)</span> is the inverse of <span class="math inline">\(\mathbf{A}\)</span>. If we know what <span class="math inline">\(\mathbf{A}^{-1}\)</span> is, then <span class="math inline">\(\mathbf{x}=\mathbf{A}^{-1}\mathbf{B}\)</span>. Note that <span class="math inline">\(\mathbf{x}\)</span> is <em>not</em> equal to <span class="math inline">\(\mathbf{B}\mathbf{A}^{-1}\)</span>; we need to <em>left</em> multiply by the inverse and order or multiplication matters.</p>
+<p>If two vectors <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> satisfy <span class="math inline">\(\mathbf{u}^{\scriptstyle\top}\mathbf{v}=0\)</span>, they are said to be <em>orthogonal</em> to each other. If all the columns and rows of a matrix <span class="math inline">\(\mathbf{A}\)</span> are orthogonal to each other and satisfy <span class="math inline">\(\mathbf{a}^{\scriptstyle\top}\mathbf{a}= 1\)</span>, then <span class="math inline">\(\mathbf{A}\)</span> (transposed) can serve as its own inverse: <span class="math inline">\(\mathbf{A}^{\scriptstyle\top}\mathbf{A}=\mathbf{A}\mathbf{A}^{\scriptstyle\top}=\mathbf{I}\)</span>. In this case, the matrix <span class="math inline">\(\mathbf{A}\)</span> is said to be an <em>orthogonal matrix</em>. If a matrix <span class="math inline">\(\mathbf{X}\)</span> is not square, then it is possible that <span class="math inline">\(\mathbf{X}^{\scriptstyle\top}\mathbf{X}=\mathbf{I}\)</span> but <span class="math inline">\(\mathbf{X}\mathbf{X}^{\scriptstyle\top}\neq \mathbf{I}\)</span>; in this case, the matrix is said to be <em>column orthogonal</em>, although in statistics it is common to refer to these matrices as orthogonal also. A somewhat related definition is that a matrix is said to be <em>idempotent</em> if <span class="math inline">\(\mathbf{A}\mathbf{A}=\mathbf{A}\)</span>.</p>
+<p>Does every matrix have one and only one inverse? If a matrix has an inverse, it is said to be <em>invertible</em> – all invertible matrices have exactly one, unique inverse. However, not every matrix is invertible. For example, there are no values of <span class="math inline">\(a, b, c\)</span>, and <span class="math inline">\(d\)</span> that satisfy</p>
+<p><span class="math display">\[ \left[ \begin{array}{rr}
+2 &amp; 4 \\
+1 &amp; 2
+\end{array} \right] \left[ \begin{array}{rr}
+a &amp; b \\
+c &amp; d
+\end{array} \right]= \left[ \begin{array}{rr}
+1 &amp; 0 \\
+0 &amp; 1
+\end{array} \right] \]</span></p>
+<p>Why doesn’t this matrix have an inverse? There are four equations and four unknowns, but some of those equations contradict each other. The term for this situation is <em>linear dependence</em>. If you have a collection of vectors <span class="math inline">\(\mathbf{v}_1, \mathbf{v}_2, \ldots, \mathbf{v}_n\)</span>, then you can form new vectors from <em>linear combinations</em> of the old vectors: <span class="math inline">\(c_1\mathbf{v}_1+c_2\mathbf{v}_2+\cdots+c_n\mathbf{v}_n\)</span>. A collection of vectors is said to be <em>linearly independent</em> if none of them can be written as a linear combination of the others; if it can, then they are linearly dependent. This is the key to whether a matrix is invertible or not: a matrix <span class="math inline">\(\mathbf{A}\)</span> is invertible if and only if its columns (or rows) are linearly independent. Note that the columns of our earlier matrix were not linearly independent, since <span class="math inline">\(2(2 \quad 1)=(4 \quad 2)\)</span>.</p>
+<p>The <em>rank</em> of a matrix is the number of linearly independent columns (or rows) it has; if they’re all linearly independent, then the matrix is said to be of <em>full rank</em>.</p>
+<p>Additional helpful identities:</p>
+<p><span class="math display">\[\begin{align}
+(\mathbf{A}+\mathbf{B}) ^{\scriptstyle\top}&amp;= \mathbf{A}^{\scriptstyle\top}+ \mathbf{B}^{\scriptstyle\top}\\
+(\mathbf{A}\mathbf{B}) ^{\scriptstyle\top}&amp;= \mathbf{B}^{\scriptstyle\top}\mathbf{A}^{\scriptstyle\top}\\
+(\mathbf{A}\mathbf{B})^{-1}   &amp;= \mathbf{B}^{-1}\mathbf{A}^{-1}     \\
+(\mathbf{A}^{\scriptstyle\top})^{-1} &amp;= (\mathbf{A}^{-1}) ^{\scriptstyle\top}
+\end{align}\]</span></p>
 
 </div>
+<!-- </div> -->
             </section>
 
           </div>
         </div>
       </div>
-<a href="optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="log-and-exp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="special-matrices.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,211 +1,199 @@
-<!DOCTYPE HTML>
-<html lang="en" class="sidebar-visible no-js coal">
-    <head>
-        <!-- Book generated using mdBook -->
-        <meta charset="UTF-8">
-        <title>Calculus - Math review for new biostatistics students</title>
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2 Calculus | Math review for new biostatistics students</title>
+  <meta name="description" content="2 Calculus | Math review for new biostatistics students" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2 Calculus | Math review for new biostatistics students" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2 Calculus | Math review for new biostatistics students" />
+  
+  
+  
+
+<meta name="author" content="Patrick Breheny" />
 
 
-        <!-- Custom HTML head -->
-        
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
 
-        <link rel="icon" href="favicon.svg">
-        <link rel="shortcut icon" href="favicon.png">
-        <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-        <link rel="stylesheet" href="css/print.css" media="print">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="functions.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
 
-        <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-        <link rel="stylesheet" href="fonts/fonts.css">
 
-        <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
 
-        <!-- Custom theme stylesheets -->
 
-        <!-- MathJax -->
-        <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    </head>
-    <body>
-        <!-- Provide site root to javascript -->
-        <script>
-            var path_to_root = "";
-            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "coal";
-        </script>
 
-        <!-- Work around some values being stored in localStorage wrapped in quotes -->
-        <script>
-            try {
-                var theme = localStorage.getItem('mdbook-theme');
-                var sidebar = localStorage.getItem('mdbook-sidebar');
 
-                if (theme.startsWith('"') && theme.endsWith('"')) {
-                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
-                }
 
-                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
-                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
-                }
-            } catch (e) { }
-        </script>
 
-        <!-- Set the theme before any content is loaded, prevents flash -->
-        <script>
-            var theme;
-            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
-            if (theme === null || theme === undefined) { theme = default_theme; }
-            var html = document.querySelector('html');
-            html.classList.remove('no-js')
-            html.classList.remove('coal')
-            html.classList.add(theme);
-            html.classList.add('js');
-        </script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
-        <!-- Hide / unhide sidebar before it is displayed -->
-        <script>
-            var html = document.querySelector('html');
-            var sidebar = 'hidden';
-            if (document.body.clientWidth >= 1080) {
-                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
-                sidebar = sidebar || 'visible';
-            }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
-        </script>
 
-        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
-            <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="intro.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="calculus.html" class="active"><strong aria-hidden="true">2.</strong> Calculus</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="functions.html"><strong aria-hidden="true">2.1.</strong> Functions</a></li><li class="chapter-item expanded "><a href="limits.html"><strong aria-hidden="true">2.2.</strong> Limits and continuity</a></li><li class="chapter-item expanded "><a href="derivatives.html"><strong aria-hidden="true">2.3.</strong> Derivatives</a></li><li class="chapter-item expanded "><a href="optimization.html"><strong aria-hidden="true">2.4.</strong> Optimization</a></li><li class="chapter-item expanded "><a href="integration.html"><strong aria-hidden="true">2.5.</strong> Integration</a></li><li class="chapter-item expanded "><a href="log-exp.html"><strong aria-hidden="true">2.6.</strong> Log and exp</a></li><li class="chapter-item expanded "><a href="techniques.html"><strong aria-hidden="true">2.7.</strong> Integration techniques</a></li><li class="chapter-item expanded "><a href="sequence.html"><strong aria-hidden="true">2.8.</strong> Sequences and series</a></li><li class="chapter-item expanded "><a href="partial.html"><strong aria-hidden="true">2.9.</strong> Partial derivatives</a></li><li class="chapter-item expanded "><a href="multi-int.html"><strong aria-hidden="true">2.10.</strong> Multiple integrals</a></li></ol></li><li class="chapter-item expanded "><a href="matrix.html"><strong aria-hidden="true">3.</strong> Matrices</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="matrix-basic.html"><strong aria-hidden="true">3.1.</strong> Basic operations</a></li><li class="chapter-item expanded "><a href="matrix-special.html"><strong aria-hidden="true">3.2.</strong> Special matrices</a></li><li class="chapter-item expanded "><a href="matrix-inverse.html"><strong aria-hidden="true">3.3.</strong> Inversion and related concepts</a></li></ol></li></ol>
-            </div>
-            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
-        </nav>
 
-        <div id="page-wrapper" class="page-wrapper">
 
-            <div class="page">
-                                <div id="menu-bar-hover-placeholder"></div>
-                <div id="menu-bar" class="menu-bar sticky bordered">
-                    <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
-                            <i class="fa fa-bars"></i>
-                        </button>
-                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
-                            <i class="fa fa-paint-brush"></i>
-                        </button>
-                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
-                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
-                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
-                        </ul>
-                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
-                            <i class="fa fa-search"></i>
-                        </button>
-                    </div>
+</head>
 
-                    <h1 class="menu-title">Math review for new biostatistics students</h1>
+<body>
 
-                    <div class="right-buttons">
-                        <a href="print.html" title="Print this book" aria-label="Print this book">
-                            <i id="print-button" class="fa fa-print"></i>
-                        </a>
 
-                    </div>
-                </div>
 
-                <div id="search-wrapper" class="hidden">
-                    <form id="searchbar-outer" class="searchbar-outer">
-                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
-                    </form>
-                    <div id="searchresults-outer" class="searchresults-outer hidden">
-                        <div id="searchresults-header" class="searchresults-header"></div>
-                        <ul id="searchresults">
-                        </ul>
-                    </div>
-                </div>
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
 
-                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
-                <script>
-                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
-                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
-                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
-                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
-                    });
-                </script>
+    <div class="book-summary">
+      <nav role="navigation">
 
-                <div id="content" class="content">
-                    <main>
-                        <h1 id="calculus"><a class="header" href="#calculus">Calculus</a></h1>
-<p>In this chapter, we will review/collect a large number of results that you should know and be familiar with from calculus. I’m not going to prove them or provide a bunch of details and explanations and graphs, so if anything strikes you as unfamiliar or you want more details, please consult your calculus textbook.</p>
-<p>Calculus is important to statistics for lots of reasons, but I would like to point out three major ones before we begin the review.</p>
-<h2 id="finding-most-likely-solutions"><a class="header" href="#finding-most-likely-solutions">Finding most likely solutions</a></h2>
-<p>A statistical analysis typically begins with some sort of model for how the data (which I’ll call \(d\)) depends on an unknown parameter (which I’ll call \(\theta\)). We observe the data, but what’s \(\theta\)? To estimate it, we typically create some <a href="functions.html">function</a> (which I’ll call \(f\)) that is large when \(\theta\) is in agreement with the data we’ve seen. To find the “best” value of \(\theta\), we can take the <a href="derivatives.html">derivative</a> of \(f\) to find the <a href="optimization.html">optimal value</a>. Note that this is actually a <a href="partial.html">partial derivative</a>, since \(f\) would be a function of both \(\theta\) and \(d\).</p>
-<h2 id="probability-and-density"><a class="header" href="#probability-and-density">Probability and density</a></h2>
-<p>For continuous quantities such as height, the distribution of likely values is specified in terms of a probability density \(f\). Calculating the probability from a probability density involves <a href="integration.html">integration</a>. For example, if we wanted to know the probability that a person’s height was between 63 and 66 inches:</p>
-<p>\[ \int_{63}^{66} f(x) \, dx . \]</p>
-<h2 id="independent-observations"><a class="header" href="#independent-observations">Independent observations</a></h2>
-<p>Suppose we are interested in the probability of events \(A_1, A_2, \ldots, A_n\). If those events are independent, this is given by</p>
-<p>\[ P(A_1) P(A_2) \cdots P(A_n) = \prod_{i=1}^n P(A_i) . \]</p>
-<p>However, it is almost <em>always</em> easier to deal with this kind of quantity after taking the <a href="log-exp.html">log</a>:</p>
-<p>\[ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). \]</p>
-<p>To see why, go ahead and multiply a bunch of probabilities together and see how useful the result is to work with. The same trick can be used with dependent terms as well, although the results are messier.</p>
-<p>It is hard to overstate how often you will do this. This isn’t some occasional trick – this is standard operating procedure, so it is critical that you know the properties of <a href="log-exp.html">exponents and logs</a> extremely well.</p>
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="calculus.html"><a href="calculus.html"><i class="fa fa-check"></i><b>2</b> Calculus</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>2.2</b> Limits and continuity</a></li>
+<li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
+<li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
+<li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
+<li class="chapter" data-level="2.6" data-path="log-and-exp.html"><a href="log-and-exp.html"><i class="fa fa-check"></i><b>2.6</b> Log and exp</a></li>
+<li class="chapter" data-level="2.7" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.7</b> Integration techniques</a></li>
+<li class="chapter" data-level="2.8" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.8</b> Sequences and series</a></li>
+<li class="chapter" data-level="2.9" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.9</b> Partial derivatives</a></li>
+<li class="chapter" data-level="2.10" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.10</b> Multiple integrals</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="matrix-algebra.html"><a href="matrix-algebra.html"><i class="fa fa-check"></i><b>3</b> Matrix algebra</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="definitions-and-conventions.html"><a href="definitions-and-conventions.html"><i class="fa fa-check"></i><b>3.1</b> Definitions and conventions</a></li>
+<li class="chapter" data-level="3.2" data-path="basic-operations.html"><a href="basic-operations.html"><i class="fa fa-check"></i><b>3.2</b> Basic operations</a></li>
+<li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
+<li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
+</ul></li>
+</ul>
 
-                    </main>
+      </nav>
+    </div>
 
-                    <nav class="nav-wrapper" aria-label="Page navigation">
-                        <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                                <i class="fa fa-angle-left"></i>
-                            </a>
-
-                            <a rel="next" href="functions.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                                <i class="fa fa-angle-right"></i>
-                            </a>
-
-                        <div style="clear: both"></div>
-                    </nav>
-                </div>
-            </div>
-
-            <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
-                        <i class="fa fa-angle-left"></i>
-                    </a>
-
-                    <a rel="next" href="functions.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
-            </nav>
-
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math review for new biostatistics students</a>
+          </h1>
         </div>
 
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
 
+            <section class="normal" id="section-">
+<div id="calculus" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">2</span> Calculus<a href="calculus.html#calculus" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In this chapter, we will review/collect a large number of results that you should know and be familiar with from calculus. I’m not going to prove them or provide a bunch of details and explanations and graphs, so if anything strikes you as unfamiliar or you want more details, please consult your calculus textbook.</p>
+<p>Calculus is important to statistics for lots of reasons, but I would like to point out three major ones before we begin the review.</p>
+<div id="finding-most-likely-solutions" class="section level3 unnumbered hasAnchor">
+<h3>Finding most likely solutions<a href="calculus.html#finding-most-likely-solutions" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A statistical analysis typically begins with some sort of model for how the data (which I’ll call <span class="math inline">\(d\)</span>) depends on an unknown parameter (which I’ll call <span class="math inline">\(\theta\)</span>). We observe the data, but what’s <span class="math inline">\(\theta\)</span>? To estimate it, we typically create some <a href="functions.html">function</a> (which I’ll call <span class="math inline">\(f\)</span>) that is large when <span class="math inline">\(\theta\)</span> is in agreement with the data we’ve seen. To find the “best” value of <span class="math inline">\(\theta\)</span>, we can take the <a href="derivatives.html">derivative</a> of <span class="math inline">\(f\)</span> to find the <a href="optimization.html">optimal value</a>. Note that this is actually a <a href="partial-derivatives.html">partial derivative</a>, since <span class="math inline">\(f\)</span> would be a function of both <span class="math inline">\(\theta\)</span> and <span class="math inline">\(d\)</span>.</p>
+</div>
+<div id="probability-and-density" class="section level3 unnumbered hasAnchor">
+<h3>Probability and density<a href="calculus.html#probability-and-density" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>For continuous quantities such as height, the distribution of likely values is specified in terms of a probability density <span class="math inline">\(f\)</span>. Calculating the probability from a probability density involves <a href="integration.html">integration</a>. For example, if we wanted to know the probability that a person’s height was between 63 and 66 inches:</p>
+<p><span class="math display">\[ \int_{63}^{66} f(x) \, dx . \]</span></p>
+</div>
+<div id="independent-observations" class="section level3 unnumbered hasAnchor">
+<h3>Independent observations<a href="calculus.html#independent-observations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose we are interested in the probability of events <span class="math inline">\(A_1, A_2, \ldots, A_n\)</span>. If those events are independent, this is given by</p>
+<p><span class="math display">\[ P(A_1) P(A_2) \cdots P(A_n) = \prod_{i=1}^n P(A_i) . \]</span></p>
+<p>However, it is almost <em>always</em> easier to deal with this kind of quantity after taking the <a href="log-and-exp.html">log</a>:</p>
+<p><span class="math display">\[ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). \]</span></p>
+<p>To see why, go ahead and multiply a bunch of probabilities together and see how useful the result is to work with. The same trick can be used with dependent terms as well, although the results are messier.</p>
+<p>It is hard to overstate how often you will do this. This isn’t some occasional trick – this is standard operating procedure, so it is critical that you know the properties of <a href="log-and-exp.html">exponents and logs</a> extremely well.</p>
 
+</div>
+</div>
+            </section>
 
-        <script>
-            window.playground_copyable = true;
-        </script>
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="functions.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["math-review.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"info": false
+});
+});
+</script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
 
-        <script src="elasticlunr.min.js"></script>
-        <script src="mark.min.js"></script>
-        <script src="searcher.js"></script>
-
-        <script src="clipboard.min.js"></script>
-        <script src="highlight.js"></script>
-        <script src="book.js"></script>
-
-        <!-- Custom JS scripts -->
-
-
-    </body>
 </html>

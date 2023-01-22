@@ -1,0 +1,24 @@
+output_dir: docs
+book_filename: math-review
+rmd_files:
+  [
+    "index.Rmd",
+
+    "calculus.md",
+    "functions.md",
+    "limits.md",
+    "derivatives.md",
+    "optimization.md",
+    "integration.md",
+    "log-exp.md",
+    "techniques.md",
+    "sequence.md",
+    "partial.md",
+    "multi-int.md",
+
+    "matrix-algebra.md",
+    "matrix-def.md",
+    "matrix-basic.md",
+    "matrix-special.md",
+    "matrix-inverse.md",
+  ]

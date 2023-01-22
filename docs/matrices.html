@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.5 Integration | Math review for new biostatistics students</title>
-  <meta name="description" content="2.5 Integration | Math review for new biostatistics students" />
+  <title>3 Matrices | Math review for new biostatistics students</title>
+  <meta name="description" content="3 Matrices | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta property="og:title" content="3 Matrices | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="3 Matrices | Math review for new biostatistics students" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="optimization.html"/>
-<link rel="next" href="log-and-exp.html"/>
+<link rel="prev" href="multiple-integrals.html"/>
+<link rel="next" href="basic-operations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -81,12 +81,11 @@
 <li class="chapter" data-level="2.9" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.9</b> Partial derivatives</a></li>
 <li class="chapter" data-level="2.10" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.10</b> Multiple integrals</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="matrix-algebra.html"><a href="matrix-algebra.html"><i class="fa fa-check"></i><b>3</b> Matrix algebra</a>
+<li class="chapter" data-level="3" data-path="matrices.html"><a href="matrices.html"><i class="fa fa-check"></i><b>3</b> Matrices</a>
 <ul>
-<li class="chapter" data-level="3.1" data-path="definitions-and-conventions.html"><a href="definitions-and-conventions.html"><i class="fa fa-check"></i><b>3.1</b> Definitions and conventions</a></li>
-<li class="chapter" data-level="3.2" data-path="basic-operations.html"><a href="basic-operations.html"><i class="fa fa-check"></i><b>3.2</b> Basic operations</a></li>
-<li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
-<li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
+<li class="chapter" data-level="3.1" data-path="basic-operations.html"><a href="basic-operations.html"><i class="fa fa-check"></i><b>3.1</b> Basic operations</a></li>
+<li class="chapter" data-level="3.2" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.2</b> Special matrices</a></li>
+<li class="chapter" data-level="3.3" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.3</b> Inversion and related concepts</a></li>
 </ul></li>
 </ul>
 
@@ -105,17 +104,32 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="integration" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-
+<div id="matrices" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">3</span> Matrices<a href="matrices.html#matrices" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>A <em>matrix</em> is a collection of numbers arranged in a rectangular array of <em>rows</em> and <em>columns</em>, such as</p>
+<p><span class="math display">\[ \left[ \begin{array}{rr}
+3 &amp; 2 \\
+4 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right] \]</span></p>
+<p>A matrix with <span class="math inline">\(r\)</span> rows and <span class="math inline">\(c\)</span> columns is said to be an <span class="math inline">\(r \times c\)</span> matrix (e.g., the matrix above is a <span class="math inline">\(3 \times 2\)</span> matrix).</p>
+<p>In the case where a matrix has just a single row or column, it is said to be a <em>vector</em>, such as</p>
+<p><span class="math display">\[ \left[ \begin{array}{r}
+3 \\
+-1
+\end{array} \right] \]</span></p>
+<p>Conventionally, vectors and matrices are denoted in lower- and upper-case boldface, respectively (e.g., <span class="math inline">\(x\)</span> is a scalar, <span class="math inline">\(\mathbf{x}\)</span> is a vector, and <span class="math inline">\(\mathbf{X}\)</span> is a matrix). In addition, vectors are taken to be <em>column vectors</em> – i.e., a vector of <span class="math inline">\(n\)</span> numbers is an <span class="math inline">\(n \times 1\)</span> matrix, not a <span class="math inline">\(1 \times n\)</span> matrix.</p>
+<p>The <span class="math inline">\(ij\)</span>th element of a matrix <span class="math inline">\(\mathbf{M}\)</span> is denoted by <span class="math inline">\(M_{ij}\)</span> or <span class="math inline">\((\mathbf{M})_{ij}\)</span>.</p>
+<p>For example, letting <span class="math inline">\(\mathbf{M}\)</span> denote the above matrix, <span class="math inline">\(M_{11}=3\)</span>, <span class="math inline">\((\mathbf{M})_{32}=2\)</span>, and so on. Similarly, the <span class="math inline">\(j\)</span>th element of a vector <span class="math inline">\(\mathbf{v}\)</span> is denoted <span class="math inline">\(v_j\)</span>; e.g., letting <span class="math inline">\(\mathbf{v}\)</span> denote the above vector, <span class="math inline">\(v_1 = 3\)</span>.</p>
+<!--chapter:end:matrix.md-->
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="log-and-exp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="multiple-integrals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="basic-operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

@@ -1,0 +1,10 @@
+bookdown::gitbook:
+  split_by: section
+  toc_depth: 2
+  config:
+    fontsettings:
+      theme: night
+    download: [["math-review.pdf", "PDF"]]
+    info: false
+    sharing: false
+bookdown::pdf_book: default

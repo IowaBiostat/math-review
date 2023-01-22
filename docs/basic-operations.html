@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>3.2 Basic operations | Math review for new biostatistics students</title>
+  <meta name="description" content="3.2 Basic operations | Math review for new biostatistics students" />
+  <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="3.2 Basic operations | Math review for new biostatistics students" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="3.2 Basic operations | Math review for new biostatistics students" />
+  
+  
+  
+
+<meta name="author" content="Patrick Breheny" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="definitions-and-conventions.html"/>
+<link rel="next" href="special-matrices.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="calculus.html"><a href="calculus.html"><i class="fa fa-check"></i><b>2</b> Calculus</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>2.2</b> Limits and continuity</a></li>
+<li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
+<li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
+<li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
+<li class="chapter" data-level="2.6" data-path="log-and-exp.html"><a href="log-and-exp.html"><i class="fa fa-check"></i><b>2.6</b> Log and exp</a></li>
+<li class="chapter" data-level="2.7" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.7</b> Integration techniques</a></li>
+<li class="chapter" data-level="2.8" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.8</b> Sequences and series</a></li>
+<li class="chapter" data-level="2.9" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.9</b> Partial derivatives</a></li>
+<li class="chapter" data-level="2.10" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.10</b> Multiple integrals</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="matrix-algebra.html"><a href="matrix-algebra.html"><i class="fa fa-check"></i><b>3</b> Matrix algebra</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="definitions-and-conventions.html"><a href="definitions-and-conventions.html"><i class="fa fa-check"></i><b>3.1</b> Definitions and conventions</a></li>
+<li class="chapter" data-level="3.2" data-path="basic-operations.html"><a href="basic-operations.html"><i class="fa fa-check"></i><b>3.2</b> Basic operations</a></li>
+<li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
+<li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math review for new biostatistics students</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="basic-operations" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Basic operations<a href="basic-operations.html#basic-operations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="transposition" class="section level3 unnumbered hasAnchor">
+<h3>Transposition<a href="basic-operations.html#transposition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>It is often useful to switch the rows and columns of a matrix around. The resulting matrix is called the <em>transpose</em> of the original matrix, and denoted with a superscript <span class="math inline">\(^{\scriptstyle\top}\)</span> or an apostrophe <span class="math inline">\(&#39;\)</span>:</p>
+<p><span class="math display">\[ \mathbf{M}= \left[ \begin{array}{rr}
+3 &amp; 2 \\
+4 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right]
+\qquad
+\mathbf{M}^{\scriptstyle\top}=\left[ \begin{array}{rrr}
+3 &amp; 4 &amp; -1 \\
+2 &amp; -1 &amp; 2
+\end{array} \right] \]</span></p>
+<p>Note that <span class="math inline">\(M_{ij}=M ^{\scriptstyle\top}_{ji}\)</span>, and that if <span class="math inline">\(\mathbf{M}\)</span> is an <span class="math inline">\(r \times c\)</span> matrix, <span class="math inline">\(\mathbf{M}^{\scriptstyle\top}\)</span> is a <span class="math inline">\(c \times r\)</span> matrix.</p>
+</div>
+<div id="addition" class="section level3 unnumbered hasAnchor">
+<h3>Addition<a href="basic-operations.html#addition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are two kinds of addition operations for matrices. The first is <em>scalar addition</em>:</p>
+<p><span class="math display">\[ \mathbf{M}+ 2 = \left[ \begin{array}{rr}
+3+2 &amp; 2+2 \\
+4+2 &amp; -1+2 \\
+-1+2 &amp; 2+2
+\end{array} \right] =
+\left[ \begin{array}{rr }
+5 &amp; 4 \\
+6 &amp; 1 \\
+1 &amp; 4
+\end{array} \right] \]</span></p>
+<p>The other kind is <em>matrix addition</em>:</p>
+<p><span class="math display">\[ \mathbf{M}+ \mathbf{M}= \left[ \begin{array}{rr}
+3 &amp; 2 \\
+4 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right] + \left[ \begin{array}{rr}
+3 &amp; 2 \\
+4 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right]= \left[ \begin{array}{rr}
+6 &amp; 4 \\
+8 &amp; -2 \\
+-2 &amp; 4
+\end{array} \right] \]</span></p>
+<p>Formally, <span class="math inline">\((\mathbf{A}+\mathbf{B})\_{ij} = A_{ij} + B_{ij}\)</span>.</p>
+<p>Note that only matrices of the same dimension can be added to each other – there is no such thing as adding a <span class="math inline">\(4 \times 5\)</span> matrix to a <span class="math inline">\(2 \times 9\)</span> matrix.</p>
+</div>
+<div id="multiplication" class="section level3 unnumbered hasAnchor">
+<h3>Multiplication<a href="basic-operations.html#multiplication" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>There are also two common kinds of multiplication for matrices. The first is <em>scalar multiplication</em>:</p>
+<p><span class="math display">\[ 4\mathbf{M}= 4\left[ \begin{array}{rr}
+3 &amp; 2 \\
+4 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right] =
+\left[ \begin{array}{rr }
+12 &amp; 8 \\
+16 &amp; -4 \\
+-4 &amp; 8
+\end{array} \right] \]</span></p>
+<p>Formally, <span class="math inline">\((c\mathbf{M})\_{ij} = cM_{ij}\)</span>.</p>
+<p>The other kind is <em>matrix multiplication</em>. The product of two matrices, <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span>, is defined by multiplying all of <span class="math inline">\(\mathbf{A}\)</span>’s rows by <span class="math inline">\(\mathbf{B}\)</span>’s columns in the following manner:</p>
+<p><span class="math display">\[ (\mathbf{A}\mathbf{B})\_{ik} = \sum_j A_{ij}B_{jk} \]</span></p>
+<p><span class="math display">\[ \left[ \begin{array}{rrr}
+1 &amp; 2 &amp; 1 \\
+4 &amp; -1 &amp; 0
+\end{array} \right] \left[ \begin{array}{rr}
+3 &amp; 2 \\
+0 &amp; -1 \\
+-1 &amp; 2
+\end{array} \right]= \left[ \begin{array}{rr}
+2 &amp; 2 \\
+12 &amp; 9
+\end{array} \right] \]</span></p>
+<p>Note that matrix multiplication is only defined if the number of columns of <span class="math inline">\(\mathbf{A}\)</span> matches the number of rows of <span class="math inline">\(\mathbf{B}\)</span>, and that if <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix and <span class="math inline">\(\mathbf{B}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix, then <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is an <span class="math inline">\(m \times p\)</span> matrix.</p>
+<p>The following elementary algebra rules carry over to matrix algebra:</p>
+<p><span class="math display">\[\begin{align}
+\mathbf{A}+\mathbf{B}&amp;= \mathbf{B}+\mathbf{A}&amp; (\mathbf{A}+\mathbf{B})+\mathbf{C}&amp;=\mathbf{A}+(\mathbf{B}+\mathbf{C}) \\
+(\mathbf{A}\mathbf{B})\mathbf{C}&amp;= \mathbf{A}(\mathbf{B}\mathbf{C}) &amp; \mathbf{A}(\mathbf{B}+\mathbf{C})&amp;=\mathbf{A}\mathbf{B}+\mathbf{A}\mathbf{C}\\
+k(\mathbf{A}+\mathbf{B}) &amp;= k\mathbf{A}+k\mathbf{B}
+\end{align}\]</span></p>
+<p>One important exception, however, is that <span class="math inline">\(\mathbf{A}\mathbf{B}\neq \mathbf{B}\mathbf{A}\)</span>; the order of matrix multiplication matters, and we must remember to, for instance, “left multiply” both sides of an equation by a matrix <span class="math inline">\(\mathbf{M}\)</span> to preserve equality.</p>
+</div>
+<div id="inner-and-outer-products" class="section level3 unnumbered hasAnchor">
+<h3>Inner and outer products<a href="basic-operations.html#inner-and-outer-products" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Suppose <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are two <span class="math inline">\(n \times 1\)</span> vectors. We can’t multiply them in the sense defined above, <span class="math inline">\(\mathbf{u}\mathbf{v}\)</span>, because the number of columns of <span class="math inline">\(\mathbf{u}\)</span>, 1, doesn’t match the number of rows of <span class="math inline">\(\mathbf{v}\)</span>, n. However, there are two ways in which vectors of the same dimension can be multiplied.</p>
+<p>The first is called the <em>inner product</em> (also, the “cross product”):</p>
+<p><span class="math display">\[\begin{align}
+\mathbf{u}^{\scriptstyle\top}\mathbf{v}&amp;= \sum_j u_j v_j \\
+\left[\begin{array}{rr}
+  3 &amp; 2
+  \end{array} \right]
+\left[\begin{array}{r}
+  2 \\
+  -1
+\end{array}\right] &amp;= 6 - 2 = 4.
+\end{align}\]</span></p>
+<p>Note that when we multiply matrices, the element <span class="math inline">\((\mathbf{A}\mathbf{B})_{ij}\)</span> is equal to the inner product of the ith row of <span class="math inline">\(\mathbf{A}\)</span> and the jth column of <span class="math inline">\(B\)</span>.</p>
+<p>The second way of multiplying two vectors is called the <em>outer product</em>:</p>
+<p><span class="math display">\[\begin{align}
+(\mathbf{u}\mathbf{v}^{\scriptstyle\top})_{ij} &amp;= u_i v_j \\
+\left[\begin{array}{r}
+  3 \\
+  2
+  \end{array} \right]
+\left[\begin{array}{rr}
+  2 &amp; -1
+\end{array}\right] &amp;=
+\left[\begin{array}{rr}
+  6 &amp; -3 \\
+  4 &amp; -2
+\end{array}\right]
+\end{align}\]</span></p>
+<p>Note that the inner product returns a scalar number, while the outer product returns an <span class="math inline">\(n \times n\)</span> matrix.</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="definitions-and-conventions.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="special-matrices.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["math-review.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"info": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

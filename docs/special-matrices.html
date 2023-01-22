@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.5 Integration | Math review for new biostatistics students</title>
-  <meta name="description" content="2.5 Integration | Math review for new biostatistics students" />
+  <title>3.3 Special matrices | Math review for new biostatistics students</title>
+  <meta name="description" content="3.3 Special matrices | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta property="og:title" content="3.3 Special matrices | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.5 Integration | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="3.3 Special matrices | Math review for new biostatistics students" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="optimization.html"/>
-<link rel="next" href="log-and-exp.html"/>
+<link rel="prev" href="basic-operations.html"/>
+<link rel="next" href="inversion-and-related-concepts.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -105,8 +105,49 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="integration" class="section level2 hasAnchor" number="2.5">
-<h2><span class="header-section-number">2.5</span> Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="special-matrices" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Special matrices<a href="special-matrices.html#special-matrices" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the special case where a matrix has the same numbers of rows and columns, it is said to be <em>square</em>. If <span class="math inline">\(\mathbf{A}^{\scriptstyle\top}=\mathbf{A}\)</span>, the matrix is said to be <em>symmetric</em>.</p>
+<p><span class="math display">\[ \text{Symmetric:}
+\left[ \begin{array}{rr}
+1 &amp; 2 \\
+2 &amp; -1
+\end{array} \right] \qquad \text{Not symmetric:} \left[ \begin{array}{rr}
+3 &amp; 2 \\
+0 &amp; -1
+\end{array} \right] \]</span></p>
+<p>Note that a matrix cannot be symmetric unless it is square.</p>
+<p>The elements <span class="math inline">\(A_{ii}\)</span> of a matrix are called its <em>diagonal entries</em>; a matrix for which <span class="math inline">\(A_{ij} = 0\)</span> for all <span class="math inline">\(i \neq j\)</span> is said to be a <em>diagonal matrix</em>:</p>
+<p><span class="math display">\[ \left[ \begin{array}{rrr}
+1 &amp; 0 &amp; 0 \\
+0 &amp; -1 &amp; 0 \\
+0 &amp; 0 &amp; 5
+\end{array} \right] \]</span></p>
+<p>Consider in particular the following diagonal matrix:</p>
+<p><span class="math display">\[ \mathbf{I}= \left[ \begin{array}{rrr}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{array} \right] \]</span></p>
+<p>Note that this matrix has the interesting property that <span class="math inline">\((\mathbf{A}\mathbf{I})\_{ij}=A_{ij}\)</span> for all <span class="math inline">\(i, \, j\)</span>; in other words, <span class="math inline">\(\mathbf{A}\mathbf{I}=\mathbf{I}\mathbf{A}=\mathbf{A}\)</span>. Because of this property, <span class="math inline">\(\mathbf{I}\)</span> is referred to as the <em>identity matrix</em>.</p>
+<p>Some other notations which are commonly used are <span class="math inline">\(\mathbf{1}\)</span>, the vector (or matrix) of 1s, and <span class="math inline">\(\mathbf{0}\)</span>, the vector (or matrix) of zeros:</p>
+<p><span class="math display">\[ \mathbf{1}= \left[ \begin{array}{rrr}
+1\
+1\
+1
+\end{array} \right] \qquad \mathbf{0}= \left[ \begin{array}{rrr}
+0\
+0\
+0
+\end{array} \right] \]</span></p>
+<p>The dimensions of these matrices is sometimes explicitly specified, as in <span class="math inline">\(\mathbf{0}_{2 \times 2}\)</span>, <span class="math inline">\(\mathbf{I}_{5 \times 5}\)</span>, or <span class="math inline">\(\mathbf{1}_{4 \times 1}\)</span>. Other times it is obvious from context what the dimensions must be.</p>
+<p>Finally, the vector <span class="math inline">\(\mathbf{e}_j\)</span> is also useful: it has element <span class="math inline">\(e_j=1\)</span> and <span class="math inline">\(e_k=0\)</span> for all other elements:</p>
+<p><span class="math display">\[ \mathbf{e}_2 = \left[ \begin{array}{rrr}
+0 \\
+1 \\
+0
+\end{array} \right]. \]</span></p>
+<p>This is useful for selecting a single element of a vector: <span class="math inline">\(\mathbf{u}^{\scriptstyle\top}\mathbf{e}_3 = u_3\)</span>.</p>
 
 </div>
             </section>
@@ -114,8 +155,8 @@
           </div>
         </div>
       </div>
-<a href="optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="log-and-exp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-operations.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="inversion-and-related-concepts.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
