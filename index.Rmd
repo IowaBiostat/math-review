@@ -18,25 +18,3 @@ In principle, any idea from math *could* come up and be helpful to a statisticia
 Finally, the focus here is really on the math -- as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you've taken statistics in the past and terms like "independent events" and "regression model" mean something to you, great. If not, however, don't worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.
 
 At present, this guide is very much a work in progress -- in places, not much more than an outline. However, our hope is to continue adding to it and making it more useful over the years. In particular, we realize that exercises and solutions would be very helpful, and we have not yet added any.
-
-$
-\newcommand{\A}{\mathbf{A}}
-\newcommand{\B}{\mathbf{B}}
-\newcommand{\C}{\mathbf{C}}
-\newcommand{\I}{\mathbf{I}}
-\newcommand{\M}{\mathbf{M}}
-\newcommand{\X}{\mathbf{X}}
-
-\newcommand{\e}{\mathbf{e}}
-\newcommand{\x}{\mathbf{x}}
-\renewcommand{\a}{\mathbf{a}}
-\renewcommand{\c}{\mathbf{c}}
-\renewcommand{\d}{\mathbf{d}}
-\renewcommand{\u}{\mathbf{u}}
-\renewcommand{\v}{\mathbf{v}}
-
-\newcommand{\Tr}{^{\scriptstyle\top}}
-\newcommand{\one}{\mathbf{1}}
-\newcommand{\zero}{\mathbf{0}}
-$
-

@@ -3,6 +3,7 @@ book_filename: math-review
 rmd_files:
   [
     "index.Rmd",
+    "commands.md",
 
     "calculus.md",
     "functions.md",
