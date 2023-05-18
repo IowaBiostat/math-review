@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>2.2 Limits and continuity | Math review for new biostatistics students</title>
   <meta name="description" content="2.2 Limits and continuity | Math review for new biostatistics students" />
-  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
   <meta property="og:title" content="2.2 Limits and continuity | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
@@ -54,6 +54,10 @@
 
 
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 </head>
 
@@ -88,6 +92,7 @@
 <li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
 <li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
 </ul></li>
+<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a></li>
 </ul>
 
       </nav>
@@ -107,7 +112,70 @@
             <section class="normal" id="section-">
 <div id="limits-and-continuity" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Limits and continuity<a href="limits-and-continuity.html#limits-and-continuity" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>NOTE: This chapter covers limits and continuity from a conceptual standpoint; for a fully rigorous definition, see the chapter on <a href="analysis.html">analysis</a>.</p>
+<div id="limits" class="section level3 unnumbered hasAnchor">
+<h3>Limits<a href="limits-and-continuity.html#limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Definition:</strong> We say that the <strong>limit</strong> of a <a href="function.html">function</a> <span class="math inline">\(f(x)\)</span>, as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(a\)</span>, is <span class="math inline">\(L\)</span> if we can make the values of <span class="math inline">\(f(x)\)</span> get as close as we want to <span class="math inline">\(L\)</span> by taking <span class="math inline">\(x\)</span> sufficiently close to <span class="math inline">\(a\)</span> (but not equal to a). Mathematically, we can express this idea as</p>
+<p><span class="math display">\[ \lim_{x \to a} f(x) = L. \]</span></p>
+<p>For example, if <span class="math inline">\(f(x)=x^2\)</span>, then it is the case that</p>
+<p><span class="math display">\[ \lim_{x \to \sqrt{5}} f(x) = 5. \]</span></p>
+<p>Suppose we set <span class="math inline">\(x\)</span> equal to 2.236 (this is close to <span class="math inline">\(\sqrt{5}\)</span> but not equal). Then <span class="math inline">\(f(x)=\)</span> 4.999696, which is close to 5. There is no value of <span class="math inline">\(x\)</span> other than <span class="math inline">\(\sqrt{5}\)</span> such that <span class="math inline">\(f(x)=5\)</span>, but we can get as close as we want by moving <span class="math inline">\(x\)</span> closer to <span class="math inline">\(\sqrt{5}\)</span>. For example, if 4.999696 isn’t close enough to satisfy us and someone demands that we be within 0.000000001 of 5, we can always accomplish that by simply moving <span class="math inline">\(x\)</span> closer to <span class="math inline">\(\sqrt{5}\)</span>.</p>
+<p><strong>Infinite limit:</strong> A variation on this idea is to say that the limit is infinite:</p>
+<p><span class="math display">\[ \lim_{x \to a} f(x) = \infty. \]</span></p>
+<p>This means that as <span class="math inline">\(x\)</span> gets closer to <span class="math inline">\(a\)</span>, <span class="math inline">\(f(x)\)</span> keeps getting bigger, with no bound. For example, we can make <span class="math inline">\(1/x^2\)</span> be as large as we want by moving <span class="math inline">\(x\)</span> closer to 0, so <span class="math inline">\(\lim_{x \to 0} 1/x^2 = \infty\)</span> (limits of <span class="math inline">\(-\infty\)</span> are defined similarly).</p>
+<p><strong>One-sided limit:</strong> Sometimes, different things happen if we approach <span class="math inline">\(a\)</span> from the left or right. We say that the <strong>left-hand limit</strong> of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x\)</span> approaches <span class="math inline">\(a\)</span> “from the left” is <span class="math inline">\(L\)</span> if <span class="math inline">\(f(x)\)</span> we can make the values of <span class="math inline">\(f(x)\)</span> as close to <span class="math inline">\(L\)</span> as we want by moving <span class="math inline">\(x\)</span> closer to <span class="math inline">\(a\)</span>, but only considering points such that <span class="math inline">\(x &lt; a\)</span>. We denote this by</p>
+<p><span class="math display">\[ \lim_{x \to a^-} f(x) = L. \]</span></p>
+<p>Right-hand limits are defined similarly. For example <span class="math inline">\(\lim_{x \to 0^-} 1/x = -\infty\)</span>, whereas <span class="math inline">\(\lim_{x \to 0^+} 1/x = \infty\)</span>.</p>
+<p>The limit of <span class="math inline">\(f(x)\)</span> as <span class="math inline">\(x \to a\)</span> is <span class="math inline">\(L\)</span> if and only both the left and the right-hand limits are also <span class="math inline">\(L\)</span>.</p>
+</div>
+<div id="calculating-limits" class="section level3 unnumbered hasAnchor">
+<h3>Calculating limits<a href="limits-and-continuity.html#calculating-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>Limit laws:</strong> The following laws are helpful for calculating limits. In what follows, let</p>
+<p><span class="math display">\[\begin{align}
+s &amp;= \lim_{x \to a} f(x) \\
+t &amp;= \lim_{x \to a} g(x);
+\end{align}\]</span></p>
+<p>it is critical that these limits exist, or none of the results below necessarily hold.</p>
+<p><span class="math display">\[\begin{align}
+\lim_{x \to a} \{f(x) + g(x)\} &amp;= s + t \\
+\lim_{x \to a} \{f(x) - g(x)\} &amp;= s - t \\
+\lim_{x \to a} \{cf(x) + g(x)\} &amp;= cs \text{ where $c$ is a constant} \\
+\lim_{x \to a} \{f(x) g(x)\} &amp;= st \\
+\lim_{x \to a} \frac{f(x)}{g(x)} &amp;= \frac{s}{t} \text{ if } t \ne 0 \\
+\lim_{x \to a} \{f(x)^n\} &amp;= s^n
+\end{align}\]</span></p>
+</div>
+<div id="continuity" class="section level3 unnumbered hasAnchor">
+<h3>Continuity<a href="limits-and-continuity.html#continuity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>You may have noticed that with limits, the value of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(a\)</span> is irrelevant. For example, if <span class="math inline">\(f(x)=x^2\)</span> everywhere except <span class="math inline">\(x=2\)</span>, where <span class="math inline">\(f(2) = -10\)</span>, it would still be the case that <span class="math inline">\(\lim_{x \to 2} f(x) = 2\)</span>. In fact, <span class="math inline">\(f(x)\)</span> wouldn’t even need to be <em>defined</em> at 2 for this to work. If we add the requirement that <span class="math inline">\(f(a)\)</span> has to equal its limit, we end up with continuity.</p>
+<p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is <strong>continuous at <span class="math inline">\(a\)</span></strong> if</p>
+<p><span class="math display">\[ \lim_{x \to a} f(x) = f(a). \]</span></p>
+<p>Note that this requires three things:</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(f(a)\)</span> is defined</li>
+<li><span class="math inline">\(\lim_{x \to a} f(x)\)</span> exists</li>
+<li>These two things are equal</li>
+</ol>
+<p>Expanding on this definition, we say that a function <span class="math inline">\(f\)</span> is <strong>continuous on an interval</strong> if <span class="math inline">\(f\)</span> is continuous at every number in the interval. We say that <span class="math inline">\(f\)</span> is <strong>continuous</strong> if <span class="math inline">\(f\)</span> is continuous at every point in its domain.</p>
+<p><strong>One-sided continuity:</strong> A function <span class="math inline">\(f\)</span> is <strong>continuous from the left at <span class="math inline">\(a\)</span></strong> if</p>
+<p><span class="math display">\[ \lim_{x \to a^-} f(x) = f(a). \]</span></p>
+<p>For example, consider the function</p>
+<p><span class="math display">\[ f(x) = \begin{cases}
+0 &amp; \text{ if } x &lt; 0 \\
+1 &amp; \text{ if } x \ge 0
+\end{cases} \]</span></p>
+<p>In this case, <span class="math inline">\(f(x)\)</span> is continuous from the right at 0, but not from the left at 0 (since <span class="math inline">\(\lim_{x \to 0^-}=0\)</span>, but <span class="math inline">\(f(0) = 1\)</span>).</p>
+<p><strong>Continuity laws:</strong> The property of continuity behaves similarly to the limit laws above. If <span class="math inline">\(f(x)\)</span> and <span class="math inline">\(g(x)\)</span> are continuous at <span class="math inline">\(a\)</span>, then the following functions are also continuous at <span class="math inline">\(a\)</span>:</p>
+<ul>
+<li><span class="math inline">\(f(x) + g(x)\)</span></li>
+<li><span class="math inline">\(f(x) - g(x)\)</span></li>
+<li><span class="math inline">\(c f(x)\)</span>, where <span class="math inline">\(c\)</span> is a constant</li>
+<li><span class="math inline">\(f(x) g(x)\)</span></li>
+<li><span class="math inline">\(f(x) / g(x)\)</span> if <span class="math inline">\(g(a) \ne 0\)</span></li>
+</ul>
+<p><strong>Composition:</strong> Finally, suppose that <span class="math inline">\(g\)</span> is continuous at <span class="math inline">\(a\)</span> and that <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(g(a)\)</span>. Then <span class="math inline">\(f(g(x))\)</span> is continuous at <span class="math inline">\(a\)</span>. In words, a continuous function of a continuous function is continuous. The function <span class="math inline">\(h(x) = f(g(x))\)</span> is known as the <em>composition</em> of <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span>.</p>
 
+</div>
 </div>
             </section>
 

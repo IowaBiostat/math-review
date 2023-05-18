@@ -22,4 +22,6 @@ rmd_files:
     "matrix-basic.md",
     "matrix-special.md",
     "matrix-inverse.md",
+
+    "analysis.md",
   ]
