@@ -1,10 +1,8 @@
 ## Limits and continuity
 
-NOTE: This chapter covers limits and continuity from a conceptual standpoint; for a fully rigorous definition, see the chapter on [analysis](analysis.html).
-
 ### Limits {-}
 
-**Definition:** We say that the **limit** of a [function](function.html) $f(x)$, as $x$ approaches $a$, is $L$ if we can make the values of $f(x)$ get as close as we want to $L$ by taking $x$ sufficiently close to $a$ (but not equal to a). Mathematically, we can express this idea as
+**Definition:** We say that the **limit** of a [function](function.html) $f(x)$, as $x$ approaches $a$, is $L$ if we can make the values of $f(x)$ get as close as we want to $L$ by taking $x$ sufficiently close to $a$ (but not equal to a)^[This section covers limits and continuity from a conceptual standpoint. For a variety of technical reasons, the definition given here isn't actually satisfactory, and a more rigorous definition is required; see the chapter on [analysis](analysis.html).]. Mathematically, we can express this idea as
 
 $$ \lim_{x \to a} f(x) = L. $$
 
@@ -13,6 +11,7 @@ For example, if $f(x)=x^2$, then it is the case that
 $$ \lim_{x \to \sqrt{5}} f(x) = 5. $$
 
 Suppose we set $x$ equal to 2.236 (this is close to $\sqrt{5}$ but not equal). Then $f(x)=$ `r 2.236^2`, which is close to 5. There is no value of $x$ other than $\sqrt{5}$ such that $f(x)=5$, but we can get as close as we want by moving $x$ closer to $\sqrt{5}$. For example, if `r 2.236^2` isn't close enough to satisfy us and someone demands that we be within 0.000000001 of 5, we can always accomplish that by simply moving $x$ closer to $\sqrt{5}$.
+
 
 **Infinite limit:** A variation on this idea is to say that the limit is infinite:
 

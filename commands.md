@@ -16,3 +16,6 @@
 \newcommand{\Tr}{^{\scriptstyle\top}}
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\zero}{\mathbf{0}}
+
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\bigabs}[1]{\left\lvert#1\right\rvert}
