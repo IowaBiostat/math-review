@@ -3,6 +3,7 @@ title: "Math review for new biostatistics students"
 author: "Patrick Breheny"
 site: bookdown::bookdown_site
 documentclass: book
+geometry: margin=1in
 ---
 
 # Introduction
@@ -17,6 +18,6 @@ In principle, any idea from math *could* come up and be helpful to a statisticia
 
 Finally, the focus here is really on the math -- as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you've taken statistics in the past and terms like "independent events" and "regression model" mean something to you, great. If not, however, don't worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.
 
-This guide is intended to be a concise review of the main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to review this section in your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, while we may add exercises and solutions in the future, there aren't any right now. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as [Schaum's Outline of Calclus](https://www.amzn.com/0071795537).
+To reiterate: this guide is intended to be a concise *review* of main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to read the corresponding section of your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, while we may add exercises and solutions in the future, there aren't any right now. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as [Schaum's Outline of Calclus](https://www.amzn.com/0071795537).
 
 Finally, if you spot any mistakes or typos, please [let me know](https://github.com/IowaBiostat/math-review/issues)!

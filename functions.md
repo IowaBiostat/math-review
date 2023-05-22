@@ -2,13 +2,13 @@
 
 The concept of a function is not difficult or foreign, but since it's the most important concept in all of mathematics, it's worth reviewing and knowing the formal definition.
 
-**Definition:** Given two sets, $A$ and $B$, a *function* (or *map*) is a rule that assigns, to each element in $A$, exactly one element from $B$. The set $A$ is called the *domain* of the function and the set $B$ is called the *range*.
+**Definition:** Given two sets, $A$ and $B$, a *function* (or *map*) is a rule that assigns, to each element in $A$, exactly one element from $B$. The set $A$ is called the *domain* of the function and the set $B$ is called the *range*. This is represented by the mathematical notation $f: A \to B$.
 
 ### Commentary {-}
 
 A few remarks on this definition and its implications:
 
-1. This is an *extremely* general definition. $A$ and $B$ could be single numbers, but they could collections of numbers...$A$ could consist of sets of 7 numbers and $B$ could consist of intervals, which are themselves infinite collections of numbers. Or $A$ and $B$ might not involve numbers at all. They can be *anything*. The only restriction is that given the same input $x \in A$, we always get the same output $f(x) \in B$.
+1. This is an *extremely* general definition. $A$ and $B$ could sets of numbers, but they could collections of numbers...$A$ could be a set numbers and $B$ could consist of intervals, with each interval being itself an infinite collection of numbers. Or $A$ and $B$ might not involve numbers at all. They can be *anything*. The only restriction is that given the same input $x \in A$, we always get the same output $f(x) \in B$.
 2. Sometimes domains are obvious from context and not explicitly specified, but it's an important part of the function. For example, consider the function $f(x) = \sqrt{x}$. This is not a function that works for all numbers -- in particular, it doesn't work for negative numbers. The domain, then, is the set of non-negative numbers $\{x:x \ge 0\}$. Functions don't have to be defined everywhere, they just need to work on their domain. As a footnote, we *could* extend the domain of the function to include negative numbers, but then the range would have to include complex numbers.
 3. Keep in mind that a function needs to be defined for *every* element in its domain. This can get complicated, especially if your function is the [integral](integration.html) of another function (as probability functions are). It's tempting to say, "The domain of my function is 'any set of numbers'. You enter a set, it returns a value." However, this is dangerous -- a devious troublemaker could say, "Oh? How about the set of [transcendental](https://en.wikipedia.org/wiki/Transcendental_number) numbers?" Do you really want to be responsible for defining the value of your function for such complicated sets? Sometimes you need to limit the domain to make defining the function easier. Keep this in mind when you encounter things like "sigma algebras", typically one of the most bewildering concepts to grasp for first-year students.
 
