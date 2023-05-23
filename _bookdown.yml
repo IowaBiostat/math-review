@@ -13,6 +13,7 @@ rmd_files:
     "integration.md",
     "log-exp.md",
     "techniques.md",
+    "improper-integrals.md",
     "sequence.md",
     "partial.md",
     "multi-int.md",

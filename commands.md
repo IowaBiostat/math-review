@@ -19,3 +19,4 @@
 
 \newcommand{\abs}[1]{\lvert#1\rvert}
 \newcommand{\bigabs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\dx}{\,dx}

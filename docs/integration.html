@@ -81,9 +81,10 @@
 <li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
 <li class="chapter" data-level="2.6" data-path="log-and-exp.html"><a href="log-and-exp.html"><i class="fa fa-check"></i><b>2.6</b> Log and exp</a></li>
 <li class="chapter" data-level="2.7" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.7</b> Integration techniques</a></li>
-<li class="chapter" data-level="2.8" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.8</b> Sequences and series</a></li>
-<li class="chapter" data-level="2.9" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.9</b> Partial derivatives</a></li>
-<li class="chapter" data-level="2.10" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.10</b> Multiple integrals</a></li>
+<li class="chapter" data-level="2.8" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.8</b> Improper integrals</a></li>
+<li class="chapter" data-level="2.9" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.9</b> Sequences and series</a></li>
+<li class="chapter" data-level="2.10" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.10</b> Partial derivatives</a></li>
+<li class="chapter" data-level="2.11" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.11</b> Multiple integrals</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="matrix-algebra.html"><a href="matrix-algebra.html"><i class="fa fa-check"></i><b>3</b> Matrix algebra</a>
 <ul>
@@ -112,7 +113,68 @@
             <section class="normal" id="section-">
 <div id="integration" class="section level2 hasAnchor" number="2.5">
 <h2><span class="header-section-number">2.5</span> Integration<a href="integration.html#integration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>There are two core questions with which calculus is concerned. One is <a href="derivatives.html">generalizing the idea of slope to nonlinear functions</a>. The other is how to calculate the total contribution of some entity, where the contribution at any given instant is given by a function. As with slopes, this is trivial if the function is linear and becomes much harder when the function is nonlinear. For example, if someone burns 700 calories/hr while exercising, and they exercise for half an hour, then they burn 350 calories. But what if their exercise intensity varies over time, with <span class="math inline">\(f(t)\)</span> describing the rate at time <span class="math inline">\(t\)</span> (in minutes)? In this case we would have to add the contributions:</p>
+<p><span class="math display">\[ f(0)\frac{1}{60} + f(1)\frac{1}{60} + \ldots. \]</span></p>
+<p>However, this still doesn’t really answer the question, as it assumes <span class="math inline">\(f(t)\)</span> is constant over the first minute, then allowed to change, then constant again for the next minute, and so on. We could get a more accurate answer by summing up these contributions at each second, and still more accurate by summing over each nanosecond, and so on. The <a href="limits-and-continuity.html">limit</a> of this process is known as the “integral”, which we define below.</p>
+<p><a href="calculus.html">As noted earlier</a>, this comes up constantly in statistics when calculating probabilities and expected values.</p>
+<div id="definition-1" class="section level3 unnumbered hasAnchor">
+<h3>Definition<a href="integration.html#definition-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Let the interval <span class="math inline">\([a, b]\)</span> be partitioned as follows:</p>
+<p><span class="math display">\[ a = x_0 &lt; x_1 &lt; x_2 &lt; \cdots &lt; x_n = b, \]</span></p>
+<p>let <span class="math inline">\(x_i^*\)</span> be any point in <span class="math inline">\([x_{i-1}, x_i]\)</span>, <span class="math inline">\(\Delta x_i = x_i - x_{i-1}\)</span>, and <span class="math inline">\(m = \max\{\Delta x_1, \Delta x_2, \ldots, \Delta x_n\}\)</span>. Then the <strong>integral of <span class="math inline">\(f\)</span> from <span class="math inline">\(a\)</span> to <span class="math inline">\(b\)</span></strong> is</p>
+<p><span class="math display">\[ \int_a^b f(x) \,dx= \lim_{m \to 0} \sum_{i=1}^n f(x_i^*) \Delta x_i \]</span></p>
+<p>if this limit exists. If the limit does exist, then <span class="math inline">\(f\)</span> is said to be <strong>integrable</strong> over <span class="math inline">\([a, b]\)</span>.</p>
+<p>Relating this definition to our example above, <span class="math inline">\(m\)</span> represents the time resolution and <span class="math inline">\(\lim_{m \to 0}\)</span> represents moving from minutes to seconds to nanoseconds and so on.</p>
+<p>The above definition assumes that <span class="math inline">\(a &lt; b\)</span>; if <span class="math inline">\(a &gt; b\)</span> the integral is defined as</p>
+<p><span class="math display">\[ \int_a^b f(x) \,dx= -\int_b^a f(x) \,dx. \]</span></p>
+<p>How can we know if a function is integrable?</p>
+<blockquote>
+<p>If <span class="math inline">\(f\)</span> is either continuous or monotonic on <span class="math inline">\([a, b]\)</span>, then <span class="math inline">\(f\)</span> is integrable on <span class="math inline">\([a, b]\)</span>.</p>
+</blockquote>
+<p>If <span class="math inline">\(f\)</span> is jumping up and down discontinuously, then anything can happen – <span class="math inline">\(f\)</span> may or may not be integrable, and we would need a deep dive into the theory of integration to really answer this question. Thankfully, as a first-year graduate student, you will only ever need to integrate continuous functions.</p>
+</div>
+<div id="properties-of-integrals" class="section level3 unnumbered hasAnchor">
+<h3>Properties of integrals<a href="integration.html#properties-of-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If all of the following integrals exist, then they obey these rules:</p>
+<p><span class="math display">\[\begin{align}
+\int_a^b c \,dx&amp;= c(b-a) \\
+\int_a^b c f(x) \,dx&amp;= c \int_a^b f(x) \,dx\\
+\int_a^b \bigl\{f(x) + g(x)\bigr\} \,dx&amp;= \int_a^b f(x) \,dx+ \int_a^b g(x) \,dx\\
+\int_a^b \bigl\{f(x) - g(x)\bigr\} \,dx&amp;= \int_a^b f(x) \,dx- \int_a^b g(x) \,dx\\
+\int_a^b f(x) \,dx&amp;= \int_a^c f(x) \,dx+ \int_c^b f(x) \,dx
+\end{align}\]</span></p>
+<p>If we further suppose that <span class="math inline">\(a &lt; b\)</span>, then we also have</p>
+<ul>
+<li>If <span class="math inline">\(f(x) \ge 0\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(\int_a^b f(x) \,dx\ge 0\)</span>.</li>
+<li>If <span class="math inline">\(f(x) \ge g(x)\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(\int_a^b f(x) \,dx\ge \int_a^b g(x) \,dx\)</span>.</li>
+<li>If <span class="math inline">\(m \le f(x) \le M\)</span> for all <span class="math inline">\(x\)</span>, then</li>
+</ul>
+<p><span class="math display">\[ m(b-a) \le \int_a^b f(x) \,dx\le M(b-a) \]</span></p>
+<ul>
+<li><span class="math inline">\(\Bigl\lvert \int_a^b f(x) \,dx\Bigr\rvert = \int_a^b \bigl\lvert f(x) \bigr\rvert \,dx\)</span></li>
+</ul>
+<p>Finally, if <span class="math inline">\(a = b\)</span>, then</p>
+<p><span class="math display">\[ \int_a^b f(x) \,dx= 0. \]</span></p>
+</div>
+<div id="fundamental-theorem-of-calculus" class="section level3 unnumbered hasAnchor">
+<h3>Fundamental theorem of calculus<a href="integration.html#fundamental-theorem-of-calculus" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Somewhat remarkably, the two branches of calculus (differentiation and integration) are closely related. This relationship is known as the <strong>fundamental theorem of calculus</strong>:</p>
+<blockquote>
+<p>If <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a, b]\)</span>, then</p>
+<p><span class="math display">\[ g(x) = \int_a^x f(t) \,dt \]</span></p>
+<p>is continuous and differentiable and <span class="math inline">\(g&#39;(x) = f(x)\)</span>.</p>
+</blockquote>
+<p>In other words, if we integrate a function, then differentiate the result, we get back to the original function. The same is true if we start with differentiation:</p>
+<blockquote>
+<p>If <span class="math inline">\(f\)</span> is continuous on <span class="math inline">\([a, b]\)</span>, then</p>
+<p><span class="math display">\[ \int_a^b f(x) \,dx= F(b) - F(a) \]</span></p>
+<p>where <span class="math inline">\(F\)</span> is any function that satisfies <span class="math inline">\(F&#39; = f\)</span>.</p>
+</blockquote>
+</div>
+<div id="antiderivatives" class="section level3 unnumbered hasAnchor">
+<h3>Antiderivatives<a href="integration.html#antiderivatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 
+</div>
 </div>
             </section>
 
