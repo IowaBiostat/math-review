@@ -20,7 +20,7 @@ Suppose we are interested in the probability of events $A_1, A_2, \ldots, A_n$. 
 
 $$ P(A_1) P(A_2) \cdots P(A_n) = \prod_{i=1}^n P(A_i) . $$
 
-However, it is almost *always* easier to deal with this kind of quantity after taking the [log](log-and-exp.html):
+However, it is almost *always* easier to deal with this kind of quantity after taking the [log](logarithms-and-exponentials.html):
 
 $$ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). $$
 
