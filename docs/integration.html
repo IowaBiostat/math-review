@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="optimization.html"/>
-<link rel="next" href="log-and-exp.html"/>
+<link rel="next" href="logarithms-and-exponentials.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -79,9 +79,9 @@
 <li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
 <li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
 <li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
-<li class="chapter" data-level="2.6" data-path="log-and-exp.html"><a href="log-and-exp.html"><i class="fa fa-check"></i><b>2.6</b> Log and exp</a></li>
-<li class="chapter" data-level="2.7" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.7</b> Integration techniques</a></li>
-<li class="chapter" data-level="2.8" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.8</b> Improper integrals</a></li>
+<li class="chapter" data-level="2.6" data-path="logarithms-and-exponentials.html"><a href="logarithms-and-exponentials.html"><i class="fa fa-check"></i><b>2.6</b> Logarithms and exponentials</a></li>
+<li class="chapter" data-level="2.7" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.7</b> Improper integrals</a></li>
+<li class="chapter" data-level="2.8" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.8</b> Integration techniques</a></li>
 <li class="chapter" data-level="2.9" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.9</b> Sequences and series</a></li>
 <li class="chapter" data-level="2.10" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.10</b> Partial derivatives</a></li>
 <li class="chapter" data-level="2.11" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.11</b> Multiple integrals</a></li>
@@ -170,11 +170,36 @@
 <p><span class="math display">\[ \int_a^b f(x) \,dx= F(b) - F(a) \]</span></p>
 <p>where <span class="math inline">\(F\)</span> is any function that satisfies <span class="math inline">\(F&#39; = f\)</span>.</p>
 </blockquote>
+<p>Functions satisfying <span class="math inline">\(F&#39; = f\)</span> are particularly important, and discussed below.</p>
 </div>
 <div id="antiderivatives" class="section level3 unnumbered hasAnchor">
 <h3>Antiderivatives<a href="integration.html#antiderivatives" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A function <span class="math inline">\(F\)</span> is called an <strong>antiderivative</strong> (or a <strong>primitive</strong>) of <span class="math inline">\(f\)</span> if <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. This can also be written</p>
+<p><span class="math display">\[ \int f(x) \,dx= F(x). \]</span></p>
+<p>This “equation” means the same thing, that <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. However, it is not truly an equation since there are an infinite number of functions <span class="math inline">\(F\)</span> that satisfy <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. For example, both of the following are correct:</p>
+<p><span class="math display">\[\begin{align}
+\int 2x \,dx&amp;= x^2 \\
+\int 2x \,dx&amp;= x^2 + 5. \\
+\end{align}\]</span></p>
+<p>This is potentially confusing because the left hand side is the same in each case, but the right hand side is different – hence the scare quotes around “equation”. Some people prefer to write</p>
+<p><span class="math display">\[ \int 2x \,dx= x^2 + C \]</span></p>
+<p>to emphasize this point. Whether you do this or not is up to you, but either way, it is critical to understand the distinction between <span class="math inline">\(\int_a^b f(x) \,dx\)</span> and <span class="math inline">\(\int f(x) \,dx\)</span>. The first quantity (with the integration limits) is a known as a <strong>definite integral</strong>, and it is a number. The second quantity (without the limits) is known as an <strong>indefinite integral</strong>, and it is <em>not</em> a number – it is a function (or more precisely, a collection of an infinite number of functions)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>.</p>
+<p>So what’s the point of antiderivatives/primitives/indefinite integrals? If we have one, we can easily calculate (definite) integrals. For example,</p>
+<p><span class="math display">\[\begin{align}
+\int_1^4 2x \,dx&amp;= F(4) - F(1) \\
+  &amp;= 4^2 - 1^2 \\
+  &amp;= 15.
+\end{align}\]</span></p>
+<p>Note that I get the same answer regardless of which antiderivative I use (i.e., it’s not important to find the collection of all antiderivates…any antiderivative is fine).</p>
+<p>In other words, we can integrate any function <span class="math inline">\(f\)</span> if can find an antiderivative of it. How do we find these antiderivatives? Unfortunately, this is often challenging and sometimes impossible. However, there are several <a href="integration-techniques.html">techniques for doing this, which will be discussed in a later section</a>.</p>
 
 </div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="4">
+<li id="fn4"><p>Students sometimes have a tendency to think of the indefinite integral as the “true” integral and the definite integral as an application of it. This is completely backwards. The indefinite integral is actually a statement about derivatives. We don’t even need to define the concept of an integral in order to say that <span class="math inline">\(\int 2x \,dx= x^2\)</span>. It is only once the integral has been defined and the fundamental theorem of calculus has been proven that indefinite integrals have any purpose. The “definite” integral defines the concept of the integral; the only reason we add the “definite” modifier to distinguish them from indefinite integrals.<a href="integration.html#fnref4" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
@@ -182,7 +207,7 @@
         </div>
       </div>
 <a href="optimization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="log-and-exp.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="logarithms-and-exponentials.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

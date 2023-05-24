@@ -76,5 +76,35 @@ In other words, if we integrate a function, then differentiate the result, we ge
 > 
 > where $F$ is any function that satisfies $F' = f$.
 
+Functions satisfying $F' = f$ are particularly important, and discussed below.
+
 ### Antiderivatives {-}
 
+A function $F$ is called an **antiderivative** (or a **primitive**) of $f$ if $F'(x) = f(x)$ for all $x$. This can also be written 
+
+$$ \int f(x) \dx = F(x). $$
+
+This "equation" means the same thing, that $F'(x) = f(x)$ for all $x$. However, it is not truly an equation since there are an infinite number of functions $F$ that satisfy $F'(x) = f(x)$ for all $x$. For example, both of the following are correct:
+
+\begin{align}
+\int 2x \dx &= x^2 \\
+\int 2x \dx &= x^2 + 5. \\
+\end{align}
+
+This is potentially confusing because the left hand side is the same in each case, but the right hand side is different -- hence the scare quotes around "equation". Some people prefer to write
+
+$$ \int 2x \dx = x^2 + C $$
+
+to emphasize this point. Whether you do this or not is up to you, but either way, it is critical to understand the distinction between $\int_a^b f(x) \dx$ and $\int f(x) \dx$. The first quantity (with the integration limits) is a known as a **definite integral**, and it is a number. The second quantity (without the limits) is known as an **indefinite integral**, and it is *not* a number -- it is a function (or more precisely, a collection of an infinite number of functions)^[Students sometimes have a tendency to think of the indefinite integral as the "true" integral and the definite integral as an application of it. This is completely backwards. The indefinite integral is actually a statement about derivatives. We don't even need to define the concept of an integral in order to say that $\int 2x \dx = x^2$. It is only once the integral has been defined and the fundamental theorem of calculus has been proven that indefinite integrals have any purpose. The "definite" integral defines the concept of the integral; the only reason we add the "definite" modifier to distinguish them from indefinite integrals.].
+
+So what's the point of antiderivatives/primitives/indefinite integrals? If we have one, we can easily calculate (definite) integrals. For example,
+
+\begin{align}
+\int_1^4 2x \dx &= F(4) - F(1) \\
+  &= 4^2 - 1^2 \\
+  &= 15.
+\end{align}
+
+Note that I get the same answer regardless of which antiderivative I use (i.e., it's not important to find the collection of all antiderivates...any antiderivative is fine).
+
+In other words, we can integrate any function $f$ if can find an antiderivative of it. How do we find these antiderivatives? Unfortunately, this is often challenging and sometimes impossible. However, there are several [techniques for doing this, which will be discussed in a later section](integration-techniques.html).

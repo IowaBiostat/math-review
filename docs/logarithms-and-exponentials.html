@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>3.1 Definitions and conventions | Math review for new biostatistics students</title>
-  <meta name="description" content="3.1 Definitions and conventions | Math review for new biostatistics students" />
+  <title>2.6 Logarithms and exponentials | Math review for new biostatistics students</title>
+  <meta name="description" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="3.1 Definitions and conventions | Math review for new biostatistics students" />
+  <meta property="og:title" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3.1 Definitions and conventions | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="matrix-algebra.html"/>
-<link rel="next" href="basic-operations.html"/>
+<link rel="prev" href="integration.html"/>
+<link rel="next" href="improper-integrals.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -111,32 +111,100 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="definitions-and-conventions" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Definitions and conventions<a href="definitions-and-conventions.html#definitions-and-conventions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A <em>matrix</em> is a collection of numbers arranged in a rectangular array of <em>rows</em> and <em>columns</em>, such as</p>
-<p><span class="math display">\[ \left[ \begin{array}{rr}
-3 &amp; 2 \\
-4 &amp; -1 \\
--1 &amp; 2
-\end{array} \right] \]</span></p>
-<p>A matrix with <span class="math inline">\(r\)</span> rows and <span class="math inline">\(c\)</span> columns is said to be an <span class="math inline">\(r \times c\)</span> matrix (e.g., the matrix above is a <span class="math inline">\(3 \times 2\)</span> matrix).</p>
-<p>In the case where a matrix has just a single row or column, it is said to be a <em>vector</em>, such as</p>
-<p><span class="math display">\[ \left[ \begin{array}{r}
-3 \\
--1
-\end{array} \right] \]</span></p>
-<p>Conventionally, vectors and matrices are denoted in lower- and upper-case boldface, respectively (e.g., <span class="math inline">\(x\)</span> is a scalar, <span class="math inline">\(\mathbf{x}\)</span> is a vector, and <span class="math inline">\(\mathbf{X}\)</span> is a matrix). In addition, vectors are taken to be <em>column vectors</em> – i.e., a vector of <span class="math inline">\(n\)</span> numbers is an <span class="math inline">\(n \times 1\)</span> matrix, not a <span class="math inline">\(1 \times n\)</span> matrix.</p>
-<p>The <span class="math inline">\(ij\)</span>th element of a matrix <span class="math inline">\(\mathbf{M}\)</span> is denoted by <span class="math inline">\(M_{ij}\)</span> or <span class="math inline">\((\mathbf{M})_{ij}\)</span>.</p>
-<p>For example, letting <span class="math inline">\(\mathbf{M}\)</span> denote the above matrix, <span class="math inline">\(M_{11}=3\)</span>, <span class="math inline">\((\mathbf{M})_{32}=2\)</span>, and so on. Similarly, the <span class="math inline">\(j\)</span>th element of a vector <span class="math inline">\(\mathbf{v}\)</span> is denoted <span class="math inline">\(v_j\)</span>; e.g., letting <span class="math inline">\(\mathbf{v}\)</span> denote the above vector, <span class="math inline">\(v_1 = 3\)</span>.</p>
+<div id="logarithms-and-exponentials" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Logarithms and exponentials<a href="logarithms-and-exponentials.html#logarithms-and-exponentials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="exponential-definition" class="section level3 unnumbered hasAnchor">
+<h3>Exponential definition<a href="logarithms-and-exponentials.html#exponential-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The exponential function <span class="math inline">\(a^x\)</span> actually has a pretty complicated definition…you don’t really need to know the definition but it feels like an omission not to include it:</p>
+<ol style="list-style-type: decimal">
+<li>If <span class="math inline">\(x\)</span> is a positive integer <span class="math inline">\(n\)</span>, then <span class="math inline">\(a^n = a \cdot a \cdots a \quad (n\)</span> times)</li>
+<li>If <span class="math inline">\(x=0\)</span>, then <span class="math inline">\(a^0 = 1\)</span></li>
+<li>If <span class="math inline">\(x\)</span> is a negative integer, then <span class="math inline">\(a^{-n} = \frac{1}{a^n}\)</span></li>
+<li>If <span class="math inline">\(x\)</span> is a rational number <span class="math inline">\(p/q\)</span>, with <span class="math inline">\(q&gt;0\)</span>, then <span class="math inline">\(a^{p/q} = \sqrt[q]{a^p}\)</span></li>
+<li>If <span class="math inline">\(x\)</span> is an irrational number, then it’s defined as the limit of <span class="math inline">\(a^r\)</span>, where <span class="math inline">\(r\)</span> is a <a href="sequences-and-series.html">sequence</a> of rational numbers whose <a href="limits-and-continuity.html">limit</a> is <span class="math inline">\(x\)</span>.</li>
+</ol>
+</div>
+<div id="exponential-rules" class="section level3 unnumbered hasAnchor">
+<h3>Exponential rules<a href="logarithms-and-exponentials.html#exponential-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align}
+a^{x+y} &amp;= a^x a^y \\
+a^{x-y} &amp;= \frac{a^x}{a^y} \\
+(a^x)^y &amp;= a^{xy} \\
+(ab)^x &amp;= a^x b^x
+\end{align}\]</span></p>
+</div>
+<div id="exponential-limits" class="section level3 unnumbered hasAnchor">
+<h3>Exponential limits<a href="logarithms-and-exponentials.html#exponential-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align}
+\lim_{x \to \infty} a^x &amp;= \infty \quad \text{if } a &gt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= 0 \quad \text{if } a &gt; 1 \\
+\lim_{x \to \infty} a^x &amp;= 0 \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{x \to -\infty} a^x &amp;= \infty \quad \text{if } 0 &lt; a &lt; 1 \\
+\lim_{h \to 0} \frac{e^h - 1}{h} &amp;= 1 \\
+\lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n &amp;= e
+\end{align}\]</span></p>
+</div>
+<div id="exponential-derivatives-and-integrals" class="section level3 unnumbered hasAnchor">
+<h3>Exponential derivatives and integrals<a href="logarithms-and-exponentials.html#exponential-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align}
+\frac{d}{dx} e^x &amp;= e^x \\
+\frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
+\int e^x \, dx &amp;= e^x \\
+\frac{d}{dx} a^x &amp;= a^x \log(a) \\
+\int a^x \, dx &amp;= \frac{a^x}{\log a} \quad (a \ne 1)
+\end{align}\]</span></p>
+<p>Note that the last two results use the logarithmic function, which we haven’t actually introduced yet (see below).</p>
+</div>
+<div id="logarithm-definition" class="section level3 unnumbered hasAnchor">
+<h3>Logarithm definition<a href="logarithms-and-exponentials.html#logarithm-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The logarithmic function with base <span class="math inline">\(a\)</span> is defined as the function satisfying</p>
+<p><span class="math display">\[ \log_a x = y \iff a^y = x \]</span></p>
+<p>If we leave off the base, it is assumed to be base <span class="math inline">\(e\)</span>, the “natural logarithm”:</p>
+<p><span class="math display">\[ \log x = \log_e x \]</span></p>
+<p>in other words,</p>
+<p><span class="math display">\[ \log x = y \iff e^y = x; \]</span></p>
+<p>the notation <span class="math inline">\(\ln x\)</span> can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is <strong>not</strong> one of those disciplines. Note that</p>
+<p><span class="math display">\[\begin{align}
+\log(e^x) &amp;= x \\
+e^{\log x} &amp;= x \\
+\log e &amp;= 1.
+\end{align}\]</span></p>
+</div>
+<div id="logarithm-rules" class="section level3 unnumbered hasAnchor">
+<h3>Logarithm rules<a href="logarithms-and-exponentials.html#logarithm-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align}
+\log_a(xy) &amp;= \log_a x + \log_a y \\
+\log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
+\log_a (x^y) &amp;= y \log_a x \\
+\log_a x &amp;= \frac{\log x}{\log a}
+\end{align}\]</span></p>
+</div>
+<div id="logarithm-limits" class="section level3 unnumbered hasAnchor">
+<h3>Logarithm limits<a href="logarithms-and-exponentials.html#logarithm-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If <span class="math inline">\(a &gt; 1\)</span>, then</p>
+<p><span class="math display">\[\begin{align}
+\lim_{x \to \infty} \log_a x = \infty \\
+\lim_{x \to 0^+} \log_a x = -\infty \\
+\end{align}\]</span></p>
+</div>
+<div id="logarithm-derivatives-and-integrals" class="section level3 unnumbered hasAnchor">
+<h3>Logarithm derivatives and integrals<a href="logarithms-and-exponentials.html#logarithm-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><span class="math display">\[\begin{align}
+\frac{d}{dx} \log x &amp;= x^{-1} \\
+\frac{d}{dx} \log u &amp;= u^{-1} \frac{du}{dx} \\
+\int \frac{1}{x} \, dx &amp;= \log|x| \\
+\frac{d}{dx} \log_a x &amp;= \frac{1}{x \log a}
+\end{align}\]</span></p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="matrix-algebra.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="basic-operations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="integration.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="improper-integrals.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

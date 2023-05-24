@@ -1,7 +1,9 @@
 ## Integration techniques
 
-Substitution + Jacobian
+[Table of integrals](https://www.integral-table.com/)
 
-Integration by parts
+### Substitution {-}
 
-Kernel trick
+### Integration by parts {-}
+
+### Kernel trick {-}

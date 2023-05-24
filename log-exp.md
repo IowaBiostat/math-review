@@ -1,8 +1,8 @@
-## Log and exp
+## Logarithms and exponentials
 
-### Exp definition {-}
+### Exponential definition {-}
 
-The exponential function $a^x$ actually has a pretty complicated definition:
+The exponential function $a^x$ actually has a pretty complicated definition...you don't really need to know the definition but it feels like an omission not to include it:
 
 1. If $x$ is a positive integer $n$, then $a^n = a \cdot a \cdots a \quad (n$ times)
 2. If $x=0$, then $a^0 = 1$
@@ -10,7 +10,7 @@ The exponential function $a^x$ actually has a pretty complicated definition:
 4. If $x$ is a rational number $p/q$, with $q>0$, then $a^{p/q} = \sqrt[q]{a^p}$
 5. If $x$ is an irrational number, then it's defined as the limit of $a^r$, where $r$ is a [sequence](sequences-and-series.html) of rational numbers whose [limit](limits-and-continuity.html) is $x$.
 
-### Exp rules {-}
+### Exponential rules {-}
 
 \begin{align}
 a^{x+y} &= a^x a^y \\
@@ -19,7 +19,7 @@ a^{x-y} &= \frac{a^x}{a^y} \\
 (ab)^x &= a^x b^x
 \end{align}
 
-### Exp limits {-}
+### Exponential limits {-}
 
 \begin{align}
 \lim_{x \to \infty} a^x &= \infty \quad \text{if } a > 1 \\
@@ -30,7 +30,7 @@ a^{x-y} &= \frac{a^x}{a^y} \\
 \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n &= e
 \end{align}
 
-### Exp derivatives and integrals {-}
+### Exponential derivatives and integrals {-}
 
 \begin{align}
 \frac{d}{dx} e^x &= e^x \\
@@ -42,7 +42,7 @@ a^{x-y} &= \frac{a^x}{a^y} \\
 
 Note that the last two results use the logarithmic function, which we haven't actually introduced yet (see below).
 
-### Log definition {-}
+### Logarithm definition {-}
 
 The logarithmic function with base $a$ is defined as the function satisfying
 
@@ -64,7 +64,7 @@ e^{\log x} &= x \\
 \log e &= 1.
 \end{align}
 
-### Log rules {-}
+### Logarithm rules {-}
 
 \begin{align}
 \log_a(xy) &= \log_a x + \log_a y \\
@@ -73,7 +73,7 @@ e^{\log x} &= x \\
 \log_a x &= \frac{\log x}{\log a}
 \end{align}
 
-### Log limits {-}
+### Logarithm limits {-}
 
 If $a > 1$, then
 
@@ -82,7 +82,7 @@ If $a > 1$, then
 \lim_{x \to 0^+} \log_a x = -\infty \\
 \end{align}
 
-### Log derivatives and integrals {-}
+### Logarithm derivatives and integrals {-}
 
 \begin{align}
 \frac{d}{dx} \log x &= x^{-1} \\
