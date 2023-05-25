@@ -1,14 +1,16 @@
-## Logarithms and exponentials
+## Logarithm and exponential
 
 ### Exponential definition {-}
 
-The exponential function $a^x$ actually has a pretty complicated definition...you don't really need to know the definition but it feels like an omission not to include it:
+The exponential function is $f(x) = a^x$; the *base* $a$ must be a positive real number but the *exponent* $x$ can be any real number. The precise definition doesn't come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is [continuous](limits-and-continuity.html#continuity)):
 
 1. If $x$ is a positive integer $n$, then $a^n = a \cdot a \cdots a \quad (n$ times)
 2. If $x=0$, then $a^0 = 1$
 3. If $x$ is a negative integer, then $a^{-n} = \frac{1}{a^n}$
 4. If $x$ is a rational number $p/q$, with $q>0$, then $a^{p/q} = \sqrt[q]{a^p}$
 5. If $x$ is an irrational number, then it's defined as the limit of $a^r$, where $r$ is a [sequence](sequences-and-series.html) of rational numbers whose [limit](limits-and-continuity.html) is $x$.
+
+Note that we would run into trouble at step 4 if we tried to allow negative bases.
 
 ### Exponential rules {-}
 

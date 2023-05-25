@@ -20,10 +20,10 @@ Suppose we are interested in the probability of events $A_1, A_2, \ldots, A_n$. 
 
 $$ P(A_1) P(A_2) \cdots P(A_n) = \prod_{i=1}^n P(A_i) . $$
 
-However, it is almost *always* easier to deal with this kind of quantity after taking the [log](logarithms-and-exponentials.html):
+However, it is almost *always* easier to deal with this kind of quantity after taking the [log](logarithm-and-exponential.html#logarithm-definition):
 
 $$ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). $$
 
 To see why, go ahead and multiply a bunch of probabilities together and see how useful the result is to work with. The same trick can be used with dependent terms as well, although the results are messier.
 
-It is hard to overstate how often you will do this. This isn't some occasional trick -- this is standard operating procedure, so it is critical that you know the properties of [exponents and logs](log-and-exp.html) extremely well.
+It is hard to overstate how often you will do this. This isn't some occasional trick -- this is standard operating procedure, so it is critical that you know the properties of [exponents and logs](logarithm-and-exponential.html) extremely well.

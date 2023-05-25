@@ -32,7 +32,7 @@ These basic rules can be combined into all sorts of additional rules with the *c
 
 $$ \frac{df}{dx} = \frac{df}{dg} \frac{dg}{dx}. $$
 
-The section on [logarthims and exponentals](logarithms-and-exponentials.html) provides additional important differentiation formulas.
+The section on [logarthim and exponential](logarithm-and-exponential.html) functions provides additional important differentiation formulas.
 
 ### Higher derivatives {-}
 

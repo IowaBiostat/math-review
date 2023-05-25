@@ -79,7 +79,7 @@
 <li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
 <li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
 <li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
-<li class="chapter" data-level="2.6" data-path="logarithms-and-exponentials.html"><a href="logarithms-and-exponentials.html"><i class="fa fa-check"></i><b>2.6</b> Logarithms and exponentials</a></li>
+<li class="chapter" data-level="2.6" data-path="logarithm-and-exponential.html"><a href="logarithm-and-exponential.html"><i class="fa fa-check"></i><b>2.6</b> Logarithm and exponential</a></li>
 <li class="chapter" data-level="2.7" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.7</b> Improper integrals</a></li>
 <li class="chapter" data-level="2.8" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.8</b> Integration techniques</a></li>
 <li class="chapter" data-level="2.9" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.9</b> Sequences and series</a></li>
@@ -113,12 +113,50 @@
             <section class="normal" id="section-">
 <div id="integration-techniques" class="section level2 hasAnchor" number="2.8">
 <h2><span class="header-section-number">2.8</span> Integration techniques<a href="integration-techniques.html#integration-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="https://www.integral-table.com/">Table of integrals</a></p>
+<p><a href="integration.html#fundamental-theorem-of-calculus">Every time we compute a derivative, we get a formula for integration</a>. For example,</p>
+<p><span class="math display">\[ f(x) = \log(x^2 + 2) \implies f&#39;(x) = \frac{2x}{x^2 + 2}. \]</span></p>
+<p>This is great news if we are ever faced with the problem of calculating</p>
+<p><span class="math display">\[ \int_a^b \frac{2x}{x^2 + 2} \,dx, \]</span></p>
+<p>but if we need to calculate <span class="math inline">\(\int_a^b f(x) \,dx\)</span>, how can we reverse engineer a function <span class="math inline">\(F(x)\)</span> so that its derivative is <span class="math inline">\(f(x)\)</span>?</p>
+<p>Unfortunately, this task is sometimes easy, sometimes hard, and sometimes impossible (and you have no way of knowing in advance which situation you are in). One could create a huge table of integral formulas by taking derivatives of various things. Providing such a table is beyond the scope of this review, but <a href="https://www.integral-table.com/">such tables exist online</a> and are useful resources to be aware of.</p>
+<p>Even with such a table, however, there are a few useful integration techniques to be familiar with. Among other things, (a) it may be faster to use one of these techniques than looking up an integral (b) you might not have access to such a table at the moment, and (c) the form that appears in the table might be slightly different than what you need, and you might have to use one of these techniques in combination with the table to compute the integral.</p>
 <div id="substitution" class="section level3 unnumbered hasAnchor">
 <h3>Substitution<a href="integration-techniques.html#substitution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>By far the most important technique to be aware of is substitution. For example, <a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals">we know that</a> <span class="math inline">\(\int e^x \,dx= e^x\)</span>, but what if we have to find <span class="math inline">\(\int e^{2x} \,dx\)</span>? Is it <span class="math inline">\(e^{2x}\)</span>? The answer (and this is extremely important to understand, because it comes up in statistics all the time) is that no, it isn’t. We can check this easily using the <a href="derivatives.html#formulas">chain rule</a>: the derivative of <span class="math inline">\(e^{2x}\)</span> is <span class="math inline">\(2e^{2x}\)</span>, so <span class="math inline">\(\int e^{2x} \,dx\ne e^{2x}\)</span>.</p>
+<p>In this case, it’s also fairly clear what we need to do in order to fix the problem: <span class="math inline">\(\int e^{2x} \,dx\)</span> must be <span class="math inline">\(\tfrac{1}{2}e^{2x}\)</span>: there must be a 1/2 present to cancel the 2 that comes from the chain rule.</p>
+<p>Conceptually, letting <span class="math inline">\(u=2x\)</span>, we can visualize what’s going on here as follows. Each unit of <span class="math inline">\(u\)</span> covers twice as much ground as a unit of <span class="math inline">\(x\)</span>. If we don’t do something to correct for this, we’re going to artificially inflate the area under the curve integral (i.e., the integral). This is what’s going on in the red region below, which clearly has greater area than the blue region (the integral we’re trying to calculate).</p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>However, if we compensate for this – we’re stretching <span class="math inline">\(x\)</span> out by a factor of 2, so we need to shrink the value of the function by a factor of 2 to preserve the correct area – we get the green region, which has the same area as the original blue region.</p>
+<p>To formalize this thinking into a procedure, if <span class="math inline">\(u=g(x)\)</span>, then (this works for any differentiable function <span class="math inline">\(g\)</span>)</p>
+<ol style="list-style-type: decimal">
+<li><span class="math inline">\(du = g&#39;(x) \,dx\)</span></li>
+<li>Substitute <span class="math inline">\(u\)</span> for <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(1/g&#39;(x) \,du\)</span> for <span class="math inline">\(dx\)</span></li>
+<li>Take the integral</li>
+<li>Substitute <span class="math inline">\(g(x)\)</span> back for <span class="math inline">\(u\)</span></li>
+</ol>
+<p>If we are calculating a definite integral, then instead of step 4, we can transform the limits of integration <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> to <span class="math inline">\(g(a)\)</span> and <span class="math inline">\(g(b)\)</span>; this is usually preferable.</p>
+<p>As practice, use this procedure to calculate</p>
+<p><span class="math display">\[ \int x (x^2 - 1)^5 \,dx. \]</span></p>
+<p>You should get <span class="math inline">\(\tfrac{1}{12} (x^2 - 1)^6\)</span>.</p>
 </div>
 <div id="integration-by-parts" class="section level3 unnumbered hasAnchor">
 <h3>Integration by parts<a href="integration-techniques.html#integration-by-parts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Just as the chain rule gave us substitution, the <a href="derivatives.html#formulas">product rule</a> gives us a formula called integration by parts, which is usually written in the form:</p>
+<p><span class="math display">\[ \int u \,dv = uv - \int v \,du. \]</span></p>
+<p>As an example of integration by parts in action, suppose we want to integrate <span class="math inline">\(\int \log x \,dx\)</span>. We can write this as</p>
+<p><span class="math display">\[\begin{align}
+u &amp;= \log x &amp;\qquad dv &amp;= dx \\
+du &amp;= \frac{1}{x} \,dx&amp;\qquad v &amp;= x
+\end{align}\]</span></p>
+<p>Thus,</p>
+<p><span class="math display">\[\begin{align}
+\int \log x \,dx&amp;= x \log x - \int x \frac{dx}{x} \\
+  &amp;= x \log x - \int \,dx\\
+  &amp;= x \log x - x
+\end{align}\]</span></p>
+<p>As practice, use this procedure to calculate</p>
+<p><span class="math display">\[ \int x e^x \,dx. \]</span></p>
+<p>You should get <span class="math inline">\(x e^x - e^x\)</span>.</p>
 </div>
 <div id="kernel-trick" class="section level3 unnumbered hasAnchor">
 <h3>Kernel trick<a href="integration-techniques.html#kernel-trick" class="anchor-section" aria-label="Anchor link to header"></a></h3>

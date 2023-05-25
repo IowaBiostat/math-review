@@ -12,7 +12,7 @@ For example,
 
 $$ \int_0^b e^{-x} \dx = 1 - e^{-b}; $$
 
-(if you don't follow this derivation, see [here](logarithms-and-exponentials.html#exponential-derivatives-and-integrals) and [here](integration-techniques#substitution)). Since $\lim_{b \to \infty} e^{-b} = 0$ (see [here](logarithms-and-exponentials.html#exponential-limits)), we have
+(if you don't follow this derivation, see [here](logarithm-and-exponential.html#exponential-derivatives-and-integrals) and [here](integration-techniques#substitution)). Since $\lim_{b \to \infty} e^{-b} = 0$ (see [here](logarithm-and-exponential.html#exponential-limits)), we have
 
 $$ \int_0^\infty e^{-x} \dx = 1. $$
 

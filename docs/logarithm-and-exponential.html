@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.6 Logarithms and exponentials | Math review for new biostatistics students</title>
-  <meta name="description" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
+  <title>2.6 Logarithm and exponential | Math review for new biostatistics students</title>
+  <meta name="description" content="2.6 Logarithm and exponential | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
+  <meta property="og:title" content="2.6 Logarithm and exponential | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.6 Logarithms and exponentials | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="2.6 Logarithm and exponential | Math review for new biostatistics students" />
   
   
   
@@ -79,7 +79,7 @@
 <li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
 <li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
 <li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
-<li class="chapter" data-level="2.6" data-path="logarithms-and-exponentials.html"><a href="logarithms-and-exponentials.html"><i class="fa fa-check"></i><b>2.6</b> Logarithms and exponentials</a></li>
+<li class="chapter" data-level="2.6" data-path="logarithm-and-exponential.html"><a href="logarithm-and-exponential.html"><i class="fa fa-check"></i><b>2.6</b> Logarithm and exponential</a></li>
 <li class="chapter" data-level="2.7" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.7</b> Improper integrals</a></li>
 <li class="chapter" data-level="2.8" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.8</b> Integration techniques</a></li>
 <li class="chapter" data-level="2.9" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.9</b> Sequences and series</a></li>
@@ -111,11 +111,11 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="logarithms-and-exponentials" class="section level2 hasAnchor" number="2.6">
-<h2><span class="header-section-number">2.6</span> Logarithms and exponentials<a href="logarithms-and-exponentials.html#logarithms-and-exponentials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="logarithm-and-exponential" class="section level2 hasAnchor" number="2.6">
+<h2><span class="header-section-number">2.6</span> Logarithm and exponential<a href="logarithm-and-exponential.html#logarithm-and-exponential" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="exponential-definition" class="section level3 unnumbered hasAnchor">
-<h3>Exponential definition<a href="logarithms-and-exponentials.html#exponential-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The exponential function <span class="math inline">\(a^x\)</span> actually has a pretty complicated definition…you don’t really need to know the definition but it feels like an omission not to include it:</p>
+<h3>Exponential definition<a href="logarithm-and-exponential.html#exponential-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The exponential function is <span class="math inline">\(f(x) = a^x\)</span>; the <em>base</em> <span class="math inline">\(a\)</span> must be a positive real number but the <em>exponent</em> <span class="math inline">\(x\)</span> can be any real number. The precise definition doesn’t come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is <a href="limits-and-continuity.html#continuity">continuous</a>):</p>
 <ol style="list-style-type: decimal">
 <li>If <span class="math inline">\(x\)</span> is a positive integer <span class="math inline">\(n\)</span>, then <span class="math inline">\(a^n = a \cdot a \cdots a \quad (n\)</span> times)</li>
 <li>If <span class="math inline">\(x=0\)</span>, then <span class="math inline">\(a^0 = 1\)</span></li>
@@ -123,9 +123,10 @@
 <li>If <span class="math inline">\(x\)</span> is a rational number <span class="math inline">\(p/q\)</span>, with <span class="math inline">\(q&gt;0\)</span>, then <span class="math inline">\(a^{p/q} = \sqrt[q]{a^p}\)</span></li>
 <li>If <span class="math inline">\(x\)</span> is an irrational number, then it’s defined as the limit of <span class="math inline">\(a^r\)</span>, where <span class="math inline">\(r\)</span> is a <a href="sequences-and-series.html">sequence</a> of rational numbers whose <a href="limits-and-continuity.html">limit</a> is <span class="math inline">\(x\)</span>.</li>
 </ol>
+<p>Note that we would run into trouble at step 4 if we tried to allow negative bases.</p>
 </div>
 <div id="exponential-rules" class="section level3 unnumbered hasAnchor">
-<h3>Exponential rules<a href="logarithms-and-exponentials.html#exponential-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Exponential rules<a href="logarithm-and-exponential.html#exponential-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[\begin{align}
 a^{x+y} &amp;= a^x a^y \\
 a^{x-y} &amp;= \frac{a^x}{a^y} \\
@@ -134,7 +135,7 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \end{align}\]</span></p>
 </div>
 <div id="exponential-limits" class="section level3 unnumbered hasAnchor">
-<h3>Exponential limits<a href="logarithms-and-exponentials.html#exponential-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Exponential limits<a href="logarithm-and-exponential.html#exponential-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[\begin{align}
 \lim_{x \to \infty} a^x &amp;= \infty \quad \text{if } a &gt; 1 \\
 \lim_{x \to -\infty} a^x &amp;= 0 \quad \text{if } a &gt; 1 \\
@@ -145,7 +146,7 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 \end{align}\]</span></p>
 </div>
 <div id="exponential-derivatives-and-integrals" class="section level3 unnumbered hasAnchor">
-<h3>Exponential derivatives and integrals<a href="logarithms-and-exponentials.html#exponential-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Exponential derivatives and integrals<a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[\begin{align}
 \frac{d}{dx} e^x &amp;= e^x \\
 \frac{d}{dx} e^u &amp;= e^x \frac{du}{dx} \\
@@ -156,7 +157,7 @@ a^{x-y} &amp;= \frac{a^x}{a^y} \\
 <p>Note that the last two results use the logarithmic function, which we haven’t actually introduced yet (see below).</p>
 </div>
 <div id="logarithm-definition" class="section level3 unnumbered hasAnchor">
-<h3>Logarithm definition<a href="logarithms-and-exponentials.html#logarithm-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Logarithm definition<a href="logarithm-and-exponential.html#logarithm-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The logarithmic function with base <span class="math inline">\(a\)</span> is defined as the function satisfying</p>
 <p><span class="math display">\[ \log_a x = y \iff a^y = x \]</span></p>
 <p>If we leave off the base, it is assumed to be base <span class="math inline">\(e\)</span>, the “natural logarithm”:</p>
@@ -171,7 +172,7 @@ e^{\log x} &amp;= x \\
 \end{align}\]</span></p>
 </div>
 <div id="logarithm-rules" class="section level3 unnumbered hasAnchor">
-<h3>Logarithm rules<a href="logarithms-and-exponentials.html#logarithm-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Logarithm rules<a href="logarithm-and-exponential.html#logarithm-rules" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[\begin{align}
 \log_a(xy) &amp;= \log_a x + \log_a y \\
 \log_a \frac{x}{y} &amp;= \log_a x - \log_a y \\
@@ -180,7 +181,7 @@ e^{\log x} &amp;= x \\
 \end{align}\]</span></p>
 </div>
 <div id="logarithm-limits" class="section level3 unnumbered hasAnchor">
-<h3>Logarithm limits<a href="logarithms-and-exponentials.html#logarithm-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Logarithm limits<a href="logarithm-and-exponential.html#logarithm-limits" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If <span class="math inline">\(a &gt; 1\)</span>, then</p>
 <p><span class="math display">\[\begin{align}
 \lim_{x \to \infty} \log_a x = \infty \\
@@ -188,7 +189,7 @@ e^{\log x} &amp;= x \\
 \end{align}\]</span></p>
 </div>
 <div id="logarithm-derivatives-and-integrals" class="section level3 unnumbered hasAnchor">
-<h3>Logarithm derivatives and integrals<a href="logarithms-and-exponentials.html#logarithm-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<h3>Logarithm derivatives and integrals<a href="logarithm-and-exponential.html#logarithm-derivatives-and-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><span class="math display">\[\begin{align}
 \frac{d}{dx} \log x &amp;= x^{-1} \\
 \frac{d}{dx} \log u &amp;= u^{-1} \frac{du}{dx} \\
