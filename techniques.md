@@ -101,3 +101,48 @@ You should get $x e^x - e^x$.
 
 ### Kernel trick {-}
 
+The above techniques are useful, but in statistics it is often the case that you can avoid them entirely and calculate the answer much faster using something I will call the "kernel trick" (I am not aware of this idea having an official name).
+
+For example, suppose we need to calculate
+
+$$ \int_0^\infty e^{-5x} \dx. $$
+
+Sure, we *can* use substitution, but most statisticians will find it easier to recognize that this is very similar to the exponential distribution, which (like all distributions) integrates to 1:
+
+$$ \int_0^\infty \lam e^{-\lam x} \dx = 1 \text{ for all } \lam > 0. $$
+
+Applying this shortcut:
+
+\begin{align}
+\int_0^{\infty} e^{-5x} \dx &= \frac{1}{5} \int_0^\infty 5 e^{-5x} \dx \\
+  &= \frac{1}{5}
+\end{align}
+
+The *kernel* of a distribution is the part that has the variable we're integrating over. This is the only part that needs to match in order for the trick to work: we can always manipulate the constants as we did above.
+
+As another example, suppose we need to find
+
+$$ \int_{-\infty}^\infty e^{-x^2} \dx. $$
+
+This is actually impossible to solve using any of the integration techniques above -- there is no elementary form form for its antiderivative. However, it has the kernel of a normal distribution:
+
+$$ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\} $$
+
+Letting $\mu=0$ and $\sigma = 1/\sqrt{2}$, we get
+
+\begin{align}
+\int_{-\infty}^\infty e^{-x^2} \dx &= \sqrt{\pi} \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi} / \sqrt{2}} \exp\left\{ -\frac{1}{2} \left( \frac{x}{1/\sqrt{2}} \right)^2 \right\} \\
+  &= \sqrt{\pi}
+\end{align}
+
+This may seem complicated at first, but I cannot emphasize enough how important it is to learn this. As a statistician you will become very familiar with these distributions and this will get easier and easier. Every fall, in a ritual as constant as the turning of the leaves, first-year graduate students labor away, trying to solve integrals using elaborate integration by parts techniques, and a professor or older graduate student will look at what they are doing and solve it in seconds using this trick.
+
+As practice, use this procedure to calculate
+
+$$ \int_0^\infty x^2 e^{-x} \dx $$
+
+by using the kernel trick with respect to the gamma distribution, which has density function
+
+$$ \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-\beta x}. $$
+
+You should get $\Gamma(3)$, which is 2: $\Gamma(\alpha) = (\alpha-1)!$ if $\alpha$ is an integer.

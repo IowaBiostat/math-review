@@ -1,6 +1,8 @@
+\newcommand{\lam}{\lambda}
+
 \newcommand{\A}{\mathbf{A}}
 \newcommand{\B}{\mathbf{B}}
-\renewcommand{\C}{\mathbf{C}}
+\def \C {\mathbf{C}}
 \newcommand{\I}{\mathbf{I}}
 \newcommand{\M}{\mathbf{M}}
 \newcommand{\X}{\mathbf{X}}
