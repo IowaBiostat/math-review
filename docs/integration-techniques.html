@@ -160,6 +160,32 @@ du &amp;= \frac{1}{x} \,dx&amp;\qquad v &amp;= x
 </div>
 <div id="kernel-trick" class="section level3 unnumbered hasAnchor">
 <h3>Kernel trick<a href="integration-techniques.html#kernel-trick" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The above techniques are useful, but in statistics it is often the case that you can avoid them entirely and calculate the answer much faster using something I will call the “kernel trick” (I am not aware of this idea having an official name).</p>
+<p>For example, suppose we need to calculate</p>
+<p><span class="math display">\[ \int_0^\infty e^{-5x} \,dx. \]</span></p>
+<p>Sure, we <em>can</em> use substitution, but most statisticians will find it easier to recognize that this is very similar to the exponential distribution, which (like all distributions) integrates to 1:</p>
+<p><span class="math display">\[ \int_0^\infty \lambda e^{-\lambda x} \,dx= 1 \text{ for all } \lambda&gt; 0. \]</span></p>
+<p>Applying this shortcut:</p>
+<p><span class="math display">\[\begin{align}
+\int_0^{\infty} e^{-5x} \,dx&amp;= \frac{1}{5} \int_0^\infty 5 e^{-5x} \,dx\\
+  &amp;= \frac{1}{5}
+\end{align}\]</span></p>
+<p>The <em>kernel</em> of a distribution is the part that has the variable we’re integrating over. This is the only part that needs to match in order for the trick to work: we can always manipulate the constants as we did above.</p>
+<p>As another example, suppose we need to find</p>
+<p><span class="math display">\[ \int_{-\infty}^\infty e^{-x^2} \,dx. \]</span></p>
+<p>This is actually impossible to solve using any of the integration techniques above – there is no elementary form form for its antiderivative. However, it has the kernel of a normal distribution:</p>
+<p><span class="math display">\[ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\} \]</span></p>
+<p>Letting <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma = 1/\sqrt{2}\)</span>, we get</p>
+<p><span class="math display">\[\begin{align}
+\int_{-\infty}^\infty e^{-x^2} \,dx&amp;= \sqrt{\pi} \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi} / \sqrt{2}} \exp\left\{ -\frac{1}{2} \left( \frac{x}{1/\sqrt{2}} \right)^2 \right\} \\
+  &amp;= \sqrt{\pi}
+\end{align}\]</span></p>
+<p>This may seem complicated at first, but I cannot emphasize enough how important it is to learn this. As a statistician you will become very familiar with these distributions and this will get easier and easier. Every fall, in a ritual as constant as the turning of the leaves, first-year graduate students labor away, trying to solve integrals using elaborate integration by parts techniques, and a professor or older graduate student will look at what they are doing and solve it in seconds using this trick.</p>
+<p>As practice, use this procedure to calculate</p>
+<p><span class="math display">\[ \int_0^\infty x^2 e^{-x} \,dx\]</span></p>
+<p>by using the kernel trick with respect to the gamma distribution, which has density function</p>
+<p><span class="math display">\[ \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-\beta x}. \]</span></p>
+<p>You should get <span class="math inline">\(\Gamma(3)\)</span>, which is 2: <span class="math inline">\(\Gamma(\alpha) = (\alpha-1)!\)</span> if <span class="math inline">\(\alpha\)</span> is an integer.</p>
 
 </div>
 </div>
