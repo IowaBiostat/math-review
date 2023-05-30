@@ -1,6 +1,6 @@
 ---
 title: "Math review for new biostatistics students"
-author: "Patrick Breheny"
+author: "Patrick Breheny and Eldon Sorensen"
 site: bookdown::bookdown_site
 documentclass: book
 geometry: margin=1in
