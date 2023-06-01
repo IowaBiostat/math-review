@@ -89,11 +89,11 @@ Note that matrix multiplication is only defined if the number of columns of $\A$
 
 The following elementary algebra rules carry over to matrix algebra:
 
-\begin{align}
+\begin{align*}
 \A+\B &= \B+\A & (\A+\B)+\C&=\A+(\B+\C) \\
 (\A\B)\C &= \A(\B\C) & \A(\B+\C)&=\A\B+\A\C \\
 k(\A+\B) &= k\A+k\B
-\end{align}
+\end{align*}
 
 One important exception, however, is that $\A\B \neq \B\A$; the order of matrix multiplication matters, and we must remember to, for instance, "left multiply" both sides of an equation by a matrix $\M$ to preserve equality.
 
@@ -103,7 +103,7 @@ Suppose $\u$ and $\v$ are two $n \times 1$ vectors. We can't multiply them in th
 
 The first is called the *inner product* (also, the "cross product"):
 
-\begin{align}
+\begin{align*}
 \u\Tr\v &= \sum_j u_j v_j \\
 \left[\begin{array}{rr}
   3 & 2
@@ -112,13 +112,13 @@ The first is called the *inner product* (also, the "cross product"):
   2 \\
   -1
 \end{array}\right] &= 6 - 2 = 4.
-\end{align}
+\end{align*}
 
 Note that when we multiply matrices, the element $(\A\B)_{ij}$ is equal to the inner product of the ith row of $\A$ and the jth column of $B$.
 
 The second way of multiplying two vectors is called the *outer product*:
 
-\begin{align}
+\begin{align*}
 (\u\v\Tr)_{ij} &= u_i v_j \\
 \left[\begin{array}{r}
   3 \\
@@ -131,6 +131,6 @@ The second way of multiplying two vectors is called the *outer product*:
   6 & -3 \\
   4 & -2
 \end{array}\right]
-\end{align}
+\end{align*}
 
 Note that the inner product returns a scalar number, while the outer product returns an $n \times n$ matrix.

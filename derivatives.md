@@ -18,7 +18,7 @@ Expanding on this pointwise definition, we can define a whole function, $f'(x)$.
 
 It is hard to overstate the importance of knowing the following formulas; you will use them constantly. Below, we assume that $f$ and $g$ are differentiable, and that $c$ is a constant.
 
-\begin{align}
+\begin{align*}
 c' &= 0 \\
 (x^n)' &= n x^{n-1} \\
 (cf)' &= c f' \\
@@ -26,7 +26,7 @@ c' &= 0 \\
 (f - g)' &= f' - g' \\
 (fg)' &= fg' + gf' \text{ (product rule)}\\
 \left( \frac{f}{g} \right)' &= \frac{gf' - fg'}{g^2}  \text{ (quotient rule)}\\
-\end{align}
+\end{align*}
 
 These basic rules can be combined into all sorts of additional rules with the *chain rule*, which states that if the derivatives $g'(x)$ and $f'(g(x))$ both exist, then the derivative of $f(g(x))$ exists, and its derivative is $f'(g(x))g'(x)$. The rule is often expressed in [Leibniz notation](https://en.wikipedia.org/wiki/Leibniz%27s_notation):
 
@@ -50,7 +50,7 @@ $$ f(x) \approx f(a) + f'(a) (x - a) + \frac{1}{2}f''(a) (x - a)^2. $$
 
 To see these approximations in action, here's a figure:
 
-```{r, echo=FALSE, fig.align = "center"}
+```{r, echo=FALSE, fig.width=4, fig.height=3}
 x <- seq(0, pi/2, len=99)
 par(mar=c(2, 2, 0.5, 0.05))
 plot(x, sin(x), type='l', bty='n', xlab='', ylab='', xaxt='n', yaxt='n', lwd=3)

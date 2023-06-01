@@ -187,18 +187,18 @@
 \end{array} \right] \]</span></p>
 <p>Note that matrix multiplication is only defined if the number of columns of <span class="math inline">\(\mathbf{A}\)</span> matches the number of rows of <span class="math inline">\(\mathbf{B}\)</span>, and that if <span class="math inline">\(\mathbf{A}\)</span> is an <span class="math inline">\(m \times n\)</span> matrix and <span class="math inline">\(\mathbf{B}\)</span> is an <span class="math inline">\(n \times p\)</span> matrix, then <span class="math inline">\(\mathbf{A}\mathbf{B}\)</span> is an <span class="math inline">\(m \times p\)</span> matrix.</p>
 <p>The following elementary algebra rules carry over to matrix algebra:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \mathbf{A}+\mathbf{B}&amp;= \mathbf{B}+\mathbf{A}&amp; (\mathbf{A}+\mathbf{B})+\mathbf{C}&amp;=\mathbf{A}+(\mathbf{B}+\mathbf{C}) \\
 (\mathbf{A}\mathbf{B})\mathbf{C}&amp;= \mathbf{A}(\mathbf{B}\mathbf{C}) &amp; \mathbf{A}(\mathbf{B}+\mathbf{C})&amp;=\mathbf{A}\mathbf{B}+\mathbf{A}\mathbf{C}\\
 k(\mathbf{A}+\mathbf{B}) &amp;= k\mathbf{A}+k\mathbf{B}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>One important exception, however, is that <span class="math inline">\(\mathbf{A}\mathbf{B}\neq \mathbf{B}\mathbf{A}\)</span>; the order of matrix multiplication matters, and we must remember to, for instance, “left multiply” both sides of an equation by a matrix <span class="math inline">\(\mathbf{M}\)</span> to preserve equality.</p>
 </div>
 <div id="inner-and-outer-products" class="section level3 unnumbered hasAnchor">
 <h3>Inner and outer products<a href="basic-operations.html#inner-and-outer-products" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Suppose <span class="math inline">\(\mathbf{u}\)</span> and <span class="math inline">\(\mathbf{v}\)</span> are two <span class="math inline">\(n \times 1\)</span> vectors. We can’t multiply them in the sense defined above, <span class="math inline">\(\mathbf{u}\mathbf{v}\)</span>, because the number of columns of <span class="math inline">\(\mathbf{u}\)</span>, 1, doesn’t match the number of rows of <span class="math inline">\(\mathbf{v}\)</span>, n. However, there are two ways in which vectors of the same dimension can be multiplied.</p>
 <p>The first is called the <em>inner product</em> (also, the “cross product”):</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \mathbf{u}^{\scriptstyle\top}\mathbf{v}&amp;= \sum_j u_j v_j \\
 \left[\begin{array}{rr}
   3 &amp; 2
@@ -207,10 +207,10 @@ k(\mathbf{A}+\mathbf{B}) &amp;= k\mathbf{A}+k\mathbf{B}
   2 \\
   -1
 \end{array}\right] &amp;= 6 - 2 = 4.
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Note that when we multiply matrices, the element <span class="math inline">\((\mathbf{A}\mathbf{B})_{ij}\)</span> is equal to the inner product of the ith row of <span class="math inline">\(\mathbf{A}\)</span> and the jth column of <span class="math inline">\(B\)</span>.</p>
 <p>The second way of multiplying two vectors is called the <em>outer product</em>:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 (\mathbf{u}\mathbf{v}^{\scriptstyle\top})_{ij} &amp;= u_i v_j \\
 \left[\begin{array}{r}
   3 \\
@@ -223,7 +223,7 @@ k(\mathbf{A}+\mathbf{B}) &amp;= k\mathbf{A}+k\mathbf{B}
   6 &amp; -3 \\
   4 &amp; -2
 \end{array}\right]
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Note that the inner product returns a scalar number, while the outer product returns an <span class="math inline">\(n \times n\)</span> matrix.</p>
 
 </div>

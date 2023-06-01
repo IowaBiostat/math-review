@@ -26,11 +26,11 @@ provided that both improper integrals exist. To see why, suppose we wanted to ca
 
 **Unbounded functions:** For technical reasons, we also run into problems when $f$ is unbounded. Suppose we're interested in integrating $f(x) = 1/\sqrt{x}$, for example. At $x=0$, $f(x)$ is undefined. Even if we were to define it, $f$ wouldn't be continuous or monotone no matter what we chose, which causes [problems with integration](integration.html#definition-1). As you might guess, however, we can extend our definition of the integral to include 0 as a lower bound by taking the limit as the bound goes to zero (if the limit exists):
 
-\begin{align}
+\begin{align*}
 \int_0^1 x^{-1/2} \dx &= \lim_{a \to 0} \int_a^1 x^{-1/2} \dx \\
   &= \lim_{a \to 0} 2\sqrt{x} \Big|_a^1 \\
   &= 2\sqrt{1} - \lim_{a \to 0} 2\sqrt{a} \\
   &= 2
-\end{align}
+\end{align*}
 
 Note that in this case, if we failed to realize that $f$ was not bounded over the integration region and blindly plugged in 0 anyway, it wouldn't make a difference -- we'd get the same answer. However, this is not always true and if you ever run into a situation where this arises, it's important to know the proper definition.

@@ -3,9 +3,14 @@ title: "Math review for new biostatistics students"
 author: "Patrick Breheny and Eldon Sorensen"
 site: bookdown::bookdown_site
 documentclass: book
+classoption: openany
 geometry: margin=1in
 urlcolor: cyan
 ---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(fig.align  ='center')
+```
 
 # Introduction
 
@@ -13,12 +18,12 @@ This guide is intended as a review of fundamental math concepts for students who
 
 Why a math review? Is math the most important skill for a statistician? Not necessarily. However, in our experience, a shaky/rusty foundation in math is the thing most likely to lead to problems in the first year of graduate school. When you encounter new statistical concepts, instructors will introduce and explain them. But the mathematical techniques this guide covers, they will assume you already know.
 
-This guide focuses in particular on two areas of mathematics, and for different reasons. [Calculus](calculus.html), because it is a big topic -- students often take Calc I, Calc II, and Calc III. That's a lot of material and it's not clear what needs to be reviewed and what can be skipped. Also [matrix algebra](matrix.html), because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that one uses in statistics.
+This guide focuses in particular on two areas of mathematics, and for different reasons. [Calculus](calculus.html), because it is a big topic -- students often take Calc I, Calc II, and Calc III. That's a lot of material and it's not clear what needs to be reviewed and what can be skipped. Also [matrix algebra](matrix.html), because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that are helpful in statistics.
 
 In principle, any idea from math *could* come up and be helpful to a statistician. In reality, however, certain ideas come up far more often than others, and this guide focuses on topics of greatest relevance. A good example is trigonometry: this almost never comes up in statistics. There is really no need to spend any time whatsoever reviewing it prior to stating a graduate program in statistics. On the other hand, properties of exponents and logarithms come up *constantly*. You need to know every property, because you will use them more or less every day, and if you don't know them, you will be constantly making errors on all of your homework and tests.
 
 Finally, the focus here is really on the math -- as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you've taken statistics in the past and terms like "independent events" and "regression model" mean something to you, great. If not, however, don't worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.
 
-To reiterate: this guide is intended to be a concise *review* of main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to read the corresponding section of your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, while we may add exercises and solutions in the future, there aren't any right now. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as [Schaum's Outline of Calclus](https://www.amazon.com/dp/0071795537/ref=cm_sw_su_dp).
+To reiterate: this guide is intended to be a concise *review* of main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to read the corresponding section of your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, there are very few exercises and solutions provided in this review. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as [Schaum's Outline of Calclus](https://www.amazon.com/dp/0071795537/ref=cm_sw_su_dp).
 
 Finally, if you spot any mistakes or typos, please [let me know](https://github.com/IowaBiostat/math-review/issues)!

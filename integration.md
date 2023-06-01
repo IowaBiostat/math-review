@@ -36,13 +36,13 @@ If $f$ is jumping up and down discontinuously, then anything can happen -- $f$ m
 
 If all of the following integrals exist, then they obey these rules:
 
-\begin{align}
+\begin{align*}
 \int_a^b c \dx &= c(b-a) \\
 \int_a^b c f(x) \dx &= c \int_a^b f(x) \dx \\
 \int_a^b \bigl\{f(x) + g(x)\bigr\} \dx &= \int_a^b f(x) \dx + \int_a^b g(x) \dx \\
 \int_a^b \bigl\{f(x) - g(x)\bigr\} \dx &= \int_a^b f(x) \dx - \int_a^b g(x) \dx \\
 \int_a^b f(x) \dx &= \int_a^c f(x) \dx + \int_c^b f(x) \dx
-\end{align}
+\end{align*}
 
 If we further suppose that $a < b$, then we also have
 
@@ -86,10 +86,10 @@ $$ \int f(x) \dx = F(x). $$
 
 This "equation" means the same thing, that $F'(x) = f(x)$ for all $x$. However, it is not truly an equation since there are an infinite number of functions $F$ that satisfy $F'(x) = f(x)$ for all $x$. For example, both of the following are correct:
 
-\begin{align}
+\begin{align*}
 \int 2x \dx &= x^2 \\
 \int 2x \dx &= x^2 + 5. \\
-\end{align}
+\end{align*}
 
 This is potentially confusing because the left hand side is the same in each case, but the right hand side is different -- hence the scare quotes around "equation". Some people prefer to write
 
@@ -99,11 +99,11 @@ to emphasize this point. Whether you do this or not is up to you, but either way
 
 So what's the point of antiderivatives/primitives/indefinite integrals? If we have one, we can easily calculate (definite) integrals. For example,
 
-\begin{align}
+\begin{align*}
 \int_1^4 2x \dx &= F(4) - F(1) \\
   &= 4^2 - 1^2 \\
   &= 15.
-\end{align}
+\end{align*}
 
 Note that I get the same answer regardless of which antiderivative I use (i.e., it's not important to find the collection of all antiderivates...any antiderivative is fine).
 

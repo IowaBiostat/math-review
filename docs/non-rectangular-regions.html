@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>2.12 Non-rectangular regions | Math review for new biostatistics students</title>
+  <meta name="description" content="2.12 Non-rectangular regions | Math review for new biostatistics students" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="2.12 Non-rectangular regions | Math review for new biostatistics students" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="2.12 Non-rectangular regions | Math review for new biostatistics students" />
+  
+  
+  
+
+<meta name="author" content="Patrick Breheny and Eldon Sorensen" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="multiple-integrals.html"/>
+<link rel="next" href="matrix-algebra.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="calculus.html"><a href="calculus.html"><i class="fa fa-check"></i><b>2</b> Calculus</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>2.1</b> Functions</a></li>
+<li class="chapter" data-level="2.2" data-path="limits-and-continuity.html"><a href="limits-and-continuity.html"><i class="fa fa-check"></i><b>2.2</b> Limits and continuity</a></li>
+<li class="chapter" data-level="2.3" data-path="derivatives.html"><a href="derivatives.html"><i class="fa fa-check"></i><b>2.3</b> Derivatives</a></li>
+<li class="chapter" data-level="2.4" data-path="optimization.html"><a href="optimization.html"><i class="fa fa-check"></i><b>2.4</b> Optimization</a></li>
+<li class="chapter" data-level="2.5" data-path="integration.html"><a href="integration.html"><i class="fa fa-check"></i><b>2.5</b> Integration</a></li>
+<li class="chapter" data-level="2.6" data-path="logarithm-and-exponential.html"><a href="logarithm-and-exponential.html"><i class="fa fa-check"></i><b>2.6</b> Logarithm and exponential</a></li>
+<li class="chapter" data-level="2.7" data-path="improper-integrals.html"><a href="improper-integrals.html"><i class="fa fa-check"></i><b>2.7</b> Improper integrals</a></li>
+<li class="chapter" data-level="2.8" data-path="integration-techniques.html"><a href="integration-techniques.html"><i class="fa fa-check"></i><b>2.8</b> Integration techniques</a></li>
+<li class="chapter" data-level="2.9" data-path="sequences-and-series.html"><a href="sequences-and-series.html"><i class="fa fa-check"></i><b>2.9</b> Sequences and series</a></li>
+<li class="chapter" data-level="2.10" data-path="partial-derivatives.html"><a href="partial-derivatives.html"><i class="fa fa-check"></i><b>2.10</b> Partial derivatives</a></li>
+<li class="chapter" data-level="2.11" data-path="multiple-integrals.html"><a href="multiple-integrals.html"><i class="fa fa-check"></i><b>2.11</b> Multiple integrals</a></li>
+<li class="chapter" data-level="2.12" data-path="non-rectangular-regions.html"><a href="non-rectangular-regions.html"><i class="fa fa-check"></i><b>2.12</b> Non-rectangular regions</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="matrix-algebra.html"><a href="matrix-algebra.html"><i class="fa fa-check"></i><b>3</b> Matrix algebra</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="definitions-and-conventions.html"><a href="definitions-and-conventions.html"><i class="fa fa-check"></i><b>3.1</b> Definitions and conventions</a></li>
+<li class="chapter" data-level="3.2" data-path="basic-operations.html"><a href="basic-operations.html"><i class="fa fa-check"></i><b>3.2</b> Basic operations</a></li>
+<li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
+<li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Math review for new biostatistics students</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="non-rectangular-regions" class="section level2 hasAnchor" number="2.12">
+<h2><span class="header-section-number">2.12</span> Non-rectangular regions<a href="non-rectangular-regions.html#non-rectangular-regions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Since we are on the topic of multiple integrals, it is important to discuss the possibility of non-rectangular regions of integration. To make this easier to explain, this explanation will only be in the context of double integrals (i.e. <span class="math inline">\(f(x,y)\)</span>). Earlier I talked about the rectangular region resultant when integrating <span class="math inline">\(0 \leq x \leq 1\)</span> and <span class="math inline">\(0 \leq y \leq 1\)</span>. Interestingly, any double integral integrated over a region like <span class="math inline">\(a \leq x \leq b\)</span> and <span class="math inline">\(c \leq y \leq d\)</span> is going to be a rectangular region as all the (x,y) points that satisfy the bounds will be located inside the rectangle with vertices (a,c), (a,d), (b,c), and (b,d). However, it is possible for a region of integration to not be rectangular and this will arise when there is an inequality governing how x and y relate to each other.</p>
+<p>For instance, what would be the multiple integral of <span class="math inline">\(f(x,y) = x^2y\)</span> across the region <span class="math inline">\(0 \leq x \leq y \leq 1\)</span>. To give an idea of what the region of integration looks like, let’s plot the area of (x,y) points that satisfy <span class="math inline">\(0 \leq x \leq y \leq 1\)</span>.</p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+<p>Notice that any (x,y) point in the green region satisfies the inequality <span class="math inline">\(0 \leq x \leq y \leq 1\)</span>. At x = 0.4 for instance, only points where y is greater than or equal to 0.4 would allow for the point to be in the green region. This region, as opposed to the rectangular region shown earlier, is actually a triangle. The inequality governing x to always be less than or equal to y forces the bottom half triangle that would make the region rectangular to be “cut-off”.</p>
+<p>Regarding actually performing the double integral, the general formula is still applicable. We will start with integrating with respect to x and then with respect to y.</p>
+<p><span class="math inline">\(\int\int f(x,y) dx dy = \int(\int f(x,y) dx) dy\)</span></p>
+<p>As soon as we figure out the bounds for the two integrals, we will be good to go. Since we are starting with respect to x, let’s figure out the appropriate x bounds. The green region plotted above is immensely helpful in understanding what the appropriate upper and lower bounds are for x. To determine the lower and upper bounds of the inner integral with respect to x, we need to identify at any given value of y, what values of x are within the green region. For instance, at given values of y = 0.2, 0.5, and 0.8, I can draw straight lines to determine that <span class="math inline">\(0 \leq x \leq 0.2\)</span>, <span class="math inline">\(0 \leq x \leq 0.5\)</span>, and <span class="math inline">\(0 \leq x \leq 0.8\)</span> are valid x values for the given values of y respectively.</p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>Extrapolating to the general case for any given value y, the region <span class="math inline">\(0 \leq x \leq y\)</span> consists of all possible x values that will fall in the green region. Thus, the bounds for the inner integral will be 0 and y.</p>
+<p><span class="math inline">\(\int\int_{0}^{y} f(x,y) dx dy = \int(\int_{0}^{y} f(x,y) dx) dy\)</span></p>
+<p>Regarding the outer integral, since the inner integral goes over all the valid x values for any given y value, integrating y over the entire range of 0 to 1 will encompass the entire triangular region. Think about it as if you drew a line segment of valid x values for every y value in the range of 0 to 1 (y = 0.001, y = 0.002, …, y = 0.1, …, y = 0.5, …, y = 1), all the line segments together would form the solid triangle.</p>
+<p><span class="math inline">\(\int_{0}^{1}\int_{0}^{y} f(x,y) dx dy = \int_{0}^{1}(\int_{0}^{y} f(x,y) dx) dy\)</span></p>
+<p>Now all that’s left is to do the math:</p>
+<p><span class="math inline">\(\int_{0}^{1}\int_{0}^{y} f(x,y) dx dy = \int_{0}^{1}(\int_{0}^{y} x^2y dx) dy = \int_{0}^{1}\frac{y^3y}{3} dy = \frac{1^5}{15} = \frac{1}{15}\)</span></p>
+<p>Interestingly, it is entirely possible to start with integrating with respect to y and then with respect to x and yield the same answer. In this case, the general formula would be modified to account for the changed order:</p>
+<p><span class="math inline">\(\int\int f(x,y) dy dx = \int(\int f(x,y) dy) dx\)</span></p>
+<p>Using the same process as before but starting with respect to y, let’s figure out the appropriate y bounds. To determine the lower and upper bounds of the inner integral with respect to y, we need to identify at any given value of x, what values of y are within the green region. For instance, at given values of x = 0.2, 0.5, and 0.8, I can draw straight lines to determine that <span class="math inline">\(0.2 \leq y \leq 1\)</span>, <span class="math inline">\(0.5 \leq y \leq 1\)</span>, and <span class="math inline">\(0.8 \leq y \leq 1\)</span> are valid y values for the given values of x respectively.</p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p>Extrapolating to the general case for any given value x, the region <span class="math inline">\(x \leq y \leq 1\)</span> consists of all possible y values that will fall in the green region. Thus, the bounds for the inner integral will be x and 1.</p>
+<p><span class="math inline">\(\int\int_{x}^{1} f(x,y) dy dx = \int(\int_{x}^{1} f(x,y) dy) dx\)</span></p>
+<p>Regarding the outer integral, since the inner integral goes over all the valid y values for any given x value, integrating x over the entire range of 0 to 1 will encompass the entire triangular region. Think about it as if you drew a line segment of valid y values for every x value in the range of 0 to 1 (x = 0.001, x = 0.002, …, x = 0.1, …, x = 0.5, …, x = 1), all the line segments together would form the solid triangle.</p>
+<p><span class="math inline">\(\int_{0}^{1}\int_{1}^{x} f(x,y) dy dx = \int_{0}^{1}(\int_{x}^{1} f(x,y) dy) dx\)</span></p>
+<p>Now all that’s left is to do the math:</p>
+<p><span class="math inline">\(\int_{0}^{1}\int_{x}^{1} f(x,y) dy dx = \int_{0}^{1}(\int_{x}^{1} x^2y dy) dx = \int_{0}^{1}(\frac{1^2x^2}{2}- \frac{x^2x^2}{2})dx = \int_{0}^{1}(\frac{x^2}{2}- \frac{x^4}{2})dx = \frac{1^3}{6} - \frac{1^5}{10} = \frac{1}{6} - \frac{1}{10} = \frac{1}{15}\)</span></p>
+<p>I bring up this idea of deciding whether to integrate with respect to x or y first because it is possible that, while both routes will lead to the same answer, one route might be much easier to calculate compared to the other. It is important to practice this concept of integrating across non-rectangular regions in order to develop intuition on how these problems can be visualized and deciding on appropriate integral bounds. Drawing the region of integration like what was done in the practice problems is also a valuable tool that can help in solving these types of problems.</p>
+<!-- $\int\int\int f(x,y,z) dx dy dz = \int\int(\int \frac{x^3z}{y} dx) dy dz = \int(\int \frac{x^4z}{4y} dy) dz = \int \frac{x^4zln(y)}{4} dz = \frac{x^4z^2ln(y)}{8}$ -->
+
+</div>
+<!-- </div> -->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="multiple-integrals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="matrix-algebra.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": false,
+"fontsettings": {
+"theme": "night",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": [["math-review.pdf", "PDF"]],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+},
+"info": false
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

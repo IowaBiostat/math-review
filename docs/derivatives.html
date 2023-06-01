@@ -125,7 +125,7 @@
 <div id="formulas" class="section level3 unnumbered hasAnchor">
 <h3>Formulas<a href="derivatives.html#formulas" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>It is hard to overstate the importance of knowing the following formulas; you will use them constantly. Below, we assume that <span class="math inline">\(f\)</span> and <span class="math inline">\(g\)</span> are differentiable, and that <span class="math inline">\(c\)</span> is a constant.</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 c&#39; &amp;= 0 \\
 (x^n)&#39; &amp;= n x^{n-1} \\
 (cf)&#39; &amp;= c f&#39; \\
@@ -133,7 +133,7 @@ c&#39; &amp;= 0 \\
 (f - g)&#39; &amp;= f&#39; - g&#39; \\
 (fg)&#39; &amp;= fg&#39; + gf&#39; \text{ (product rule)}\\
 \left( \frac{f}{g} \right)&#39; &amp;= \frac{gf&#39; - fg&#39;}{g^2}  \text{ (quotient rule)}\\
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>These basic rules can be combined into all sorts of additional rules with the <em>chain rule</em>, which states that if the derivatives <span class="math inline">\(g&#39;(x)\)</span> and <span class="math inline">\(f&#39;(g(x))\)</span> both exist, then the derivative of <span class="math inline">\(f(g(x))\)</span> exists, and its derivative is <span class="math inline">\(f&#39;(g(x))g&#39;(x)\)</span>. The rule is often expressed in <a href="https://en.wikipedia.org/wiki/Leibniz%27s_notation">Leibniz notation</a>:</p>
 <p><span class="math display">\[ \frac{df}{dx} = \frac{df}{dg} \frac{dg}{dx}. \]</span></p>
 <p>The section on <a href="logarithm-and-exponential.html">logarthim and exponential</a> functions provides additional important differentiation formulas.</p>
@@ -147,7 +147,7 @@ c&#39; &amp;= 0 \\
 <p>The <strong>quadratic approximation</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(a\)</span> is given by</p>
 <p><span class="math display">\[ f(x) \approx f(a) + f&#39;(a) (x - a) + \frac{1}{2}f&#39;&#39;(a) (x - a)^2. \]</span></p>
 <p>To see these approximations in action, here’s a figure:</p>
-<p><img src="math-review_files/figure-html/unnamed-chunk-1-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-2-1.png" width="384" style="display: block; margin: auto;" /></p>
 <p>Note that (a) both approximations are very good close to <span class="math inline">\(a\)</span>, which is denoted by the black dot and (b) the quadratic approximation is more accurate than the linear approximation. Both of these observations are true broadly speaking; they are not particular to this example.</p>
 
 </div>

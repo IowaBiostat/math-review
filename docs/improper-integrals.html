@@ -126,12 +126,12 @@
 <p><span class="math display">\[ \int_{-\infty}^\infty f(x) \,dx= \int_{-\infty}^0 f(x) \,dx+ \int_0^\infty f(x) \,dx, \]</span></p>
 <p>provided that both improper integrals exist. To see why, suppose we wanted to calculate <span class="math inline">\(\int_{-\infty}^\infty x \,dx\)</span>. This integral does not exist, even though <span class="math inline">\(\lim_{a \to \infty} \int_{-a}^a x \,dx= 0\)</span>. The problem with saying that <span class="math inline">\(\int_{-\infty}^\infty x \,dx\)</span> equals 0 is that it depends entirely on how fast the upper and lower bounds are going to infinity. For example, <span class="math inline">\(\lim_{a \to \infty} \int_{-a}^{2a} x \,dx= \infty\)</span>. Without more information on exactly how fast the upper and lower bounds are going to infinity, <span class="math inline">\(\int_{-\infty}^\infty x \,dx\)</span> could equal anything.</p>
 <p><strong>Unbounded functions:</strong> For technical reasons, we also run into problems when <span class="math inline">\(f\)</span> is unbounded. Suppose we’re interested in integrating <span class="math inline">\(f(x) = 1/\sqrt{x}\)</span>, for example. At <span class="math inline">\(x=0\)</span>, <span class="math inline">\(f(x)\)</span> is undefined. Even if we were to define it, <span class="math inline">\(f\)</span> wouldn’t be continuous or monotone no matter what we chose, which causes <a href="integration.html#definition-1">problems with integration</a>. As you might guess, however, we can extend our definition of the integral to include 0 as a lower bound by taking the limit as the bound goes to zero (if the limit exists):</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int_0^1 x^{-1/2} \,dx&amp;= \lim_{a \to 0} \int_a^1 x^{-1/2} \,dx\\
   &amp;= \lim_{a \to 0} 2\sqrt{x} \Big|_a^1 \\
   &amp;= 2\sqrt{1} - \lim_{a \to 0} 2\sqrt{a} \\
   &amp;= 2
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Note that in this case, if we failed to realize that <span class="math inline">\(f\)</span> was not bounded over the integration region and blindly plugged in 0 anyway, it wouldn’t make a difference – we’d get the same answer. However, this is not always true and if you ever run into a situation where this arises, it’s important to know the proper definition.</p>
 
 </div>

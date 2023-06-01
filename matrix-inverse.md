@@ -23,9 +23,9 @@ The *rank* of a matrix is the number of linearly independent columns (or rows) i
 
 Additional helpful identities:
 
-\begin{align}
+\begin{align*}
 (\A+\B) \Tr   &= \A \Tr + \B \Tr    \\
 (\A\B) \Tr    &= \B \Tr\A \Tr       \\
 (\A\B)^{-1}   &= \B^{-1}\A^{-1}     \\
 (\A \Tr)^{-1} &= (\A^{-1}) \Tr
-\end{align}
+\end{align*}

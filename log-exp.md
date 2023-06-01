@@ -14,33 +14,33 @@ Note that we would run into trouble at step 4 if we tried to allow negative base
 
 ### Exponential rules {-}
 
-\begin{align}
+\begin{align*}
 a^{x+y} &= a^x a^y \\
 a^{x-y} &= \frac{a^x}{a^y} \\
 (a^x)^y &= a^{xy} \\
 (ab)^x &= a^x b^x
-\end{align}
+\end{align*}
 
 ### Exponential limits {-}
 
-\begin{align}
+\begin{align*}
 \lim_{x \to \infty} a^x &= \infty \quad \text{if } a > 1 \\
 \lim_{x \to -\infty} a^x &= 0 \quad \text{if } a > 1 \\
 \lim_{x \to \infty} a^x &= 0 \quad \text{if } 0 < a < 1 \\
 \lim_{x \to -\infty} a^x &= \infty \quad \text{if } 0 < a < 1 \\
 \lim_{h \to 0} \frac{e^h - 1}{h} &= 1 \\
 \lim_{n \to \infty} \left(1 + \frac{1}{n}\right)^n &= e
-\end{align}
+\end{align*}
 
 ### Exponential derivatives and integrals {-}
 
-\begin{align}
+\begin{align*}
 \frac{d}{dx} e^x &= e^x \\
 \frac{d}{dx} e^u &= e^x \frac{du}{dx} \\
 \int e^x \, dx &= e^x \\
 \frac{d}{dx} a^x &= a^x \log(a) \\
 \int a^x \, dx &= \frac{a^x}{\log a} \quad (a \ne 1)
-\end{align}
+\end{align*}
 
 Note that the last two results use the logarithmic function, which we haven't actually introduced yet (see below).
 
@@ -60,35 +60,35 @@ $$ \log x = y \iff e^y = x; $$
 
 the notation $\ln x$ can also be used for this. In some disciplines, when we leave off the base, one assumes the base is 10; statistics is **not** one of those disciplines. Note that
 
-\begin{align}
+\begin{align*}
 \log(e^x) &= x \\
 e^{\log x} &= x \\
 \log e &= 1.
-\end{align}
+\end{align*}
 
 ### Logarithm rules {-}
 
-\begin{align}
+\begin{align*}
 \log_a(xy) &= \log_a x + \log_a y \\
 \log_a \frac{x}{y} &= \log_a x - \log_a y \\
 \log_a (x^y) &= y \log_a x \\
 \log_a x &= \frac{\log x}{\log a}
-\end{align}
+\end{align*}
 
 ### Logarithm limits {-}
 
 If $a > 1$, then
 
-\begin{align}
+\begin{align*}
 \lim_{x \to \infty} \log_a x = \infty \\
 \lim_{x \to 0^+} \log_a x = -\infty \\
-\end{align}
+\end{align*}
 
 ### Logarithm derivatives and integrals {-}
 
-\begin{align}
+\begin{align*}
 \frac{d}{dx} \log x &= x^{-1} \\
 \frac{d}{dx} \log u &= u^{-1} \frac{du}{dx} \\
 \int \frac{1}{x} \, dx &= \log|x| \\
 \frac{d}{dx} \log_a x &= \frac{1}{x \log a}
-\end{align}
+\end{align*}

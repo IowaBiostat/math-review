@@ -118,14 +118,14 @@
 <div id="finite-series" class="section level3 unnumbered hasAnchor">
 <h3>Finite series<a href="sequences-and-series.html#finite-series" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Most of this section centers on infinite sequences and series, but here are some important finite series to be familiar with (you should know the first three by heart, and know where to look up the rest of them when you need them):</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \sum_{i=1}^n 1 &amp;= n \\
 \sum_{i=1}^n c &amp;= nc \\
 \sum_{i=1}^n i &amp;= \frac{n(n+1)}{2} \\
 \sum_{i=1}^n i^2 &amp;= \frac{n(n+1)(2n+1)}{6} \\
 \sum_{i=1}^n i^3 &amp;= \left\{ \frac{n(n+1)}{2} \right\}^2\\
 \sum_{i=1}^n i^4 &amp;= \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\\
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 </div>
 <div id="infinite-sequences" class="section level3 unnumbered hasAnchor">
 <h3>Infinite sequences<a href="sequences-and-series.html#infinite-sequences" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -137,15 +137,15 @@
 <p>just like we did for functions.</p>
 <p><strong>Techniques:</strong> It is often unclear what the limit of a ratio is – both numerator and denominator could be going to infinity, or both going to zero. Two techniques to remember are dividing by the largest power and L’Hôpital’s rule.</p>
 <p>To illustrate the first:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \frac{n^2 - 5}{n^3 + n + 3} &amp;= \frac{n^{-1} - 5n^{-3}}{1 + n^{-2} + 3n^{-3}} \\
   &amp;\to 0
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>To illustrate the second:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \lim_{n \to \infty} \frac{\log n}{n} &amp;= \lim_{n \to \infty} \frac{n^{-1}}{1} \\
   &amp;= 0
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Recall that L’Hôpital’s rule only holds if the ratio of the derivatives converges and the original fraction is indeterminate.</p>
 <p><strong>Some special sequences:</strong> It is useful to know the limits of some sequences, because they come up frequently:</p>
 <p><span class="math display">\[ r^n \to \begin{cases}
@@ -172,11 +172,11 @@
 <p>Note that if the series <span class="math inline">\(\sum_{n=1}^\infty a_n\)</span> converges, then <span class="math inline">\(a_n \to 0\)</span>. The converse, however, is not true. For example, the following is known as the <strong>harmonic series:</strong></p>
 <p><span class="math display">\[ \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} \cdots = \infty. \]</span></p>
 <p>Note that series obey some of the limit rules, but not all of them. For example, the following are true if <span class="math inline">\(\sum_{n=1}^\infty a_n = a\)</span> and <span class="math inline">\(\sum_{n=1}^\infty b_n = b\)</span>:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \sum_{n=1}^\infty c a_n &amp;= c a \\
 \sum_{n=1}^\infty (a_n + b_n) &amp;= a + b \\
 \sum_{n=1}^\infty (a_n - b_n) &amp;= a - b \\
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>However, not all of the limit laws carry over. In particular, if we see the quotient</p>
 <p><span class="math display">\[ \frac{\sum_{n=1}^\infty a_n}{\sum_{n=1}^\infty b_n}, \]</span></p>
 <p>we <em>cannot</em> conclude that its limit is <span class="math inline">\(a/b\)</span>. This is a common mistake, so take some time to realize <em>why</em> this is false.</p>

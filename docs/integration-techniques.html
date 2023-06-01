@@ -125,7 +125,7 @@
 <p>By far the most important technique to be aware of is substitution. For example, <a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals">we know that</a> <span class="math inline">\(\int e^x \,dx= e^x\)</span>, but what if we have to find <span class="math inline">\(\int e^{2x} \,dx\)</span>? Is it <span class="math inline">\(e^{2x}\)</span>? The answer (and this is extremely important to understand, because it comes up in statistics all the time) is that no, it isn’t. We can check this easily using the <a href="derivatives.html#formulas">chain rule</a>: the derivative of <span class="math inline">\(e^{2x}\)</span> is <span class="math inline">\(2e^{2x}\)</span>, so <span class="math inline">\(\int e^{2x} \,dx\ne e^{2x}\)</span>.</p>
 <p>In this case, it’s also fairly clear what we need to do in order to fix the problem: <span class="math inline">\(\int e^{2x} \,dx\)</span> must be <span class="math inline">\(\tfrac{1}{2}e^{2x}\)</span>: there must be a 1/2 present to cancel the 2 that comes from the chain rule.</p>
 <p>Conceptually, letting <span class="math inline">\(u=2x\)</span>, we can visualize what’s going on here as follows. Each unit of <span class="math inline">\(u\)</span> covers twice as much ground as a unit of <span class="math inline">\(x\)</span>. If we don’t do something to correct for this, we’re going to artificially inflate the area under the curve integral (i.e., the integral). This is what’s going on in the red region below, which clearly has greater area than the blue region (the integral we’re trying to calculate).</p>
-<p><img src="math-review_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p><img src="math-review_files/figure-html/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;" /></p>
 <p>However, if we compensate for this – we’re stretching <span class="math inline">\(x\)</span> out by a factor of 2, so we need to shrink the value of the function by a factor of 2 to preserve the correct area – we get the green region, which has the same area as the original blue region.</p>
 <p>To formalize this thinking into a procedure, if <span class="math inline">\(u=g(x)\)</span>, then (this works for any differentiable function <span class="math inline">\(g\)</span>)</p>
 <ol style="list-style-type: decimal">
@@ -144,16 +144,16 @@
 <p>Just as the chain rule gave us substitution, the <a href="derivatives.html#formulas">product rule</a> gives us a formula called integration by parts, which is usually written in the form:</p>
 <p><span class="math display">\[ \int u \,dv = uv - \int v \,du. \]</span></p>
 <p>As an example of integration by parts in action, suppose we want to integrate <span class="math inline">\(\int \log x \,dx\)</span>. We can write this as</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 u &amp;= \log x &amp;\qquad dv &amp;= dx \\
 du &amp;= \frac{1}{x} \,dx&amp;\qquad v &amp;= x
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Thus,</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int \log x \,dx&amp;= x \log x - \int x \frac{dx}{x} \\
   &amp;= x \log x - \int \,dx\\
   &amp;= x \log x - x
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>As practice, use this procedure to calculate</p>
 <p><span class="math display">\[ \int x e^x \,dx. \]</span></p>
 <p>You should get <span class="math inline">\(x e^x - e^x\)</span>.</p>
@@ -166,20 +166,20 @@ du &amp;= \frac{1}{x} \,dx&amp;\qquad v &amp;= x
 <p>Sure, we <em>can</em> use substitution, but most statisticians will find it easier to recognize that this is very similar to the exponential distribution, which (like all distributions) integrates to 1:</p>
 <p><span class="math display">\[ \int_0^\infty \lambda e^{-\lambda x} \,dx= 1 \text{ for all } \lambda&gt; 0. \]</span></p>
 <p>Applying this shortcut:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int_0^{\infty} e^{-5x} \,dx&amp;= \frac{1}{5} \int_0^\infty 5 e^{-5x} \,dx\\
   &amp;= \frac{1}{5}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>The <em>kernel</em> of a distribution is the part that has the variable we’re integrating over. This is the only part that needs to match in order for the trick to work: we can always manipulate the constants as we did above.</p>
 <p>As another example, suppose we need to find</p>
 <p><span class="math display">\[ \int_{-\infty}^\infty e^{-x^2} \,dx. \]</span></p>
 <p>This is actually impossible to solve using any of the integration techniques above – there is no elementary form form for its antiderivative. However, it has the kernel of a normal distribution:</p>
 <p><span class="math display">\[ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\} \]</span></p>
 <p>Letting <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma = 1/\sqrt{2}\)</span>, we get</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int_{-\infty}^\infty e^{-x^2} \,dx&amp;= \sqrt{\pi} \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi} / \sqrt{2}} \exp\left\{ -\frac{1}{2} \left( \frac{x}{1/\sqrt{2}} \right)^2 \right\} \\
   &amp;= \sqrt{\pi}
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>This may seem complicated at first, but I cannot emphasize enough how important it is to learn this. As a statistician you will become very familiar with these distributions and this will get easier and easier. Every fall, in a ritual as constant as the turning of the leaves, first-year graduate students labor away, trying to solve integrals using elaborate integration by parts techniques, and a professor or older graduate student will look at what they are doing and solve it in seconds using this trick.</p>
 <p>As practice, use this procedure to calculate</p>
 <p><span class="math display">\[ \int_0^\infty x^2 e^{-x} \,dx\]</span></p>

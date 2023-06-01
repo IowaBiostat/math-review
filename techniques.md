@@ -22,7 +22,7 @@ In this case, it's also fairly clear what we need to do in order to fix the prob
 
 Conceptually, letting $u=2x$, we can visualize what's going on here as follows. Each unit of $u$ covers twice as much ground as a unit of $x$. If we don't do something to correct for this, we're going to artificially inflate the area under the curve integral (i.e., the integral). This is what's going on in the red region below, which clearly has greater area than the blue region (the integral we're trying to calculate).
 
-```{r, fig.height=3.5, echo=FALSE}
+```{r, fig.height=3, fig.width=6, echo=FALSE}
 x <- seq(0, 1, len=99)
 u <- 2*x
 col <- c("#FF4E37FF", "#00B500FF", "#008DFFFF")
@@ -80,18 +80,18 @@ $$ \int u \,dv = uv - \int v \,du. $$
 
 As an example of integration by parts in action, suppose we want to integrate $\int \log x \dx$. We can write this as
 
-\begin{align}
+\begin{align*}
 u &= \log x &\qquad dv &= dx \\
 du &= \frac{1}{x} \dx &\qquad v &= x
-\end{align}
+\end{align*}
 
 Thus,
 
-\begin{align}
+\begin{align*}
 \int \log x \dx &= x \log x - \int x \frac{dx}{x} \\
   &= x \log x - \int \dx \\
   &= x \log x - x
-\end{align}
+\end{align*}
 
 As practice, use this procedure to calculate
 
@@ -113,10 +113,10 @@ $$ \int_0^\infty \lam e^{-\lam x} \dx = 1 \text{ for all } \lam > 0. $$
 
 Applying this shortcut:
 
-\begin{align}
+\begin{align*}
 \int_0^{\infty} e^{-5x} \dx &= \frac{1}{5} \int_0^\infty 5 e^{-5x} \dx \\
   &= \frac{1}{5}
-\end{align}
+\end{align*}
 
 The *kernel* of a distribution is the part that has the variable we're integrating over. This is the only part that needs to match in order for the trick to work: we can always manipulate the constants as we did above.
 
@@ -130,10 +130,10 @@ $$ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\
 
 Letting $\mu=0$ and $\sigma = 1/\sqrt{2}$, we get
 
-\begin{align}
+\begin{align*}
 \int_{-\infty}^\infty e^{-x^2} \dx &= \sqrt{\pi} \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi} / \sqrt{2}} \exp\left\{ -\frac{1}{2} \left( \frac{x}{1/\sqrt{2}} \right)^2 \right\} \\
   &= \sqrt{\pi}
-\end{align}
+\end{align*}
 
 This may seem complicated at first, but I cannot emphasize enough how important it is to learn this. As a statistician you will become very familiar with these distributions and this will get easier and easier. Every fall, in a ritual as constant as the turning of the leaves, first-year graduate students labor away, trying to solve integrals using elaborate integration by parts techniques, and a professor or older graduate student will look at what they are doing and solve it in seconds using this trick.
 

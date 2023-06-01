@@ -136,13 +136,13 @@
 <div id="properties-of-integrals" class="section level3 unnumbered hasAnchor">
 <h3>Properties of integrals<a href="integration.html#properties-of-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>If all of the following integrals exist, then they obey these rules:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int_a^b c \,dx&amp;= c(b-a) \\
 \int_a^b c f(x) \,dx&amp;= c \int_a^b f(x) \,dx\\
 \int_a^b \bigl\{f(x) + g(x)\bigr\} \,dx&amp;= \int_a^b f(x) \,dx+ \int_a^b g(x) \,dx\\
 \int_a^b \bigl\{f(x) - g(x)\bigr\} \,dx&amp;= \int_a^b f(x) \,dx- \int_a^b g(x) \,dx\\
 \int_a^b f(x) \,dx&amp;= \int_a^c f(x) \,dx+ \int_c^b f(x) \,dx
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>If we further suppose that <span class="math inline">\(a &lt; b\)</span>, then we also have</p>
 <ul>
 <li>If <span class="math inline">\(f(x) \ge 0\)</span> for all <span class="math inline">\(x\)</span>, then <span class="math inline">\(\int_a^b f(x) \,dx\ge 0\)</span>.</li>
@@ -177,19 +177,19 @@
 <p>A function <span class="math inline">\(F\)</span> is called an <strong>antiderivative</strong> (or a <strong>primitive</strong>) of <span class="math inline">\(f\)</span> if <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. This can also be written</p>
 <p><span class="math display">\[ \int f(x) \,dx= F(x). \]</span></p>
 <p>This “equation” means the same thing, that <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. However, it is not truly an equation since there are an infinite number of functions <span class="math inline">\(F\)</span> that satisfy <span class="math inline">\(F&#39;(x) = f(x)\)</span> for all <span class="math inline">\(x\)</span>. For example, both of the following are correct:</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int 2x \,dx&amp;= x^2 \\
 \int 2x \,dx&amp;= x^2 + 5. \\
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>This is potentially confusing because the left hand side is the same in each case, but the right hand side is different – hence the scare quotes around “equation”. Some people prefer to write</p>
 <p><span class="math display">\[ \int 2x \,dx= x^2 + C \]</span></p>
 <p>to emphasize this point. Whether you do this or not is up to you, but either way, it is critical to understand the distinction between <span class="math inline">\(\int_a^b f(x) \,dx\)</span> and <span class="math inline">\(\int f(x) \,dx\)</span>. The first quantity (with the integration limits) is a known as a <strong>definite integral</strong>, and it is a number. The second quantity (without the limits) is known as an <strong>indefinite integral</strong>, and it is <em>not</em> a number – it is a function (or more precisely, a collection of an infinite number of functions)<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>.</p>
 <p>So what’s the point of antiderivatives/primitives/indefinite integrals? If we have one, we can easily calculate (definite) integrals. For example,</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \int_1^4 2x \,dx&amp;= F(4) - F(1) \\
   &amp;= 4^2 - 1^2 \\
   &amp;= 15.
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Note that I get the same answer regardless of which antiderivative I use (i.e., it’s not important to find the collection of all antiderivates…any antiderivative is fine).</p>
 <p>In other words, we can integrate any function <span class="math inline">\(f\)</span> if can find an antiderivative of it. How do we find these antiderivatives? Unfortunately, this is often challenging and sometimes impossible. However, there are several <a href="integration-techniques.html">techniques for doing this, which will be discussed in a later section</a>.</p>
 

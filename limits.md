@@ -31,21 +31,21 @@ The limit of $f(x)$ as $x \to a$ is $L$ if and only both the left and the right-
 
 **Limit laws:** The following laws are helpful for calculating limits. In what follows, let
 
-\begin{align}
+\begin{align*}
 s &= \lim_{x \to a} f(x) \\
 t &= \lim_{x \to a} g(x);
-\end{align}
+\end{align*}
 
 it is critical that these limits exist, or none of the results below necessarily hold.
 
-\begin{align}
+\begin{align*}
 \lim_{x \to a} \{f(x) + g(x)\} &= s + t \\
 \lim_{x \to a} \{f(x) - g(x)\} &= s - t \\
 \lim_{x \to a} \{cf(x) + g(x)\} &= cs \text{ where $c$ is a constant} \\
 \lim_{x \to a} \{f(x) g(x)\} &= st \\
 \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{s}{t} \text{ if } t \ne 0 \\
 \lim_{x \to a} \{f(x)^n\} &= s^n
-\end{align}
+\end{align*}
 
 ### Continuity {-}
 

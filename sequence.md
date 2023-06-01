@@ -8,14 +8,14 @@ The study of infinite sequences and series is a big topic; this review is not ex
 
 Most of this section centers on infinite sequences and series, but here are some important finite series to be familiar with (you should know the first three by heart, and know where to look up the rest of them when you need them):
 
-\begin{align}
+\begin{align*}
 \sum_{i=1}^n 1 &= n \\
 \sum_{i=1}^n c &= nc \\
 \sum_{i=1}^n i &= \frac{n(n+1)}{2} \\
 \sum_{i=1}^n i^2 &= \frac{n(n+1)(2n+1)}{6} \\
 \sum_{i=1}^n i^3 &= \left\{ \frac{n(n+1)}{2} \right\}^2\\
 \sum_{i=1}^n i^4 &= \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}\\
-\end{align}
+\end{align*}
 
 ### Infinite sequences {-}
 
@@ -35,17 +35,17 @@ just like we did for functions.
 
 To illustrate the first:
 
-\begin{align}
+\begin{align*}
 \frac{n^2 - 5}{n^3 + n + 3} &= \frac{n^{-1} - 5n^{-3}}{1 + n^{-2} + 3n^{-3}} \\
   &\to 0
-\end{align}
+\end{align*}
 
 To illustrate the second:
 
-\begin{align}
+\begin{align*}
 \lim_{n \to \infty} \frac{\log n}{n} &= \lim_{n \to \infty} \frac{n^{-1}}{1} \\
   &= 0
-\end{align}
+\end{align*}
 
 Recall that L'Hôpital's rule only holds if the ratio of the derivatives converges and the original fraction is indeterminate.
 
@@ -83,11 +83,11 @@ $$ \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} 
 
 Note that series obey some of the limit rules, but not all of them. For example, the following are true if $\sum_{n=1}^\infty a_n = a$ and $\sum_{n=1}^\infty b_n = b$:
 
-\begin{align}
+\begin{align*}
 \sum_{n=1}^\infty c a_n &= c a \\
 \sum_{n=1}^\infty (a_n + b_n) &= a + b \\
 \sum_{n=1}^\infty (a_n - b_n) &= a - b \\
-\end{align}
+\end{align*}
 
 However, not all of the limit laws carry over. In particular, if we see the quotient
 

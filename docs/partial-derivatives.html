@@ -115,45 +115,53 @@
 <h2><span class="header-section-number">2.10</span> Partial derivatives<a href="partial-derivatives.html#partial-derivatives" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>As problems get more complicated, there are almost always multiple variables involved. Suppose we have the function</p>
 <p><span class="math display">\[ f(x,y) = x^2y \]</span></p>
-<p>and we are told to find its derivative. This is an ambiguous request, and could mean several different things. For a function of several variables, a <strong>partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span></strong> means to calculate the ordinary derivative treating <span class="math inline">\(f\)</span> as a function of <span class="math inline">\(x\)</span> alone with all the other variables held constant.</p>
+<p>and we are told to find its derivative. This is an ambiguous request, and could mean several different things. For a function of several variables, a <strong>partial derivative of <span class="math inline">\(f\)</span> with respect to <span class="math inline">\(x\)</span></strong> means to calculate the ordinary derivative treating <span class="math inline">\(f\)</span> as a function of <span class="math inline">\(x\)</span> alone with all the other variables held constant. This is denoted <span class="math inline">\(\partial f / \partial x\)</span>.</p>
 <p>For the example above, taking the derivative with respect to <span class="math inline">\(x\)</span> would yield <span class="math inline">\(2xy\)</span>, whereas taking the derivative with respect to <span class="math inline">\(y\)</span>, would yield <span class="math inline">\(x^2\)</span>.</p>
-<p>To give a further example, as well as introduce notation, for the function <span class="math inline">\(f(x,y,z) = \frac{x^3z}{y}\)</span>, the partial derivatives with respect to x, y, and z would be written as:</p>
-<p><span class="math display">\[ \frac{\partial}{\partial x}(\frac{x^3z}{y}) = \frac{3x^2z}{y} \]</span></p>
-<p><span class="math display">\[ \frac{\partial}{\partial y}(\frac{x^3z}{y}) = \frac{-x^3z}{y^2} \]</span></p>
-<p><span class="math display">\[ \frac{\partial}{\partial z}(\frac{x^3z}{y}) = \frac{x^3}{y} \]</span></p>
-<p>Notice how for each of the partial derivative operations, two of the input variables are left constant whereas the derivative operation is performed on one “aspect” of the function. For <span class="math inline">\(\frac{\partial}{\partial x}\)</span>, the <span class="math inline">\(\frac{z}{y}\)</span> term of the function was treated as constant and the derivative operation was performed on <span class="math inline">\(x^3\)</span>. For <span class="math inline">\(\frac{\partial}{\partial y}\)</span>, the <span class="math inline">\(x^3z\)</span> term of the function was treated as constant and the derivative operation was performed on <span class="math inline">\(\frac{1}{y}\)</span>. For <span class="math inline">\(\frac{\partial}{\partial z}\)</span>, the <span class="math inline">\(\frac{x^3}{y}\)</span> term of the function was treated as constant and the derivative operation was performed on <span class="math inline">\(z\)</span>. Notation-wise, the symbol <span class="math inline">\(\partial\)</span> is used to represent a partial derivative whereas <span class="math inline">\(d\)</span> is used to represent a total derivative.</p>
-<p>Conceptually speaking, a partial derivative details the instantaneous rate of change in a function when one of its input variables is changed while keeping all other input variables constant. For instance, for each of the results above, it is conveyed that the instantaneous rate of change in the function <span class="math inline">\(f(x,y,z) = \frac{x^3z}{y}\)</span> is <span class="math inline">\(\frac{3x^2z}{y}\)</span>, <span class="math inline">\(\frac{-x^3z}{y^2}\)</span>, <span class="math inline">\(\frac{x^3}{y}\)</span> when x, y, or z is changed respectively (while keeping the other two variables constant).</p>
-<p>Partial derivatives can also be taken to the second order (similar to total derivatives) as well as “mixed”. For second order partial derivatives, they are written and calculated similarly to total derivatives (just with keeping other input variables constant):</p>
-<p><span class="math display">\[\begin{align}
-\frac{\partial^2}{\partial x^2}(\frac{x^3z}{y}) &amp;= \frac{\partial}{\partial x}(\frac{\partial}{\partial x}(\frac{x^3z}{y})) \\
+<p>To give a further example, as well as introduce notation, for the function <span class="math inline">\(f(x,y,z) = x^3z/y\)</span>, the partial derivatives with respect to x, y, and z would be written as:</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial}{\partial x} \left( \frac{x^3z}{y} \right) &amp;= \frac{3x^2z}{y} \\
+\frac{\partial}{\partial y} \left( \frac{x^3z}{y} \right) &amp;= \frac{-x^3z}{y^2} \\
+\frac{\partial}{\partial z} \left( \frac{x^3z}{y} \right) &amp;= \frac{x^3}{y}
+\end{align*}\]</span></p>
+<p>In each partial derivative, two of the input variables are treated as constants. For example, when we take <span class="math inline">\(\frac{\partial}{\partial x}\)</span>, the <span class="math inline">\(z/y\)</span> portion of the function is treated as a constant, and so on. Conceptually, a partial derivative represents the instantaneous rate of change in a function when only one of its input variables is changed while keeping all other input variables constant. Thus, <span class="math inline">\(f\)</span> is changing at the rate <span class="math inline">\(3(2)^2(4)/3\)</span> as we increase <span class="math inline">\(x\)</span> from, say, 2 to 2.001 when <span class="math inline">\(x=2\)</span>, <span class="math inline">\(y=3\)</span>, and <span class="math inline">\(z=4\)</span>.</p>
+<div id="higher-orders" class="section level3 unnumbered hasAnchor">
+<h3>Higher orders<a href="partial-derivatives.html#higher-orders" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Partial derivatives can also be taken to the second order, such as</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial^2}{\partial x^2} \left( \frac{x^3z}{y} \right) &amp;= \frac{\partial}{\partial x}(\frac{\partial}{\partial x}(\frac{x^3z}{y})) \\
   &amp;= \frac{\partial}{\partial x}(\frac{3x^2z}{y}) \\
-  &amp;= \frac{6xz}{y}
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-\frac{\partial^2}{\partial y^2}(\frac{x^3z}{y}) &amp;= \frac{\partial}{\partial y}(\frac{\partial}{\partial y}(\frac{x^3z}{y})) \\
-  &amp;= \frac{\partial}{\partial y}(\frac{-x^3z}{y^2}) \\
-  &amp;= \frac{2x^3z}{y^3}
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-\frac{\partial^2}{\partial z^2}(\frac{x^3z}{y}) &amp;= \frac{\partial}{\partial z}(\frac{\partial}{\partial z}(\frac{x^3z}{y})) \\
-  &amp;= \frac{\partial}{\partial z}(\frac{x^3}{y})
-  &amp;= 0
-\end{align}\]</span></p>
-<p>By “mixed” partial derivatives, I mean partial derivatives with respect to different input variables that are taken in succession. For instance, if I write <span class="math inline">\(\frac{\partial^2}{\partial x\partial y}\)</span>, this is equivalent to writing <span class="math inline">\(\frac{\partial}{\partial x}\frac{\partial}{\partial y}\)</span> and states that the partial derivative with respect to y is taken first and then the result from that operation is then used to take the partial derivative with respect to x. A couple examples using the same <span class="math inline">\(f(x,y,z) = \frac{x^3z}{y}\)</span> are given below:</p>
-<p><span class="math display">\[\begin{align}
-\frac{\partial^2}{\partial x\partial y} (\frac{x^3z}{y}) &amp;= \frac{\partial}{\partial x}\frac{\partial}{\partial y} (\frac{x^3z}{y}) \\
+  &amp;= \frac{6xz}{y} \\
+  \\
+\frac{\partial^2}{\partial z^2} \left( \frac{x^3z}{y} \right) &amp;= \frac{\partial}{\partial z}(\frac{\partial}{\partial z}(\frac{x^3z}{y})) \\
+  &amp;= \frac{\partial}{\partial z}(\frac{x^3}{y}) \\
+  &amp;= 0.
+\end{align*}\]</span></p>
+<p>Higher-order partial derivatives can also be “mixed”, meaning that we take a derivative first with respect to one variable, then with respect to a different variable. In terms of mathematical symbols, <span class="math inline">\(\partial^2 f / \partial x \partial y\)</span> is the same as <span class="math inline">\(\partial / \partial x ( \partial f / \partial y)\)</span>. A couple examples using the same <span class="math inline">\(f(x,y,z) = x^3z/y\)</span> are given below:</p>
+<p><span class="math display">\[\begin{align*}
+\frac{\partial^2}{\partial x\partial y} \left( \frac{x^3z}{y} \right) &amp;= \frac{\partial}{\partial x}\frac{\partial}{\partial y} (\frac{x^3z}{y}) \\
   &amp;= \frac{\partial}{\partial x} (\frac{-x^3z}{y^2}) \\
-  &amp;= \frac{-3x^2z}{y^2}
-\end{align}\]</span></p>
-<p><span class="math display">\[\begin{align}
-\frac{\partial^2}{\partial z\partial x} (\frac{x^3z}{y}) &amp;= \frac{\partial}{\partial z}\frac{\partial}{\partial x} (\frac{x^3z}{y}) \\
+  &amp;= \frac{-3x^2z}{y^2} \\
+  \\
+\frac{\partial^2}{\partial z\partial x} \left( \frac{x^3z}{y} \right) &amp;= \frac{\partial}{\partial z}\frac{\partial}{\partial x} (\frac{x^3z}{y}) \\
   &amp;= \frac{\partial}{\partial z} (\frac{3x^2z}{y}) \\
   &amp;= \frac{3x^2}{y}
-\end{align}\]</span></p>
-<p>Since we are on the subject of partial derivatives, it is also worth briefly discussing the gradient operation as this will be one of the more common operations involving partial derivatives in statistics. The gradient, symbolized by <span class="math inline">\(\nabla\)</span>, when applied to a function made up of n input variables (i.e. <span class="math inline">\(f(x_1, ..., x_n)\)</span>), results in a vector where each element is the partial derivative of <span class="math inline">\(f(x_1, ..., x_n)\)</span> with respect to one of the input variables.</p>
-<p><span class="math inline">\(\nabla f(x_1, ..., x_n) = [\frac{\partial}{\partial x_1}f(x_1, ..., x_n), \frac{\partial}{\partial x_2}f(x_1, ..., x_n), ... ,\frac{\partial}{\partial x_n}f(x_1, ..., x_n)]\)</span></p>
-<p>The gradient will be described in much more detail in the first year or two of the program but getting a little exposure to it now is important. Conceptually, the gradient represents, on a high level, the direction and rate of fastest increase for a function made up of multiple input variables.</p>
+\end{align*}\]</span></p>
+<p>It is worth noting (and a bit surprising) that the order is irrelevant, a result known as Clairaut’s Theorem. If <span class="math inline">\(\partial^2 f / \partial x \partial y\)</span> and <span class="math inline">\(\partial^2 f / \partial y \partial x\)</span> are both continuous, then</p>
+<p><span class="math display">\[ \frac{\partial^2 f}{\partial x \partial y} = \frac{\partial^2 f}{\partial y \partial x}. \]</span></p>
+<p>Partial derivatives have many uses in statistics, but the main ideas above are all you really need to know for the first year. Later years will have an increasing focus on multivariable mathematical statistics.</p>
+</div>
+<div id="gradients" class="section level3 unnumbered hasAnchor">
+<h3>Gradients<a href="partial-derivatives.html#gradients" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A closely related idea to the partial derivative is that of the <strong>gradient</strong>, which simply collects all of the partial derivatives of a function into a vector, symbolized by <span class="math inline">\(\nabla f(\mathbf{x})\)</span>, where <span class="math inline">\(\mathbf{x}\)</span> represents the <a href="definitions-and-conventions.html">vector</a> <span class="math inline">\((x_1, x_2, \ldots, x_n)\)</span>:</p>
+<p><span class="math display">\[ \nabla f(x_1, ..., x_n) = \begin{bmatrix}
+\frac{\partial f(\mathbf{x})}{\partial x_1} \\
+\frac{\partial f(\mathbf{x})}{\partial x_2} \\
+\vdots \\
+\frac{\partial f(\mathbf{x})}{\partial x_n}
+\end{bmatrix} \]</span></p>
+<p>Again, gradients will play a larger role in later years than they do in the first year, but familiarity with the basic idea now will help. One reason (among many) that gradients are useful is that in multiple dimensions, there are infinitely many ways we could change the input: we could increase <span class="math inline">\(x\)</span> a little while decreasing <span class="math inline">\(y\)</span> at the same rate but change <span class="math inline">\(z\)</span> three times as fast, and so on. With the gradient, we can calculate these changes by taking the <a href="basic-operations.html#inner-and-outer-products">inner product</a> of the gradient and direction: <span class="math inline">\(\nabla f(\mathbf{x}) ^{\scriptstyle\top}\mathbf{d}\)</span>, where <span class="math inline">\(\mathbf{d}\)</span> is the direction.</p>
 
+</div>
 </div>
             </section>
 
