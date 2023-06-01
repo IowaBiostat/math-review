@@ -2,7 +2,7 @@
 
 ### Definition {-}
 
-The slope of a straight line is straightforward: $\Delta y / \Delta x$. For a curved line, however, we will get different answers depending on the range over which we calculate these changes. Nevertheless, we can calculate the [limit](limits-and-continuity.html) of this slope over shorter and shorter ranges. This is known as the derivative of the function.
+The slope of a straight line is straightforward: $\Delta y / \Delta x$. For a curved line, however, we will get different answers depending on the range over which we calculate these changes. Nevertheless, we can calculate the [limit][limits and continuity] of this slope over shorter and shorter ranges. This is known as the derivative of the function.
 
 **Definition:** The **derivative of a function $f$ at $a$**, denoted $f'(a)$, is
 
@@ -10,7 +10,7 @@ $$ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} $$
 
 if this limit exists.
 
-If the limit exists, $f$ is said to be **differentiable at $a$**. If a function is not [continuous](limits-and-continuity.html#continuity) at $a$, it is not possible for it to be differentiable at $a$. The converse, however, is not true. For example, the function $f(x) = \abs{x}$ is continuous everywhere, and differentiable just about everywhere, but not differentiable at zero since the [limit from the left](limits-and-continuity.html) is -1 and the limit from the right is 1.
+If the limit exists, $f$ is said to be **differentiable at $a$**. If a function is not [continuous][continuity] at $a$, it is not possible for it to be differentiable at $a$. The converse, however, is not true. For example, the function $f(x) = \abs{x}$ is continuous everywhere, and differentiable just about everywhere, but not differentiable at zero since the [limit from the left][limits and continuity] is -1 and the limit from the right is 1.
 
 Expanding on this pointwise definition, we can define a whole function, $f'(x)$. This function is known as the **derivative of $f$**.
 
@@ -32,7 +32,7 @@ These basic rules can be combined into all sorts of additional rules with the *c
 
 $$ \frac{df}{dx} = \frac{df}{dg} \frac{dg}{dx}. $$
 
-The section on [logarthim and exponential](logarithm-and-exponential.html) functions provides additional important differentiation formulas.
+The section on [logarthim and exponential][logarithm and exponential] functions provides additional important differentiation formulas.
 
 ### Higher derivatives {-}
 

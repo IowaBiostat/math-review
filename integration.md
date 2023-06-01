@@ -1,12 +1,12 @@
 ## Integration
 
-There are two core questions with which calculus is concerned. One is [generalizing the idea of slope to nonlinear functions](derivatives.html). The other is how to calculate the total contribution of some entity, where the contribution at any given instant is given by a function. As with slopes, this is trivial if the function is linear and becomes much harder when the function is nonlinear. For example, if someone burns 700 calories/hr while exercising, and they exercise for half an hour, then they burn 350 calories. But what if their exercise intensity varies over time, with $f(t)$ describing the rate at time $t$ (in minutes)? In this case we would have to add the contributions:
+There are two core questions with which calculus is concerned. One is [generalizing the idea of slope to nonlinear functions][derivatives]. The other is how to calculate the total contribution of some entity, where the contribution at any given instant is given by a function. As with slopes, this is trivial if the function is linear and becomes much harder when the function is nonlinear. For example, if someone burns 700 calories/hr while exercising, and they exercise for half an hour, then they burn 350 calories. But what if their exercise intensity varies over time, with $f(t)$ describing the rate at time $t$ (in minutes)? In this case we would have to add the contributions:
 
 $$ f(0)\frac{1}{60} + f(1)\frac{1}{60} + \ldots. $$
 
-However, this still doesn't really answer the question, as it assumes $f(t)$ is constant over the first minute, then allowed to change, then constant again for the next minute, and so on. We could get a more accurate answer by summing up these contributions at each second, and still more accurate by summing over each nanosecond, and so on. The [limit](limits-and-continuity.html) of this process is known as the "integral", which we define below.
+However, this still doesn't really answer the question, as it assumes $f(t)$ is constant over the first minute, then allowed to change, then constant again for the next minute, and so on. We could get a more accurate answer by summing up these contributions at each second, and still more accurate by summing over each nanosecond, and so on. The [limit][limits and continuity] of this process is known as the "integral", which we define below.
 
-[As noted earlier](calculus.html), this comes up constantly in statistics when calculating probabilities and expected values.
+[As noted earlier][calculus], this comes up constantly in statistics when calculating probabilities and expected values.
 
 ### Definition {-}
 
@@ -107,4 +107,4 @@ So what's the point of antiderivatives/primitives/indefinite integrals? If we ha
 
 Note that I get the same answer regardless of which antiderivative I use (i.e., it's not important to find the collection of all antiderivates...any antiderivative is fine).
 
-In other words, we can integrate any function $f$ if can find an antiderivative of it. How do we find these antiderivatives? Unfortunately, this is often challenging and sometimes impossible. However, there are several [techniques for doing this, which will be discussed in a later section](integration-techniques.html).
+In other words, we can integrate any function $f$ if can find an antiderivative of it. How do we find these antiderivatives? Unfortunately, this is often challenging and sometimes impossible. However, there are several [techniques for doing this, which will be discussed in a later section][integration techniques].

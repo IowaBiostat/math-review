@@ -52,7 +52,7 @@ Partial derivatives have many uses in statistics, but the main ideas above are a
 
 ### Gradients {-}
 
-A closely related idea to the partial derivative is that of the **gradient**, which simply collects all of the partial derivatives of a function into a vector, symbolized by $\nabla f(\x)$, where $\x$ represents the [vector](definitions-and-conventions.html) $(x_1, x_2, \ldots, x_n)$:
+A closely related idea to the partial derivative is that of the **gradient**, which simply collects all of the partial derivatives of a function into a vector, symbolized by $\nabla f(\x)$, where $\x$ represents the [vector][definitions and conventions] $(x_1, x_2, \ldots, x_n)$:
 
 $$ \nabla f(x_1, ..., x_n) = \begin{bmatrix}
 \frac{\partial f(\x)}{\partial x_1} \\
@@ -61,4 +61,4 @@ $$ \nabla f(x_1, ..., x_n) = \begin{bmatrix}
 \frac{\partial f(\x)}{\partial x_n}
 \end{bmatrix} $$
 
-Again, gradients will play a larger role in later years than they do in the first year, but familiarity with the basic idea now will help. One reason (among many) that gradients are useful is that in multiple dimensions, there are infinitely many ways we could change the input: we could increase $x$ a little while decreasing $y$ at the same rate but change $z$ three times as fast, and so on. With the gradient, we can calculate these changes by taking the [inner product](basic-operations.html#inner-and-outer-products) of the gradient and direction: $\nabla f(\x) \Tr \d$, where $\d$ is the direction.
+Again, gradients will play a larger role in later years than they do in the first year, but familiarity with the basic idea now will help. One reason (among many) that gradients are useful is that in multiple dimensions, there are infinitely many ways we could change the input: we could increase $x$ a little while decreasing $y$ at the same rate but change $z$ three times as fast, and so on. With the gradient, we can calculate these changes by taking the [inner product][inner and outer products] of the gradient and direction: $\nabla f(\x) \Tr \d$, where $\d$ is the direction.

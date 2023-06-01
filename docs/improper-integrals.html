@@ -115,11 +115,11 @@
 <h2><span class="header-section-number">2.7</span> Improper integrals<a href="improper-integrals.html#improper-integrals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>In statistics, it is very common to encounter integrals that look like this:</p>
 <p><span class="math display">\[ \int_0^\infty f(x) \,dx. \]</span></p>
-<p>This expression is a little confusing because if the integration region is infinite, then our <a href="integration.html">earlier definition of the integral</a> no longer works. What the expression means is that we’re taking the limit of the definite integrals (all of which are well-defined) as the region gets larger and larger:</p>
+<p>This expression is a little confusing because if the integration region is infinite, then our <a href="integration.html#integration">earlier definition of the integral</a> no longer works. What the expression means is that we’re taking the limit of the definite integrals (all of which are well-defined) as the region gets larger and larger:</p>
 <p><span class="math display">\[ \int_0^\infty f(x) \,dx= \lim_{b \to \infty} \int_a^b f(x) \,dx. \]</span></p>
 <p>For example,</p>
 <p><span class="math display">\[ \int_0^b e^{-x} \,dx= 1 - e^{-b}; \]</span></p>
-<p>(if you don’t follow this derivation, see <a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals">here</a> and <a href="integration-techniques#substitution">here</a>). Since <span class="math inline">\(\lim_{b \to \infty} e^{-b} = 0\)</span> (see <a href="logarithm-and-exponential.html#exponential-limits">here</a>), we have</p>
+<p>(if you don’t follow this derivation, see <a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals">here</a> and <a href="integration-techniques.html#substitution">here</a>). Since <span class="math inline">\(\lim_{b \to \infty} e^{-b} = 0\)</span> (see <a href="logarithm-and-exponential.html#exponential-limits">here</a>), we have</p>
 <p><span class="math display">\[ \int_0^\infty e^{-x} \,dx= 1. \]</span></p>
 <p>Integrals with an infinite bound (either upper or lower) are known as <strong>improper integrals</strong>. There are two other kinds of improper integrals.</p>
 <p><strong>Both bounds are infinite:</strong> One might expect that <span class="math inline">\(\int_{-\infty}^\infty f(x) \,dx\)</span> would be defined as the limit of <span class="math inline">\(\int_{-a}^a f(x) \,dx\)</span> as <span class="math inline">\(a \to \infty\)</span>. But you’d be wrong! The actual definition is:</p>

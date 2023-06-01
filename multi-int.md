@@ -4,7 +4,7 @@ In statistics, we also (quite often!) need to integrate functions involving mult
 
 $$ f(x,y) = x^2y. $$
 
-Similar to [partial derivatives](partial-derivatives.html), we could integrate with respect to $x$ (treating $y$ as a constant) or integrate with respect to $y$ (treating $x$ as constant). This should be relatively straightforward for you to get $x^3y/3$ and $x^2y^2/2$ in these two scenarios.
+Similar to [partial derivatives][partial derivatives], we could integrate with respect to $x$ (treating $y$ as a constant) or integrate with respect to $y$ (treating $x$ as constant). This should be relatively straightforward for you to get $x^3y/3$ and $x^2y^2/2$ in these two scenarios.
 
 However, we often need to integrate with respect to *both* $x$ and $y$. Thankfully, this can be done one variable at a time:
 
@@ -13,7 +13,7 @@ However, we often need to integrate with respect to *both* $x$ and $y$. Thankful
   &= \int \left\{ \int f(x,y) \dy \right\} \dx.
 \end{align*}
 
-As we saw with [second-order partial derivatives](partial-derivatives.html#higher-orders), it turns out that if $f$ is [continuous](limits-and-continuity.html#continuity), the order of integration doesn't matter (this is known as Fubini's theorem); more on this later.
+As we saw with [second-order partial derivatives][higher orders], it turns out that if $f$ is [continuous][continuity], the order of integration doesn't matter (this is known as Fubini's theorem); more on this later.
 
 Let's say we've decided to integrate with respect to $x$ first, then $y$ (as we indicate when we write $\dx \dy$):
 

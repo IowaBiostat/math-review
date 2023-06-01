@@ -1,6 +1,6 @@
 ## Integration techniques
 
-[Every time we compute a derivative, we get a formula for integration](integration.html#fundamental-theorem-of-calculus). For example,
+[Every time we compute a derivative, we get a formula for integration][fundamental theorem of calculus]. For example,
 
 $$ f(x) = \log(x^2 + 2) \implies f'(x) = \frac{2x}{x^2 + 2}. $$
 
@@ -16,7 +16,7 @@ Even with such a table, however, there are a few useful integration techniques t
 
 ### Substitution {-}
 
-By far the most important technique to be aware of is substitution. For example, [we know that](logarithm-and-exponential.html#exponential-derivatives-and-integrals) $\int e^x \dx = e^x$, but what if we have to find $\int e^{2x} \dx$? Is it $e^{2x}$? The answer (and this is extremely important to understand, because it comes up in statistics all the time) is that no, it isn't. We can check this easily using the [chain rule](derivatives.html#formulas): the derivative of $e^{2x}$ is $2e^{2x}$, so $\int e^{2x} \dx \ne e^{2x}$.
+By far the most important technique to be aware of is substitution. For example, [we know that][exponential derivatives and integrals] $\int e^x \dx = e^x$, but what if we have to find $\int e^{2x} \dx$? Is it $e^{2x}$? The answer (and this is extremely important to understand, because it comes up in statistics all the time) is that no, it isn't. We can check this easily using the [chain rule][formulas]: the derivative of $e^{2x}$ is $2e^{2x}$, so $\int e^{2x} \dx \ne e^{2x}$.
 
 In this case, it's also fairly clear what we need to do in order to fix the problem: $\int e^{2x} \dx$ must be $\tfrac{1}{2}e^{2x}$: there must be a 1/2 present to cancel the 2 that comes from the chain rule.
 
@@ -74,7 +74,7 @@ You should get $\tfrac{1}{12} (x^2 - 1)^6$.
 
 ### Integration by parts {-}
 
-Just as the chain rule gave us substitution, the [product rule](derivatives.html#formulas) gives us a formula called integration by parts, which is usually written in the form:
+Just as the chain rule gave us substitution, the [product rule][formulas] gives us a formula called integration by parts, which is usually written in the form:
 
 $$ \int u \,dv = uv - \int v \,du. $$
 

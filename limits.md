@@ -2,7 +2,7 @@
 
 ### Limits {-}
 
-**Definition:** We say that the **limit** of a [function](function.html) $f(x)$, as $x$ approaches $a$, is $L$ if we can make the values of $f(x)$ get as close as we want to $L$ by taking $x$ sufficiently close to $a$ (but not equal to a)^[This section covers limits and continuity from a conceptual standpoint. For a variety of technical reasons, the definition given here isn't actually satisfactory, and a more rigorous definition is required; see the chapter on [analysis](analysis.html).]. Mathematically, we can express this idea as
+**Definition:** We say that the **limit** of a [function][functions] $f(x)$, as $x$ approaches $a$, is $L$ if we can make the values of $f(x)$ get as close as we want to $L$ by taking $x$ sufficiently close to $a$ (but not equal to a)^[This section covers limits and continuity from a conceptual standpoint. For a variety of technical reasons, the definition given here isn't actually satisfactory, and a more rigorous definition is required; see the chapter on [analysis].]. Mathematically, we can express this idea as
 
 $$ \lim_{x \to a} f(x) = L. $$
 

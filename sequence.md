@@ -19,13 +19,13 @@ Most of this section centers on infinite sequences and series, but here are some
 
 ### Infinite sequences {-}
 
-The limit of a sequence is very similar to the [limit of a function](limits-and-continuity.html#limits) that we have previously encountered. A sequence $a_n$ has limit $a$ if $a_n$ gets closer and closer to $a$ (i.e., the difference $\abs{a_n-a}$ gets smaller and smaller) as $n$ goes to infinity. This is denoted $a_n \to a$^[As before, we're skipping some technical details here because you shouldn't really need them for the first year. The topic is covered more rigorously [here](analysis.html), which is intended for second-year students.].
+The limit of a sequence is very similar to the [limit of a function][limits] that we have previously encountered. A sequence $a_n$ has limit $a$ if $a_n$ gets closer and closer to $a$ (i.e., the difference $\abs{a_n-a}$ gets smaller and smaller) as $n$ goes to infinity. This is denoted $a_n \to a$^[As before, we're skipping some technical details here because you shouldn't really need them for the first year. The topic is covered more rigorously [here][analysis], which is intended for second-year students.].
 
 As with functions, $\a_n \to \infty$ means that $a_n$ just keeps getting bigger, with no bound.
 
 If the limit exists, we say that the sequence **converges** (or is **convergent**). Otherwise, we say the sequence **diverges** (or is **divergent**). If $\a_n \to \infty$, people often say that the "limit is infinity", although keep in mind that if this happens, the sequence diverges (it just diverges in a particular way).
 
-All of the [limit laws](limits-and-continuity.html#calculating-limits) we discussed earlier for functions are equally valid when stated in terms of sequences. For example, if $a_n \to a$ and $b_n \to b$, we have
+All of the [limit laws][calculating limits] we discussed earlier for functions are equally valid when stated in terms of sequences. For example, if $a_n \to a$ and $b_n \to b$, we have
 
 $$ \lim_{n \to \infty} \{ a_n b_n \} = ab, $$
 
