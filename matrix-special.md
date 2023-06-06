@@ -29,7 +29,7 @@ $$ \I = \left[ \begin{array}{rrr}
 0 & 0 & 1
 \end{array} \right] $$
 
-Note that this matrix has the interesting property that $(\A\I)\_{ij}=A_{ij}$ for all $i, \, j$; in other words, $\A\I=\I\A=\A$.  Because of this property, $\I$ is referred to as the *identity matrix*.
+Note that this matrix has the interesting property that $(\A\I)_{ij}=A_{ij}$ for all $i, \, j$; in other words, $\A\I=\I\A=\A$.  Because of this property, $\I$ is referred to as the *identity matrix*.
 
 Some other notations which are commonly used are $\one$, the vector (or matrix) of 1s, and $\zero$, the vector (or matrix) of zeros:
 

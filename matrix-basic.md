@@ -48,7 +48,7 @@ $$ \M + \M = \left[ \begin{array}{rr}
 -2 & 4
 \end{array} \right] $$
 
-Formally, $(\A+\B)\_{ij} = A_{ij} + B_{ij}$.
+Formally, $(\A+\B)_{ij} = A_{ij} + B_{ij}$.
 
 Note that only matrices of the same dimension can be added to each other -- there is no such thing as adding a $4 \times 5$ matrix to a $2 \times 9$ matrix.
 
@@ -67,11 +67,11 @@ $$ 4\M = 4\left[ \begin{array}{rr}
 -4 & 8
 \end{array} \right] $$
 
-Formally, $(c\M)\_{ij} = cM_{ij}$.
+Formally, $(c\M)_{ij} = cM_{ij}$.
 
 The other kind is *matrix multiplication*. The product of two matrices, $\A\B$, is defined by multiplying all of $\A$'s rows by $\B$'s columns in the following manner:
 
-$$ (\A\B)\_{ik} = \sum_j A_{ij}B_{jk} $$
+$$ (\A\B)_{ik} = \sum_j A_{ij}B_{jk} $$
 
 $$ \left[ \begin{array}{rrr}
 1 & 2 & 1 \\
