@@ -23,3 +23,6 @@
 \newcommand{\bigabs}[1]{\left\lvert#1\right\rvert}
 \newcommand{\dx}{\,dx}
 \newcommand{\dy}{\,dy}
+
+\newcommand{\eps}{\epsilon}
+\providecommand{\tcirc}[1]{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {#1}}}}

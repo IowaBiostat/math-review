@@ -1,6 +1,7 @@
 bookdown::gitbook:
   split_by: section
   toc_depth: 2
+  highlight: espresso
   config:
     fontsettings:
       theme: night

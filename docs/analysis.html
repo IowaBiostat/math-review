@@ -30,7 +30,7 @@
   
   
 <link rel="prev" href="inversion-and-related-concepts.html"/>
-
+<link rel="next" href="there-exists-and-for-all.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,6 +53,69 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -93,7 +156,13 @@
 <li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
 <li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a></li>
+<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="there-exists-and-for-all.html"><a href="there-exists-and-for-all.html"><i class="fa fa-check"></i><b>4.1</b> There exists and For all</a></li>
+<li class="chapter" data-level="4.2" data-path="structured-proofs.html"><a href="structured-proofs.html"><i class="fa fa-check"></i><b>4.2</b> Structured proofs</a></li>
+<li class="chapter" data-level="4.3" data-path="convergence.html"><a href="convergence.html"><i class="fa fa-check"></i><b>4.3</b> Convergence</a></li>
+<li class="chapter" data-level="4.4" data-path="continuity-1.html"><a href="continuity-1.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -115,27 +184,23 @@
 <h1><span class="header-section-number">4</span> Analysis<a href="analysis.html#analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The material in chapters 2 and 3 is intended as review for <em>incoming</em> graduate students to prepare them for courses they will take their first year in the program. For students in our PhD program, there is an additional sequence of courses (<a href="https://catalog.registrar.uiowa.edu/courses/bios/">BIOS 7110 and BIOS 7250</a>) that covers the mathematical foundations of statistics in greater depth. For this material, an understanding of analysis is important.</p>
 <p>Analysis is concerned with the same topics as calculus, but calculus focuses on tools from a user perspective (“how do I calculate a derivative?”) whereas analysis focuses on theoretical properties (e.g., proving theorems about derivatives and differentiability). So, the table of contents here might appear similar to chapter 2, but the focus is quite different.</p>
-<p>NOTE: I am in the process of migrating material here from <a href="https://myweb.uiowa.edu/pbreheny/7110/wiki/pdf/proofs.pdf">this pdf version</a>, so this page is something of a placeholder for now.</p>
-<p>REMINDER: If you are an incoming first-year student, you really don’t need to worry about this material yet! Just focus on chapters 2 and 3.</p>
-
+<p>Furthermore, constructing abstract proofs involves a rather different set of skills than deriving results in calculus or linear algebra, so it’s also important to cover techniques and terminology that arise in constructing proofs. This is especially important to read if you have never taken a course in which you were asked to construct mathematical proofs.</p>
+<p>If you’ve never had a course in real analysis, or it’s been a while and you’ve forgotten, this document should be useful if you’re thinking about taking Likelihood Theory. <strong>REMINDER: If you are an incoming first-year student, you don’t need to worry about this material yet! Just focus on chapters 2 and 3.</strong></p>
+<p>Before we begin, a note on style. Most textbooks and papers provide proofs in an unstructured paragraph style. For the purposes of learning how to prove things, however, I recommend a more <a href="structured-proofs.html#structured-proofs">structured approach</a> based on making consecutive explicit statements with explicit justifications. There are several reasons for this:</p>
+<ol style="list-style-type: decimal">
+<li>When you finish a structured proof, it is very clear exactly which conditions were required, why they were required, and what supporting theorems or results were used. When you’re learning in a course, this is extremely valuable as it will be more clear to you how everything is connected.</li>
+<li>The other major reason is that it’s much harder to make a mistake in a structured proof. This doesn’t make the proof easier, it just means that in an unstructured proof, one can easily skip steps without realizing it. We’ll see some examples of this later.</li>
+<li>It’s also very beneficial from a grading and feedback perspective, as it makes it much clearer to the person grading the proof whether you understand all the pieces or not.</li>
+</ol>
+<!--chapter:end:analysis.md-->
 </div>
-
-
-
-
-
-
-
-
-
-
             </section>
 
           </div>
         </div>
       </div>
-<a href="inversion-and-related-concepts.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="inversion-and-related-concepts.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="there-exists-and-for-all.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

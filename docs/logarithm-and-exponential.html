@@ -53,6 +53,69 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    background-color: #2a211c;
+    color: #bdae9d;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #bdae9d;  padding-left: 4px; }
+div.sourceCode
+  { color: #bdae9d; background-color: #2a211c; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ffff00; } /* Alert */
+code span.an { color: #0066ff; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { } /* Attribute */
+code span.bn { color: #44aa43; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #43a8ed; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #049b0a; } /* Char */
+code span.cn { } /* Constant */
+code span.co { color: #0066ff; font-weight: bold; font-style: italic; } /* Comment */
+code span.do { color: #0066ff; font-style: italic; } /* Documentation */
+code span.dt { text-decoration: underline; } /* DataType */
+code span.dv { color: #44aa43; } /* DecVal */
+code span.er { color: #ffff00; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #44aa43; } /* Float */
+code span.fu { color: #ff9358; font-weight: bold; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #0066ff; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #43a8ed; font-weight: bold; } /* Keyword */
+code span.op { } /* Operator */
+code span.pp { font-weight: bold; } /* Preprocessor */
+code span.sc { color: #049b0a; } /* SpecialChar */
+code span.ss { color: #049b0a; } /* SpecialString */
+code span.st { color: #049b0a; } /* String */
+code span.va { } /* Variable */
+code span.vs { color: #049b0a; } /* VerbatimString */
+code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
+</style>
 
 <style type="text/css">
   
@@ -93,7 +156,13 @@
 <li class="chapter" data-level="3.3" data-path="special-matrices.html"><a href="special-matrices.html"><i class="fa fa-check"></i><b>3.3</b> Special matrices</a></li>
 <li class="chapter" data-level="3.4" data-path="inversion-and-related-concepts.html"><a href="inversion-and-related-concepts.html"><i class="fa fa-check"></i><b>3.4</b> Inversion and related concepts</a></li>
 </ul></li>
-<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a></li>
+<li class="chapter" data-level="4" data-path="analysis.html"><a href="analysis.html"><i class="fa fa-check"></i><b>4</b> Analysis</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="there-exists-and-for-all.html"><a href="there-exists-and-for-all.html"><i class="fa fa-check"></i><b>4.1</b> There exists and For all</a></li>
+<li class="chapter" data-level="4.2" data-path="structured-proofs.html"><a href="structured-proofs.html"><i class="fa fa-check"></i><b>4.2</b> Structured proofs</a></li>
+<li class="chapter" data-level="4.3" data-path="convergence.html"><a href="convergence.html"><i class="fa fa-check"></i><b>4.3</b> Convergence</a></li>
+<li class="chapter" data-level="4.4" data-path="continuity-1.html"><a href="continuity-1.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+</ul></li>
 </ul>
 
       </nav>
@@ -115,7 +184,7 @@
 <h2><span class="header-section-number">2.6</span> Logarithm and exponential<a href="logarithm-and-exponential.html#logarithm-and-exponential" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="exponential-definition" class="section level3 unnumbered hasAnchor">
 <h3>Exponential definition<a href="logarithm-and-exponential.html#exponential-definition" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The exponential function is <span class="math inline">\(f(x) = a^x\)</span>; the <em>base</em> <span class="math inline">\(a\)</span> must be a positive real number but the <em>exponent</em> <span class="math inline">\(x\)</span> can be any real number. The precise definition doesn’t come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is <a href="limits-and-continuity.html#continuity">continuous</a>:</p>
+<p>The exponential function is <span class="math inline">\(f(x) = a^x\)</span>; the <em>base</em> <span class="math inline">\(a\)</span> must be a positive real number but the <em>exponent</em> <span class="math inline">\(x\)</span> can be any real number. The precise definition doesn’t come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is <a href="continuity-1.html#continuity-1">continuous</a>:</p>
 <ol style="list-style-type: decimal">
 <li>If <span class="math inline">\(x\)</span> is a positive integer <span class="math inline">\(n\)</span>, then <span class="math inline">\(a^n = a \cdot a \cdots a \quad (n\)</span> times)</li>
 <li>If <span class="math inline">\(x=0\)</span>, then <span class="math inline">\(a^0 = 1\)</span></li>

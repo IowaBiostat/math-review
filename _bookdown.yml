@@ -25,4 +25,8 @@ rmd_files:
     "matrix-inverse.md",
 
     "analysis.md",
+    "there-exists.md",
+    "structured-proofs.md",
+    "convergence.md",
+    "continuity.md",
   ]

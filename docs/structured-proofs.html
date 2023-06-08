@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2.8 Integration techniques | Math review for new biostatistics students</title>
-  <meta name="description" content="2.8 Integration techniques | Math review for new biostatistics students" />
+  <title>4.2 Structured proofs | Math review for new biostatistics students</title>
+  <meta name="description" content="4.2 Structured proofs | Math review for new biostatistics students" />
   <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2.8 Integration techniques | Math review for new biostatistics students" />
+  <meta property="og:title" content="4.2 Structured proofs | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2.8 Integration techniques | Math review for new biostatistics students" />
+  <meta name="twitter:title" content="4.2 Structured proofs | Math review for new biostatistics students" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="improper-integrals.html"/>
-<link rel="next" href="sequences-and-series.html"/>
+<link rel="prev" href="there-exists-and-for-all.html"/>
+<link rel="next" href="convergence.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -180,91 +180,22 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="integration-techniques" class="section level2 hasAnchor" number="2.8">
-<h2><span class="header-section-number">2.8</span> Integration techniques<a href="integration-techniques.html#integration-techniques" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p><a href="integration.html#fundamental-theorem-of-calculus">Every time we compute a derivative, we get a formula for integration</a>. For example,</p>
-<p><span class="math display">\[ f(x) = \log(x^2 + 2) \implies f&#39;(x) = \frac{2x}{x^2 + 2}. \]</span></p>
-<p>This is great news if we are ever faced with the problem of calculating</p>
-<p><span class="math display">\[ \int_a^b \frac{2x}{x^2 + 2} \,dx, \]</span></p>
-<p>but if we need to calculate <span class="math inline">\(\int_a^b f(x) \,dx\)</span>, how can we reverse engineer a function <span class="math inline">\(F(x)\)</span> so that its derivative is <span class="math inline">\(f(x)\)</span>?</p>
-<p>Unfortunately, this task is sometimes easy, sometimes hard, and sometimes impossible (and you have no way of knowing in advance which situation you are in). One could create a huge table of integral formulas by taking derivatives of various things. Providing such a table is beyond the scope of this review, but <a href="https://www.integral-table.com/">such tables exist online</a> and are useful resources to be aware of.</p>
-<p>Even with such a table, however, there are a few useful integration techniques to be familiar with. Among other things, (a) it may be faster to use one of these techniques than looking up an integral (b) you might not have access to such a table at the moment, and (c) the form that appears in the table might be slightly different than what you need, and you might have to use one of these techniques in combination with the table to compute the integral.</p>
-<div id="substitution" class="section level3 unnumbered hasAnchor">
-<h3>Substitution<a href="integration-techniques.html#substitution" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>By far the most important technique to be aware of is substitution. For example, <a href="logarithm-and-exponential.html#exponential-derivatives-and-integrals">we know that</a> <span class="math inline">\(\int e^x \,dx= e^x\)</span>, but what if we have to find <span class="math inline">\(\int e^{2x} \,dx\)</span>? Is it <span class="math inline">\(e^{2x}\)</span>? The answer (and this is extremely important to understand, because it comes up in statistics all the time) is that no, it isn’t. We can check this easily using the <a href="derivatives.html#formulas">chain rule</a>: the derivative of <span class="math inline">\(e^{2x}\)</span> is <span class="math inline">\(2e^{2x}\)</span>, so <span class="math inline">\(\int e^{2x} \,dx\ne e^{2x}\)</span>.</p>
-<p>In this case, it’s also fairly clear what we need to do in order to fix the problem: <span class="math inline">\(\int e^{2x} \,dx\)</span> must be <span class="math inline">\(\tfrac{1}{2}e^{2x}\)</span>: there must be a 1/2 present to cancel the 2 that comes from the chain rule.</p>
-<p>Conceptually, letting <span class="math inline">\(u=2x\)</span>, we can visualize what’s going on here as follows. Each unit of <span class="math inline">\(u\)</span> covers twice as much ground as a unit of <span class="math inline">\(x\)</span>. If we don’t do something to correct for this, we’re going to artificially inflate the area under the curve integral (i.e., the integral). This is what’s going on in the red region below, which clearly has greater area than the blue region (the integral we’re trying to calculate).</p>
-<p><img src="math-review_files/figure-html/unnamed-chunk-3-1.png" width="576" style="display: block; margin: auto;" /></p>
-<p>However, if we compensate for this – we’re stretching <span class="math inline">\(x\)</span> out by a factor of 2, so we need to shrink the value of the function by a factor of 2 to preserve the correct area – we get the green region, which has the same area as the original blue region.</p>
-<p>To formalize this thinking into a procedure, if <span class="math inline">\(u=g(x)\)</span>, then (this works for any differentiable function <span class="math inline">\(g\)</span>)</p>
-<ol style="list-style-type: decimal">
-<li><span class="math inline">\(du = g&#39;(x) \,dx\)</span></li>
-<li>Substitute <span class="math inline">\(u\)</span> for <span class="math inline">\(g(x)\)</span> and <span class="math inline">\(1/g&#39;(x) \,du\)</span> for <span class="math inline">\(dx\)</span></li>
-<li>Take the integral</li>
-<li>Substitute <span class="math inline">\(g(x)\)</span> back for <span class="math inline">\(u\)</span></li>
-</ol>
-<p>If we are calculating a definite integral, then instead of step 4, we can transform the limits of integration <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> to <span class="math inline">\(g(a)\)</span> and <span class="math inline">\(g(b)\)</span>; this is usually preferable.</p>
-<p>As practice, use this procedure to calculate</p>
-<p><span class="math display">\[ \int x (x^2 - 1)^5 \,dx. \]</span></p>
-<p>You should get <span class="math inline">\(\tfrac{1}{12} (x^2 - 1)^6\)</span>.</p>
-</div>
-<div id="integration-by-parts" class="section level3 unnumbered hasAnchor">
-<h3>Integration by parts<a href="integration-techniques.html#integration-by-parts" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>Just as the chain rule gave us substitution, the <a href="derivatives.html#formulas">product rule</a> gives us a formula called integration by parts, which is usually written in the form:</p>
-<p><span class="math display">\[ \int u \,dv = uv - \int v \,du. \]</span></p>
-<p>As an example of integration by parts in action, suppose we want to integrate <span class="math inline">\(\int \log x \,dx\)</span>. We can write this as</p>
-<p><span class="math display">\[\begin{align*}
-u &amp;= \log x &amp;\qquad dv &amp;= dx \\
-du &amp;= \frac{1}{x} \,dx&amp;\qquad v &amp;= x
-\end{align*}\]</span></p>
-<p>Thus,</p>
-<p><span class="math display">\[\begin{align*}
-\int \log x \,dx&amp;= x \log x - \int x \frac{dx}{x} \\
-  &amp;= x \log x - \int \,dx\\
-  &amp;= x \log x - x
-\end{align*}\]</span></p>
-<p>As practice, use this procedure to calculate</p>
-<p><span class="math display">\[ \int x e^x \,dx. \]</span></p>
-<p>You should get <span class="math inline">\(x e^x - e^x\)</span>.</p>
-</div>
-<div id="kernel-trick" class="section level3 unnumbered hasAnchor">
-<h3>Kernel trick<a href="integration-techniques.html#kernel-trick" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The above techniques are useful, but in statistics it is often the case that you can avoid them entirely and calculate the answer much faster using something I will call the “kernel trick” (I am not aware of this idea having an official name).</p>
-<p>For example, suppose we need to calculate</p>
-<p><span class="math display">\[ \int_0^\infty e^{-5x} \,dx. \]</span></p>
-<p>Sure, we <em>can</em> use substitution, but most statisticians will find it easier to recognize that this is very similar to the exponential distribution, which (like all distributions) integrates to 1:</p>
-<p><span class="math display">\[ \int_0^\infty \lambda e^{-\lambda x} \,dx= 1 \text{ for all } \lambda&gt; 0. \]</span></p>
-<p>Applying this shortcut:</p>
-<p><span class="math display">\[\begin{align*}
-\int_0^{\infty} e^{-5x} \,dx&amp;= \frac{1}{5} \int_0^\infty 5 e^{-5x} \,dx\\
-  &amp;= \frac{1}{5}
-\end{align*}\]</span></p>
-<p>The <em>kernel</em> of a distribution is the part that has the variable we’re integrating over. This is the only part that needs to match in order for the trick to work: we can always manipulate the constants as we did above.</p>
-<p>As another example, suppose we need to find</p>
-<p><span class="math display">\[ \int_{-\infty}^\infty e^{-x^2} \,dx. \]</span></p>
-<p>This is actually impossible to solve using any of the integration techniques above – there is no elementary form form for its antiderivative. However, it has the kernel of a normal distribution:</p>
-<p><span class="math display">\[ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\} \]</span></p>
-<p>Letting <span class="math inline">\(\mu=0\)</span> and <span class="math inline">\(\sigma = 1/\sqrt{2}\)</span>, we get</p>
-<p><span class="math display">\[\begin{align*}
-\int_{-\infty}^\infty e^{-x^2} \,dx&amp;= \sqrt{\pi} \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi} / \sqrt{2}} \exp\left\{ -\frac{1}{2} \left( \frac{x}{1/\sqrt{2}} \right)^2 \right\} \\
-  &amp;= \sqrt{\pi}
-\end{align*}\]</span></p>
-<p>This may seem complicated at first, but I cannot emphasize enough how important it is to learn this. As a statistician you will become very familiar with these distributions and this will get easier and easier. Every fall, in a ritual as constant as the turning of the leaves, first-year graduate students labor away, trying to solve integrals using elaborate integration by parts techniques, and a professor or older graduate student will look at what they are doing and solve it in seconds using this trick.</p>
-<p>As practice, use this procedure to calculate</p>
-<p><span class="math display">\[ \int_0^\infty x^2 e^{-x} \,dx\]</span></p>
-<p>by using the kernel trick with respect to the gamma distribution, which has density function</p>
-<p><span class="math display">\[ \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-\beta x}. \]</span></p>
-<p>You should get <span class="math inline">\(\Gamma(3)\)</span>, which is 2: <span class="math inline">\(\Gamma(\alpha) = (\alpha-1)!\)</span> if <span class="math inline">\(\alpha\)</span> is an integer.</p>
+<div id="structured-proofs" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Structured proofs<a href="structured-proofs.html#structured-proofs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>That was a lot of preliminary stuff, but it’s very important to understand definitions before you move on to proofs. Now, let’s prove that <span class="math inline">\(e^{-n} \to 0\)</span>. What, specifically, do we need to prove? That for all <span class="math inline">\(\epsilon &gt; 0\)</span>, there is an integer <span class="math inline">\(N\)</span> such that <span class="math inline">\(\lvert e^{-n}\rvert &lt; \epsilon\)</span> for all <span class="math inline">\(n &gt; N\)</span>. So, we need to start with “Let <span class="math inline">\(\epsilon&gt; 0\)</span>” (this is how <strong>a lot</strong> of proofs start):</p>
+<p>The left column is a series of statements or claims; this is the main logic of what’s happening in the proof. Chaining all the lines together, we have <span class="math inline">\(\lvert e^{-n}\rvert &lt; \epsilon\)</span>. Thus, we’ve done what we needed to do: given any positive <span class="math inline">\(\epsilon\)</span>, I can find always find an <span class="math inline">\(N\)</span> that meets the requirement. Thus, <span class="math inline">\(e^{-n} \to 0\)</span> by the definition of convergence.</p>
+<p>The right column provides the justification for each step. For example, in the fourth line we claimed that <span class="math inline">\(\exp\{-\lceil-\log \epsilon\rceil\} \le e^{\log \epsilon}\)</span>. How do we know that this is true? Well, <span class="math inline">\(\lceil x \rceil \ge x\)</span> since the operation involves rounding up, and <span class="math inline">\(e^{-x}\)</span> is a decreasing function of <span class="math inline">\(x\)</span>. So by replacing the argument to <span class="math inline">\(e^{-x}\)</span> with something smaller, the result must be larger (or equal, since <span class="math inline">\(-\log\epsilon\)</span> could be an integer already).</p>
+<p>How far to go with these justification depends on what the reader of the proof would likely consider obvious, and is therefore a judgment call. For example, we could include a proof of the fact that <span class="math inline">\(e^{-x}\)</span> is a decreasing function of <span class="math inline">\(x\)</span>, but in my judgment this is going off on a bit of a tangent that distracts from the main point of the proof. In a similar fashion, I didn’t even provide a justification for the final step, but to be really thorough, I could have added that <span class="math inline">\(\exp()\)</span> and <span class="math inline">\(\log()\)</span> are inverse functions. In general, for the purposes of a course, you should err on the side of being very thorough and justifying every step. In a paper or thesis, however, going into this level of detail for every proof is probably unnecessary as the audience (other people with PhDs in statistics or biostatistics) will probably find many of the steps obvious and not requiring justification.</p>
+<p>One final comment: as the above proof should hopefully make clear, a final proof does not describe one’s thought process in terms of how you arrived at the result. Clearly I didn’t know what I should set <span class="math inline">\(N\)</span> equal to until I’d worked through the math to solve for <span class="math inline">\(n\)</span> in the previous section. If you’re reading the proof for the first time, the line “let <span class="math inline">\(N = \lceil -\log \epsilon\rceil\)</span>” is going to seem mysterious; where did <em>that</em> come from? Keep in mind that we’re writing a proof, not a novel of self-discovery. The point is to construct an iron-clad, rigorous argument, not to communicate our thoughts and feelings and realizations. It might not be immediately obvious <em>why</em> I am letting <span class="math inline">\(N = \lceil -\log \epsilon\rceil\)</span>“, but it should be completely obvious that I <em>can</em> set <span class="math inline">\(N = \lceil -\log \epsilon\rceil\)</span>”. One can certainly write about the thought process and intuition behind the proof, but this should be done outside the formal proof – we don’t want to mix formal logic with informal intuition.</p>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="improper-integrals.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="sequences-and-series.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="there-exists-and-for-all.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="convergence.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
