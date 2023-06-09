@@ -182,56 +182,47 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="convergence" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Convergence<a href="convergence.html#convergence" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Let’s go through a few more proofs. For example, you might find the “there exists a real number <span class="math inline">\(x\)</span>” clause in the definition of convergence unsatisfying, as it leaves open the possibility that a many such numbers exist and a sequence might converge to lots of different things. However, this is in fact not possible.</p>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-1" class="theorem"><strong>Theorem 4.1  </strong></span>If <span class="math inline">\(x_n \to a\)</span> and <span class="math inline">\(x_n \to b\)</span>, then a=b.</p>
-</div>
+<p>Let’s go through a few more proofs involving convergence (refer back to <a href="there-exists-and-for-all.html#there-exists-and-for-all">the definition</a> at needed). For example, you might find the “there exists a real number <span class="math inline">\(x\)</span>” clause in the definition of convergence unsatisfying, as it leaves open the possibility that many such numbers exist and a sequence might converge to lots of different things. However, this is in fact not possible.</p>
+<p><strong>Theorem.</strong> <em>If <span class="math inline">\(x_n \to a\)</span> and <span class="math inline">\(x_n \to b\)</span>, then a=b.</em></p>
 <div class="proof">
-<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\epsilon&gt; 0\)</span>.
-<span class="math display">\[\begin{alignat*}{2}
-\tag*{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {1}}}} \exists N_a: n &gt; N_a &amp;\implies \lvert x_n - a\rvert &lt; \tfrac{\epsilon}{2} &amp;\hspace{4em}&amp; x_n \to a \\
-\tag*{\raisebox{.5pt}{\textcircled{\raisebox{-.9pt} {2}}}} \exists N_b: n &gt; N_b &amp;\implies \lvert x_n - b\rvert &lt; \tfrac{\epsilon}{2} &amp;&amp; x_n \to b
+<p><span id="unlabeled-div-2" class="proof"><em>Proof</em>. </span>Let <span class="math inline">\(\epsilon&gt; 0\)</span>.</p>
+<p><span class="math display">\[\begin{alignat*}{2}
+\exists N_a: n &gt; N_a &amp;\implies \lvert x_n - a\rvert &lt; \tfrac{\epsilon}{2} &amp;\hspace{4em}&amp; x_n \to a \\
+\exists N_b: n &gt; N_b &amp;\implies \lvert x_n - b\rvert &lt; \tfrac{\epsilon}{2} &amp;&amp; x_n \to b
 \end{alignat*}\]</span>
 Thus, for all <span class="math inline">\(n &gt; N = \max(N_a, N_b)\)</span>, we have
 <span class="math display">\[\begin{alignat*}{2}
 \lvert a - b\rvert &amp;= \lvert a - x_n + x_n - b\rvert \\
   &amp;\le \lvert x_n - a\rvert + \lvert x_n - b\rvert &amp;\hspace{4em}&amp; \text{Triangle inequality} \\
   &amp;&lt; \epsilon
-\end{alignat*}\]</span>
-<span class="math inline">\(\therefore a=b\)</span></p>
+\end{alignat*}\]</span></p>
+<p><span class="math inline">\(\therefore a=b\)</span></p>
 </div>
 <p>In the above proof, the symbol <span class="math inline">\(\implies\)</span> means “implies” and the symbol <span class="math inline">\(\therefore\)</span> means “therefore” (writing out the words is fine too, I’m just introducing the symbols because I occasionally use them in class). This proof introduces a standard technique that comes up often: since <span class="math inline">\(x_n \to a\)</span>, I can get <span class="math inline">\(x_n\)</span> as close to <span class="math inline">\(a\)</span> as I want. I could find an <span class="math inline">\(n\)</span> such that <span class="math inline">\(\lvert x_n-a\rvert &lt; \epsilon\)</span>, but why stop there? I can keep going and get <span class="math inline">\(\lvert x_n-a\rvert &lt; \epsilon/2\)</span>, which ends up making the rest of the proof more clear. I could keep going even further and get <span class="math inline">\(\lvert x_n-a\rvert &lt; \epsilon/1000000\)</span> if I wanted, but this isn’t necessary for what I’m trying to show.</p>
 <p>Summarizing the above proof, if <span class="math inline">\(x_n \to a\)</span> and <span class="math inline">\(x_n \to b\)</span>, then for any positive number <span class="math inline">\(\epsilon\)</span>, it must be the case that <span class="math inline">\(\lvert a-b\rvert &lt; \epsilon\)</span>. In other words, they have to be equal (<span class="math inline">\(a-b=0\)</span>). Here, the triangle inequality states that</p>
 <p><span class="math display">\[ \lvert x+y\rvert \le \lvert x\rvert + \lvert y\rvert. \]</span></p>
 <p>Applied to line three, this gives</p>
-<p><span class="math display">\[\begin{align}
+<p><span class="math display">\[\begin{align*}
 \lvert a - x_n + x_n - b\rvert &amp;\le \lvert a-x_n\rvert + \lvert x_n-b\rvert \\
 \lvert a-b\rvert &amp;&lt; \tfrac{\epsilon}{2} + \tfrac{\epsilon}{2}.
-\end{align}\]</span></p>
+\end{align*}\]</span></p>
 <p>Hopefully the logic here is clear and all the steps of the proof make sense (if not, feel free to come by my office). You may very well be thinking “I understand the proof, but I could never come up with that!” This is normal; don’t worry about it. Any technique that you’ve never seen before is going to seem incredible and clever, but the more exposure to proofs you have, the more you will recognize all of the above steps as fairly standard and you will definitely be able to recognize when you need them in the future.</p>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-3" class="theorem"><strong>Theorem 4.2  </strong></span>If <span class="math inline">\(x_n \to x\)</span>, then the sequence <span class="math inline">\(x_n\)</span> is bounded.</p>
-</div>
+<p><strong>Theorem.</strong> <em>If <span class="math inline">\(x_n \to x\)</span>, then the sequence <span class="math inline">\(x_n\)</span> is bounded.</em></p>
 <div class="proof">
-<p><span id="unlabeled-div-4" class="proof"><em>Proof</em>. </span><span class="math display">\[\begin{alignat*}{2}
+<p><span id="unlabeled-div-3" class="proof"><em>Proof</em>. </span><span class="math display">\[\begin{alignat*}{2}
 &amp;\exists N: n &gt; N \implies \lvert x_n - x\rvert &lt; 1 &amp;\hspace{4em}&amp; x_n \to x \\
 &amp;\exists r = \max\{1, \lvert x_1 - x\rvert, \ldots, \lvert x_N - x\rvert\} &amp;&amp; \text{Maximum of finite set exists}\\
-&amp;\therefore \{x_n\}_{n=1}^\infty \text{ is bounded} &amp;&amp; \omit{$r + 1 + \lvert x\rvert$} \hfill \qedhere \\
-\end{alignat*}\]</span></p>
+\end{alignat*}\]</span>
+Therefore, <span class="math inline">\(\{x_n\}_{n=1}^\infty\)</span> is bounded (above by <span class="math inline">\(x+r\)</span>, below by <span class="math inline">\(x-r\)</span>).</p>
 </div>
-<p>This is a fairly simple proof, but it illustrates a few important points. First, the choice of “1” in the first line is completely arbitrary; I could have chosen any number. Second, and more importantly, the heart of this proof is the second line, where we establish that there is a number <span class="math inline">\(r\)</span> that bounds <span class="math inline">\(\lvert x_n-x\rvert\)</span> and therefore also bounds <span class="math inline">\(x_n\)</span>. However, it is important to recognize that this is a claim (of existence), and it requires a justification. It is very easy in an unstructured proof to just say “let <span class="math inline">\(r\)</span> by the maximum of <span class="math inline">\(\{1, \lvert x_1 - x\rvert, \ldots, \lvert x_N - x\rvert\}\)</span>”. But how do you know that this maximum exists? If the set were infinite, we wouldn’t know this. For example, we saw earlier that <span class="math inline">\(e^{-n} \to 0\)</span>, so by our proof, <span class="math inline">\(e^{-1}, e^{-2}, \ldots\)</span> is bounded. However, consider the set <span class="math inline">\(\{\ldots, e^{-(-2)}, e^{-(-1)}, e^{-0}, e^{-1}, e^{-2}, \ldots\}\)</span>. This sequence converges as <span class="math inline">\(n \to \infty\)</span>, but because there is an infinite collection of numbers leading up to <span class="math inline">\(x_N\)</span>, our proof above doesn’t work – we don’t know that this set has a maximum (and indeed, it doesn’t have a maximum, and the set isn’t bounded).</p>
-<p>This is a common way in which it is easy to skip steps in an unstructured proof. Of course, one could still write “Let <span class="math inline">\(r =\max \{1, \lvert x_1 - x\rvert, \ldots, \lvert x_N - x\rvert\}\)</span>” in a structured proof, but it would be immediately clear that the right hand column is empty and that this statement has not been justified. Now, sometimes it’s fine to say “let” without a justification: writing “Let <span class="math inline">\(\epsilon&gt; 0\)</span>” and justifying it with “positive numbers exist” is pedantic. One could argue that letting <span class="math inline">\(N = \lceil -\log \epsilon\rceil\)</span> should be justified in the sense that this only exists if <span class="math inline">\(\epsilon&gt; 0\)</span> (which it is), and furthermore we should be more careful in the definition: <span class="math inline">\(N = \max\{1, \lceil -\log \epsilon\rceil\}\)</span> is more technically sound (if <span class="math inline">\(\epsilon\)</span> is very large, <span class="math inline">\(N\)</span> could be negative according to our original definition). It never hurts to think about these things, but at the same time, it’s something of a judgment call and I felt that going into these justifications was a distraction from the main idea. On the other hand, the “maximum of a finite set” justification is quite important because it’s really the main idea of the proof.</p>
-<p>Now would be a good time to try proving things on your own. Here are three theorems to start with (solutions will be provided).</p>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-5" class="theorem"><strong>Theorem 4.3  </strong></span>Suppose <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(y_n \to y\)</span>. Then <span class="math inline">\(x_n + y_n \to x + y\)</span>.</p>
-</div>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-6" class="theorem"><strong>Theorem 4.4  </strong></span>Suppose <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(y_n \to y\)</span>. Then <span class="math inline">\(x_n y_n \to xy\)</span>.</p>
-</div>
-<div class="theorem">
-<p><span id="thm:unlabeled-div-7" class="theorem"><strong>Theorem 4.5  </strong></span>Suppose <span class="math inline">\(x_n \to x\)</span>, with <span class="math inline">\(x_n \ne 0\)</span> for all <span class="math inline">\(n\)</span> and <span class="math inline">\(x \ne 0\)</span>. Then <span class="math inline">\(1/x_n \to 1/x\)</span>.</p>
-</div>
+<p>This is a fairly simple proof, but it illustrates a few important points. First, the choice of “1” in the first line is completely arbitrary; I could have chosen any number. Second, and more importantly, the heart of this proof is the second line, where we establish that there is a number <span class="math inline">\(r\)</span> that bounds <span class="math inline">\(\lvert x_n-x\rvert\)</span> and therefore also bounds <span class="math inline">\(x_n\)</span>. However, it is important to recognize that this is a <em>claim</em> (of existence), and it requires a justification. It is very easy in an unstructured proof to just say “let <span class="math inline">\(r\)</span> by the maximum of <span class="math inline">\(\{1, \lvert x_1 - x\rvert, \ldots, \lvert x_N - x\rvert\}\)</span>”. But how do you know that this maximum exists? If the set were infinite, we wouldn’t know this. For example, we saw earlier that <span class="math inline">\(e^{-n} \to 0\)</span>, so by our proof, <span class="math inline">\(e^{-1}, e^{-2}, \ldots\)</span> is bounded. However, consider the set <span class="math inline">\(\{\ldots, e^{-(-2)}, e^{-(-1)}, e^{-0}, e^{-1}, e^{-2}, \ldots\}\)</span>. This sequence converges as <span class="math inline">\(n \to \infty\)</span>, but because there is an infinite collection of numbers leading up to <span class="math inline">\(x_N\)</span>, our proof above doesn’t work – we don’t know that this set has a maximum (and indeed, it doesn’t have a maximum, and the set isn’t bounded).</p>
+<p>This is a common way in which it is easy to skip steps in an unstructured proof. Of course, one could still write “Let <span class="math inline">\(r =\max \{1, \lvert x_1 - x\rvert, \ldots, \lvert x_N - x\rvert\}\)</span>” in a structured proof, but it would be immediately clear that the right hand column is empty and that this statement has not been justified. Now, sometimes it’s fine to say “let” without a justification: writing “Let <span class="math inline">\(\epsilon&gt; 0\)</span>” and justifying it with “positive numbers exist” is pedantic. Going back to an <a href="structured-proofs.html#structured-proofs">earlier proof</a>, one could argue that letting <span class="math inline">\(N = \lceil -\log \epsilon\rceil\)</span> should be justified in the sense that this only exists if <span class="math inline">\(\epsilon&gt; 0\)</span> (which it is), and furthermore we should be more careful in the definition: <span class="math inline">\(N = \max\{1, \lceil -\log \epsilon\rceil\}\)</span> is more technically sound (if <span class="math inline">\(\epsilon\)</span> is very large, <span class="math inline">\(N\)</span> could be negative according to our original definition). It never hurts to think about these things, but at the same time, it’s something of a judgment call and I felt that going into these justifications was a distraction from the main idea. On the other hand, the “maximum of a finite set” justification is quite important because it’s really the main idea of the proof.</p>
+<p>Now would be a good time to try proving things on your own. Here are three theorems to start with.</p>
+<p><strong>Theorem.</strong> <em>Suppose <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(y_n \to y\)</span>. Then <span class="math inline">\(x_n + y_n \to x + y\)</span>.</em></p>
+<p><strong>Theorem.</strong> <em>Suppose <span class="math inline">\(x_n \to x\)</span> and <span class="math inline">\(y_n \to y\)</span>. Then <span class="math inline">\(x_n y_n \to xy\)</span>.</em></p>
+<p><strong>Theorem.</strong> <em>Suppose <span class="math inline">\(x_n \to x\)</span>, with <span class="math inline">\(x_n \ne 0\)</span> for all <span class="math inline">\(n\)</span> and <span class="math inline">\(x \ne 0\)</span>. Then <span class="math inline">\(1/x_n \to 1/x\)</span>.</em></p>
 <p>For the third theorem, is <span class="math inline">\(x_n \ne 0\)</span> actually required? If we know that <span class="math inline">\(x \ne 0\)</span>, can we still have <span class="math inline">\(x_n = 0\)</span>?</p>
+<p>See <a href="https://raw.githubusercontent.com/IowaBiostat/math-review/main/sols/analysis.pdf">here</a> for solutions, although you should definitely try proving them on your own first before looking at the solutions.</p>
 
 </div>
             </section>
