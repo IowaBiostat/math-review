@@ -208,7 +208,7 @@ t &amp;= \lim_{x \to a} g(x);
 <p><span class="math display">\[\begin{align*}
 \lim_{x \to a} \{f(x) + g(x)\} &amp;= s + t \\
 \lim_{x \to a} \{f(x) - g(x)\} &amp;= s - t \\
-\lim_{x \to a} \{cf(x) + g(x)\} &amp;= cs \text{ where $c$ is a constant} \\
+\lim_{x \to a} \{cf(x) + g(x)\} &amp;= cs + t \text{ where $c$ is a constant} \\
 \lim_{x \to a} \{f(x) g(x)\} &amp;= st \\
 \lim_{x \to a} \frac{f(x)}{g(x)} &amp;= \frac{s}{t} \text{ if } t \ne 0 \\
 \lim_{x \to a} \{f(x)^n\} &amp;= s^n
@@ -216,7 +216,7 @@ t &amp;= \lim_{x \to a} g(x);
 </div>
 <div id="continuity" class="section level3 unnumbered hasAnchor">
 <h3>Continuity<a href="limits-and-continuity.html#continuity" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>You may have noticed that with limits, the value of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(a\)</span> is irrelevant. For example, if <span class="math inline">\(f(x)=x^2\)</span> everywhere except <span class="math inline">\(x=2\)</span>, where <span class="math inline">\(f(2) = -10\)</span>, it would still be the case that <span class="math inline">\(\lim_{x \to 2} f(x) = 2\)</span>. In fact, <span class="math inline">\(f(x)\)</span> wouldn’t even need to be <em>defined</em> at 2 for this to work. If we add the requirement that <span class="math inline">\(f(a)\)</span> has to equal its limit, we end up with continuity.</p>
+<p>You may have noticed that with limits, the value of <span class="math inline">\(f(x)\)</span> at <span class="math inline">\(a\)</span> is irrelevant. For example, if <span class="math inline">\(f(x)=x^2\)</span> everywhere except <span class="math inline">\(x=2\)</span>, where <span class="math inline">\(f(2) = -10\)</span>, it would still be the case that <span class="math inline">\(\lim_{x \to 2} f(x) = 4\)</span>. In fact, <span class="math inline">\(f(x)\)</span> wouldn’t even need to be <em>defined</em> at 2 for this to work. If we add the requirement that <span class="math inline">\(f(a)\)</span> has to equal its limit, we end up with continuity.</p>
 <p><strong>Definition:</strong> A function <span class="math inline">\(f\)</span> is <strong>continuous at <span class="math inline">\(a\)</span></strong> if</p>
 <p><span class="math display">\[ \lim_{x \to a} f(x) = f(a). \]</span></p>
 <p>Note that this requires three things:</p>

@@ -41,7 +41,7 @@ it is critical that these limits exist, or none of the results below necessarily
 \begin{align*}
 \lim_{x \to a} \{f(x) + g(x)\} &= s + t \\
 \lim_{x \to a} \{f(x) - g(x)\} &= s - t \\
-\lim_{x \to a} \{cf(x) + g(x)\} &= cs \text{ where $c$ is a constant} \\
+\lim_{x \to a} \{cf(x) + g(x)\} &= cs + t \text{ where $c$ is a constant} \\
 \lim_{x \to a} \{f(x) g(x)\} &= st \\
 \lim_{x \to a} \frac{f(x)}{g(x)} &= \frac{s}{t} \text{ if } t \ne 0 \\
 \lim_{x \to a} \{f(x)^n\} &= s^n
@@ -49,7 +49,7 @@ it is critical that these limits exist, or none of the results below necessarily
 
 ### Continuity {-}
 
-You may have noticed that with limits, the value of $f(x)$ at $a$ is irrelevant. For example, if $f(x)=x^2$ everywhere except $x=2$, where $f(2) = -10$, it would still be the case that $\lim_{x \to 2} f(x) = 2$. In fact, $f(x)$ wouldn't even need to be *defined* at 2 for this to work. If we add the requirement that $f(a)$ has to equal its limit, we end up with continuity.
+You may have noticed that with limits, the value of $f(x)$ at $a$ is irrelevant. For example, if $f(x)=x^2$ everywhere except $x=2$, where $f(2) = -10$, it would still be the case that $\lim_{x \to 2} f(x) = 4$. In fact, $f(x)$ wouldn't even need to be *defined* at 2 for this to work. If we add the requirement that $f(a)$ has to equal its limit, we end up with continuity.
 
 **Definition:** A function $f$ is **continuous at $a$** if
 
