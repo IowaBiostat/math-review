@@ -40,7 +40,7 @@ So there you have it. If $f$ is differentiable, there are three possibilities: i
 
 **Tests for min/max:** Often, it is obvious whether a critical point $c$ is a minimum or maximum. However, if you're not sure, you can do one of two things:
 
-1. Plug in a number less than $c$, then greater than $c$. If $f'$ changes from negative to positive, $c$ is a local maximum. If it changes from positive to negative, $c$ is a local minimum. If it does not change sign, $c$ is not a local extremum. This is known as the "first derivative test".
+1. Plug in a number less than $c$, then greater than $c$. If $f'$ changes from negative to positive, $c$ is a local minimum. If it changes from positive to negative, $c$ is a local maximum. If it does not change sign, $c$ is not a local extremum. This is known as the "first derivative test".
 2. Take the second derivative at $c$ (assuming it exists). If $f''(c) > 0$, then $c$ is a local minimum. If $f''(c) < 0$, then $c$ is a local maximum. This is known as the "second derivative test". Note that if $f''(c) = 0$, the test is inconclusive -- $c$ could be a local max, a local min, or neither.
 
 **Convexity and concavity:** If a function is always curving upwards or downwards, then no tests are needed and no distinctions between local and global extrema are necessary. To define this formally, imagine drawing a tangent line to a function $f$ at every point in its domain. If $f$ always lies above the tangent line, it is said to be **convex** (curving upwards). If $f$ always lies below the tangent line, it is **concave** (curving downwards). With respect to optimization,
