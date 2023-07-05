@@ -91,7 +91,7 @@ Note that series obey some of the limit rules, but not all of them. For example,
 
 However, not all of the limit laws carry over. In particular, if we see the quotient
 
-$$ \frac{\sum_{n=1}^\infty a_n}{\sum_{n=1}^\infty b_n}, $$ 
+$$ \sum_{n=1}^\infty \frac{a_n}{b_n}, $$ 
 
 we *cannot* conclude that its limit is $a/b$. This is a common mistake, so take some time to realize *why* this is false.
 
