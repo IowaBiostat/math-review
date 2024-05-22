@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>4.4 Continuity | Math review for new biostatistics students</title>
   <meta name="description" content="4.4 Continuity | Math review for new biostatistics students" />
-  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="4.4 Continuity | Math review for new biostatistics students" />
   <meta property="og:type" content="book" />
@@ -55,7 +55,7 @@
 
 <style type="text/css">
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -182,7 +182,7 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="continuity-1" class="section level2 hasAnchor" number="4.4">
 <h2><span class="header-section-number">4.4</span> Continuity<a href="continuity-1.html#continuity-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Another major concept in analysis is that of continuity (again, we came across this <a href="continuity-1.html#continuity-1">earlier</a>, but it’s worth revisiting this concept not that we’ve formally defined limits and convergence). Suppose we have a function <span class="math inline">\(f\)</span> and a convergent sequence <span class="math inline">\(x_n \to x\)</span>. Do we know that as <span class="math inline">\(f(x_n) \to f(x)\)</span>? The answer is that no, this doesn’t always happen. Only some functions have this property, and those functions are said to be “continuous”. Below is the formal definition.</p>
+<p>Another major concept in analysis is that of continuity (again, we came across this <a href="limits-and-continuity.html#continuity">earlier</a>, but it’s worth revisiting this concept not that we’ve formally defined limits and convergence). Suppose we have a function <span class="math inline">\(f\)</span> and a convergent sequence <span class="math inline">\(x_n \to x\)</span>. Do we know that as <span class="math inline">\(f(x_n) \to f(x)\)</span>? The answer is that no, this doesn’t always happen. Only some functions have this property, and those functions are said to be “continuous”. Below is the formal definition.</p>
 <p><strong>Definition.</strong> <em>A function <span class="math inline">\(f\)</span> is said to be <strong>continuous at the point</strong> <span class="math inline">\(x_0\)</span> if for every <span class="math inline">\(\epsilon&gt; 0\)</span>, there exists <span class="math inline">\(\delta &gt; 0\)</span> such that <span class="math inline">\(\lvert f(x) - f(x_0)\rvert &lt; \epsilon\)</span> for all <span class="math inline">\(x: \lvert x-x_0\rvert &lt; \delta\)</span>. If <span class="math inline">\(f\)</span> is continuous at every point in its <a href="functions.html#functions">domain</a>, then the entire function <span class="math inline">\(f\)</span> is said to be <strong>continuous</strong>.</em></p>
 <p>This is similar to the concept of convergent sequences, except now instead of a countable sequence of points <span class="math inline">\(x_1, x_2, \ldots\)</span>, we are concerned with all the points in the “neighborhood” <span class="math inline">\(\{x: \lvert x-x_0\rvert &lt; \delta\}\)</span>; that is, the points near <span class="math inline">\(x_0\)</span>. Many of the techniques that we encountered earlier with convergence are very similar to the techniques one uses with continuity. These techniques are often referred to as “delta-epsilon” techniques. For example, the techniques used in the following proof should look fairly familiar by now.</p>
 <p><strong>Theorem.</strong> <em>Suppose <span class="math inline">\(x_n \to x_0\)</span> and <span class="math inline">\(f\)</span> is continuous at <span class="math inline">\(x_0\)</span>. Then <span class="math inline">\(f(x_n) \to f(x_0)\)</span>.</em></p>

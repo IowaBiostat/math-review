@@ -52,7 +52,7 @@ If we further suppose that $a < b$, then we also have
 
 $$ m(b-a) \le \int_a^b f(x) \dx \le M(b-a) $$
 
-* $\Bigl\lvert \int_a^b f(x) \dx \Bigr\rvert = \int_a^b \bigl\lvert f(x) \bigr\rvert \dx$
+* $\Bigl\lvert \int_a^b f(x) \dx \Bigr\rvert \le \int_a^b \bigl\lvert f(x) \bigr\rvert \dx$
 
 Finally, if $a = b$, then
 
