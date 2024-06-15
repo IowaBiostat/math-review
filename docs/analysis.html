@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang xml:lang>
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>4 Analysis | Math review for new biostatistics students</title>
-  <meta name="description" content="4 Analysis | Math review for new biostatistics students" />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="description" content="4 Analysis | Math review for new biostatistics students">
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7">
 
-  <meta property="og:title" content="4 Analysis | Math review for new biostatistics students" />
-  <meta property="og:type" content="book" />
+  <meta property="og:title" content="4 Analysis | Math review for new biostatistics students">
+  <meta property="og:type" content="book">
   
   
   
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="4 Analysis | Math review for new biostatistics students" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="4 Analysis | Math review for new biostatistics students">
   
   
   
 
-<meta name="author" content="Patrick Breheny and Eldon Sorensen" />
+<meta name="author" content="Patrick Breheny and Eldon Sorensen">
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
 <link rel="prev" href="inversion-and-related-concepts.html"/>
 <link rel="next" href="there-exists-and-for-all.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet">
 
 
 
@@ -48,8 +48,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet">
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet">
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
@@ -122,7 +122,7 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-</head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" data-external="1"></head>
 
 <body>
 
@@ -161,7 +161,8 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4.1" data-path="there-exists-and-for-all.html"><a href="there-exists-and-for-all.html"><i class="fa fa-check"></i><b>4.1</b> There exists and For all</a></li>
 <li class="chapter" data-level="4.2" data-path="structured-proofs.html"><a href="structured-proofs.html"><i class="fa fa-check"></i><b>4.2</b> Structured proofs</a></li>
 <li class="chapter" data-level="4.3" data-path="convergence.html"><a href="convergence.html"><i class="fa fa-check"></i><b>4.3</b> Convergence</a></li>
-<li class="chapter" data-level="4.4" data-path="continuity-1.html"><a href="continuity-1.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.4" data-path="analysis-continuity.html"><a href="analysis-continuity.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.5" data-path="analysis-solutions.html"><a href="analysis-solutions.html"><i class="fa fa-check"></i><b>4.5</b> Solutions</a></li>
 </ul></li>
 </ul>
 
@@ -183,14 +184,14 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <div id="analysis" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">4</span> Analysis<a href="analysis.html#analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>The material in chapters 2 and 3 is intended as review for <em>incoming</em> graduate students to prepare them for courses they will take their first year in the program. For students in our PhD program, there is an additional sequence of courses (<a href="https://catalog.registrar.uiowa.edu/courses/bios/">BIOS 7110 and BIOS 7250</a>) that covers the mathematical foundations of statistics in greater depth. For this material, an understanding of analysis is important.</p>
-<p>Analysis is concerned with the same topics as calculus, but calculus focuses on tools from a user perspective (“how do I calculate a derivative?”) whereas analysis focuses on theoretical properties (e.g., proving theorems about derivatives and differentiability). So, the table of contents here might appear similar to chapter 2, but the focus is quite different.</p>
-<p>Furthermore, constructing abstract proofs involves a rather different set of skills than deriving results in calculus or linear algebra, so it’s also important to cover techniques and terminology that arise in constructing proofs. This is especially important to read if you have never taken a course in which you were asked to construct mathematical proofs.</p>
-<p>If you’ve never had a course in real analysis, or it’s been a while and you’ve forgotten, this document should be useful if you’re thinking about taking Likelihood Theory. <strong>REMINDER: If you are an incoming first-year student, you don’t need to worry about this material yet! Just focus on chapters 2 and 3.</strong></p>
+<p>Analysis is concerned with the same topics as calculus, but calculus focuses on tools from a user perspective (&#x201C;how do I calculate a derivative?&#x201D;) whereas analysis focuses on theoretical properties (e.g., proving theorems about derivatives and differentiability). So, the table of contents here might appear similar to chapter 2, but the focus is quite different.</p>
+<p>Furthermore, constructing abstract proofs involves a rather different set of skills than deriving results in calculus or linear algebra, so it&#x2019;s also important to cover techniques and terminology that arise in constructing proofs. This is especially important to read if you have never taken a course in which you were asked to construct mathematical proofs.</p>
+<p>If you&#x2019;ve never had a course in real analysis, or it&#x2019;s been a while and you&#x2019;ve forgotten, this document should be useful if you&#x2019;re thinking about taking Likelihood Theory. <strong>REMINDER: If you are an incoming first-year student, you don&#x2019;t need to worry about this material yet! Just focus on chapters 2 and 3.</strong></p>
 <p>Before we begin, a note on style. Most textbooks and papers provide proofs in an unstructured paragraph style. For the purposes of learning how to prove things, however, I recommend a more <a href="structured-proofs.html#structured-proofs">structured approach</a> based on making consecutive explicit statements with explicit justifications. There are several reasons for this:</p>
 <ol style="list-style-type: decimal">
-<li>When you finish a structured proof, it is very clear exactly which conditions were required, why they were required, and what supporting theorems or results were used. When you’re learning in a course, this is extremely valuable as it will be more clear to you how everything is connected.</li>
-<li>The other major reason is that it’s much harder to make a mistake in a structured proof. This doesn’t make the proof easier, it just means that in an unstructured proof, one can easily skip steps without realizing it. We’ll see some examples of this later.</li>
-<li>It’s also very beneficial from a grading and feedback perspective, as it makes it much clearer to the person grading the proof whether you understand all the pieces or not.</li>
+<li>When you finish a structured proof, it is very clear exactly which conditions were required, why they were required, and what supporting theorems or results were used. When you&#x2019;re learning in a course, this is extremely valuable as it will be more clear to you how everything is connected.</li>
+<li>The other major reason is that it&#x2019;s much harder to make a mistake in a structured proof. This doesn&#x2019;t make the proof easier, it just means that in an unstructured proof, one can easily skip steps without realizing it. We&#x2019;ll see some examples of this later.</li>
+<li>It&#x2019;s also very beneficial from a grading and feedback perspective, as it makes it much clearer to the person grading the proof whether you understand all the pieces or not.</li>
 </ol>
 <!--chapter:end:analysis.md-->
 </div>
@@ -250,7 +251,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

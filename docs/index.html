@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang xml:lang>
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Math review for new biostatistics students</title>
-  <meta name="description" content="Math review for new biostatistics students" />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="description" content="Math review for new biostatistics students">
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7">
 
-  <meta property="og:title" content="Math review for new biostatistics students" />
-  <meta property="og:type" content="book" />
+  <meta property="og:title" content="Math review for new biostatistics students">
+  <meta property="og:type" content="book">
   
   
   
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Math review for new biostatistics students" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Math review for new biostatistics students">
   
   
   
 
-<meta name="author" content="Patrick Breheny and Eldon Sorensen" />
+<meta name="author" content="Patrick Breheny and Eldon Sorensen">
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
 
 <link rel="next" href="calculus.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet">
 
 
 
@@ -48,8 +48,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet">
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet">
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
@@ -122,7 +122,7 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-</head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" data-external="1"></head>
 
 <body>
 
@@ -161,7 +161,8 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4.1" data-path="there-exists-and-for-all.html"><a href="there-exists-and-for-all.html"><i class="fa fa-check"></i><b>4.1</b> There exists and For all</a></li>
 <li class="chapter" data-level="4.2" data-path="structured-proofs.html"><a href="structured-proofs.html"><i class="fa fa-check"></i><b>4.2</b> Structured proofs</a></li>
 <li class="chapter" data-level="4.3" data-path="convergence.html"><a href="convergence.html"><i class="fa fa-check"></i><b>4.3</b> Convergence</a></li>
-<li class="chapter" data-level="4.4" data-path="continuity-1.html"><a href="continuity-1.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.4" data-path="analysis-continuity.html"><a href="analysis-continuity.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.5" data-path="analysis-solutions.html"><a href="analysis-solutions.html"><i class="fa fa-check"></i><b>4.5</b> Solutions</a></li>
 </ul></li>
 </ul>
 
@@ -188,10 +189,10 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <h1><span class="header-section-number">1</span> Introduction<a href="index.html#introduction" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>This guide is intended as a review of fundamental math concepts for students who will be starting an MS or PhD program in biostatistics. More specifically, its intended audience is new students at the University of Iowa, but the material here is quite general and I would expect it to be useful to any new student in a biostatistics program regardless of where it is.</p>
 <p>Why a math review? Is math the most important skill for a statistician? Not necessarily. However, in our experience, a shaky/rusty foundation in math is the thing most likely to lead to problems in the first year of graduate school. When you encounter new statistical concepts, instructors will introduce and explain them. But the mathematical techniques this guide covers, they will assume you already know.</p>
-<p>This guide focuses in particular on two areas of mathematics, and for different reasons. <a href="calculus.html#calculus">Calculus</a>, because it is a big topic – students often take Calc I, Calc II, and Calc III. That’s a lot of material and it’s not clear what needs to be reviewed and what can be skipped. Also <a href="matrix-algebra.html#matrix-algebra">matrix algebra</a>, because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that are helpful in statistics.</p>
-<p>In principle, any idea from math <em>could</em> come up and be helpful to a statistician. In reality, however, certain ideas come up far more often than others, and this guide focuses on topics of greatest relevance. A good example is trigonometry: this almost never comes up in statistics. There is really no need to spend any time whatsoever reviewing it prior to stating a graduate program in statistics. On the other hand, properties of exponents and logarithms come up <em>constantly</em>. You need to know every property, because you will use them more or less every day, and if you don’t know them, you will be constantly making errors on all of your homework and tests.</p>
-<p>Finally, the focus here is really on the math – as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you’ve taken statistics in the past and terms like “independent events” and “regression model” mean something to you, great. If not, however, don’t worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.</p>
-<p>To reiterate: this guide is intended to be a concise <em>review</em> of main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to read the corresponding section of your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, there are very few exercises and solutions provided in this review. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as <a href="https://www.amazon.com/dp/0071795537/ref=cm_sw_su_dp">Schaum’s Outline of Calculus</a>.</p>
+<p>This guide focuses in particular on two areas of mathematics, and for different reasons. <a href="calculus.html#calculus">Calculus</a>, because it is a big topic &#x2013; students often take Calc I, Calc II, and Calc III. That&#x2019;s a lot of material and it&#x2019;s not clear what needs to be reviewed and what can be skipped. Also <a href="matrix-algebra.html#matrix-algebra">matrix algebra</a>, because it tends not to be taught very well at the undergraduate level. Perhaps more accurately, courses tend to focus on old-fashioned topics like inverting matrices by hand and not on the kinds of manipulations that are helpful in statistics.</p>
+<p>In principle, any idea from math <em>could</em> come up and be helpful to a statistician. In reality, however, certain ideas come up far more often than others, and this guide focuses on topics of greatest relevance. A good example is trigonometry: this almost never comes up in statistics. There is really no need to spend any time whatsoever reviewing it prior to stating a graduate program in statistics. On the other hand, properties of exponents and logarithms come up <em>constantly</em>. You need to know every property, because you will use them more or less every day, and if you don&#x2019;t know them, you will be constantly making errors on all of your homework and tests.</p>
+<p>Finally, the focus here is really on the math &#x2013; as noted above, we expect to teach you the statistics once you get here. However, to help make connections, I will occasionally point out the relevance of certain concepts to the field of biostatistics. If you&#x2019;ve taken statistics in the past and terms like &#x201C;independent events&#x201D; and &#x201C;regression model&#x201D; mean something to you, great. If not, however, don&#x2019;t worry about it. You can appreciate the connection later once you learn about these ideas in graduate school.</p>
+<p>To reiterate: this guide is intended to be a concise <em>review</em> of main ideas in calculus. If a section is unfamiliar or confusing, it would probably be a good idea to read the corresponding section of your calculus textbook, which will have a lot more examples, explanations, graphs, etc. Also, there are very few exercises and solutions provided in this review. Obviously, exercises are extremely helpful, especially if you feel you are rusty on a particular section. We recommend either finding problems from your calculus book or purchasing a book such as <a href="https://www.amazon.com/dp/0071795537/ref=cm_sw_su_dp">Schaum&#x2019;s Outline of Calculus</a>.</p>
 <p>Finally, if you spot any mistakes or typos, please <a href="https://github.com/IowaBiostat/math-review/issues">let me know</a>!</p>
 
 
@@ -252,7 +253,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

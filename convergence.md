@@ -60,4 +60,4 @@ Now would be a good time to try proving things on your own. Here are three theor
 
 For the third theorem, is $x_n \ne 0$ actually required? If we know that $x \ne 0$, can we still have $x_n = 0$?
 
-See [here](https://raw.githubusercontent.com/IowaBiostat/math-review/main/sols/analysis.pdf) for solutions, although you should definitely try proving them on your own first before looking at the solutions.
+See [here](#analysis-convergence-solutions) for solutions, although you should definitely try proving them on your own first before looking at the solutions.

@@ -13,7 +13,7 @@ However, we often need to integrate with respect to *both* $x$ and $y$. Thankful
   &= \int \left\{ \int f(x,y) \dy \right\} \dx.
 \end{align*}
 
-As we saw with [second-order partial derivatives][higher orders], it turns out that if $f$ is [continuous][continuity], the order of integration doesn't matter (this is known as Fubini's theorem); more on this later.
+As we saw with [second-order partial derivatives][higher orders], it turns out that if $f$ is [continuous](#calculus-continuity), the order of integration doesn't matter (this is known as Fubini's theorem); more on this later.
 
 Let's say we've decided to integrate with respect to $x$ first, then $y$ (as we indicate when we write $\dx \dy$):
 

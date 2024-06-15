@@ -10,7 +10,7 @@ $$ f'(a) = \lim_{h \to 0} \frac{f(a+h) - f(a)}{h} $$
 
 if this limit exists.
 
-If the limit exists, $f$ is said to be **differentiable at $a$**. If a function is not [continuous][continuity] at $a$, it is not possible for it to be differentiable at $a$. The converse, however, is not true. For example, the function $f(x) = \abs{x}$ is continuous everywhere, and differentiable just about everywhere, but not differentiable at zero since the [limit from the left][limits and continuity] is -1 and the limit from the right is 1.
+If the limit exists, $f$ is said to be **differentiable at $a$**. If a function is not [continuous](#calculus-continuity) at $a$, it is not possible for it to be differentiable at $a$. The converse, however, is not true. For example, the function $f(x) = \abs{x}$ is continuous everywhere, and differentiable just about everywhere, but not differentiable at zero since the [limit from the left][limits and continuity] is -1 and the limit from the right is 1.
 
 Expanding on this pointwise definition, we can define a whole function, $f'(x)$. This function is known as the **derivative of $f$**.
 

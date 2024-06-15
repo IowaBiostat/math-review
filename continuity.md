@@ -1,6 +1,6 @@
-## Continuity
+## Continuity {#analysis-continuity}
 
-Another major concept in analysis is that of continuity (again, we came across this [earlier][continuity], but it's worth revisiting this concept not that we've formally defined limits and convergence). Suppose we have a function $f$ and a convergent sequence $x_n \to x$. Do we know that as $f(x_n) \to f(x)$? The answer is that no, this doesn't always happen. Only some functions have this property, and those functions are said to be "continuous". Below is the formal definition.
+Another major concept in analysis is that of continuity (again, we came across this [earlier](#calculus-continuity), but it's worth revisiting this concept not that we've formally defined limits and convergence). Suppose we have a function $f$ and a convergent sequence $x_n \to x$. Do we know that as $f(x_n) \to f(x)$? The answer is that no, this doesn't always happen. Only some functions have this property, and those functions are said to be "continuous". Below is the formal definition.
 
 **Definition.** *A function $f$ is said to be **continuous at the point** $x_0$ if for every $\eps > 0$, there exists $\delta > 0$ such that $\abs{f(x) - f(x_0)} < \eps$ for all $x: \abs{x-x_0} < \delta$. If $f$ is continuous at every point in its [domain][functions], then the entire function $f$ is said to be **continuous**.*
 
@@ -31,4 +31,4 @@ Here are some additional proof exercises related to continuity for you to practi
 
 **Exercise.** *Write an R function `n(eps)` that returns the smallest $N$ for which $n > N \implies \abs{f(x_n)-f(x_0)} < \eps$ for $x_n = 2^{1/n}$ and $f(x) = e^x$.*
 
-See [here](https://raw.githubusercontent.com/IowaBiostat/math-review/main/sols/analysis.pdf) for solutions, although you should definitely try proving them on your own first before looking at the solutions.
+See [here](#analysis-continuity-solutions) for solutions, although you should definitely try proving them on your own first before looking at the solutions.

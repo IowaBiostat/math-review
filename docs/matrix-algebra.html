@@ -1,45 +1,45 @@
 <!DOCTYPE html>
-<html lang="" xml:lang="">
+<html lang xml:lang>
 <head>
 
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>3 Matrix algebra | Math review for new biostatistics students</title>
-  <meta name="description" content="3 Matrix algebra | Math review for new biostatistics students" />
-  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
+  <meta name="description" content="3 Matrix algebra | Math review for new biostatistics students">
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7">
 
-  <meta property="og:title" content="3 Matrix algebra | Math review for new biostatistics students" />
-  <meta property="og:type" content="book" />
+  <meta property="og:title" content="3 Matrix algebra | Math review for new biostatistics students">
+  <meta property="og:type" content="book">
   
   
   
 
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="3 Matrix algebra | Math review for new biostatistics students" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="3 Matrix algebra | Math review for new biostatistics students">
   
   
   
 
-<meta name="author" content="Patrick Breheny and Eldon Sorensen" />
+<meta name="author" content="Patrick Breheny and Eldon Sorensen">
 
 
 
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
   
   
 <link rel="prev" href="multiple-integrals.html"/>
 <link rel="next" href="definitions-and-conventions.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
-<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
-<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet">
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet">
 
 
 
@@ -48,8 +48,8 @@
 
 
 
-<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
-<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet">
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet">
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
@@ -122,7 +122,7 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-</head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" data-external="1"></head>
 
 <body>
 
@@ -161,7 +161,8 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
 <li class="chapter" data-level="4.1" data-path="there-exists-and-for-all.html"><a href="there-exists-and-for-all.html"><i class="fa fa-check"></i><b>4.1</b> There exists and For all</a></li>
 <li class="chapter" data-level="4.2" data-path="structured-proofs.html"><a href="structured-proofs.html"><i class="fa fa-check"></i><b>4.2</b> Structured proofs</a></li>
 <li class="chapter" data-level="4.3" data-path="convergence.html"><a href="convergence.html"><i class="fa fa-check"></i><b>4.3</b> Convergence</a></li>
-<li class="chapter" data-level="4.4" data-path="continuity-1.html"><a href="continuity-1.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.4" data-path="analysis-continuity.html"><a href="analysis-continuity.html"><i class="fa fa-check"></i><b>4.4</b> Continuity</a></li>
+<li class="chapter" data-level="4.5" data-path="analysis-solutions.html"><a href="analysis-solutions.html"><i class="fa fa-check"></i><b>4.5</b> Solutions</a></li>
 </ul></li>
 </ul>
 
@@ -182,16 +183,16 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
             <section class="normal" id="section-">
 <div id="matrix-algebra" class="section level1 hasAnchor" number="3">
 <h1><span class="header-section-number">3</span> Matrix algebra<a href="matrix-algebra.html#matrix-algebra" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>In this chapter, we will review a number of definitions and results that you should be familiar with from a course on linear algebra. This review will not focus at all on the theory of linear algebra, only on the practical matter of manipulating matrices – hence the title “matrix algebra”, which is intended to reflect a focus on algebraic manipulation, not the abstract characterization of linear functions and transformations.</p>
-<p>Matrices come up constantly in statistics. Before we begin the review, I’ll point out two reasons for this.</p>
+<p>In this chapter, we will review a number of definitions and results that you should be familiar with from a course on linear algebra. This review will not focus at all on the theory of linear algebra, only on the practical matter of manipulating matrices &#x2013; hence the title &#x201C;matrix algebra&#x201D;, which is intended to reflect a focus on algebraic manipulation, not the abstract characterization of linear functions and transformations.</p>
+<p>Matrices come up constantly in statistics. Before we begin the review, I&#x2019;ll point out two reasons for this.</p>
 <div id="representing-data" class="section level3 unnumbered hasAnchor">
 <h3>Representing data<a href="matrix-algebra.html#representing-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>The data we collect in studies typically has the form of a matrix: for every subject, we collect information on a number of variables (age, weight, blood pressure, etc.). By convention, we write this in matrix form where every subject is assigned a row of the matrix and each variable is assigned a column. For a study with <span class="math inline">\(n\)</span> subjects and <span class="math inline">\(p\)</span> variables, we can represent the data we have collected in the form of a <span class="math inline">\(n \times p\)</span> matrix.</p>
+<p>The data we collect in studies typically has the form of a matrix: for every subject, we collect information on a number of variables (age, weight, blood pressure, etc.). By convention, we write this in matrix form where every subject is assigned a row of the matrix and each variable is assigned a column. For a study with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span> subjects and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi></mrow><annotation encoding="application/x-tex">p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> variables, we can represent the data we have collected in the form of a <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>&#xD7;</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">n \times p</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">&#xD7;</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span></span></span></span> matrix.</p>
 </div>
 <div id="multivariable-manipulations" class="section level3 unnumbered hasAnchor">
 <h3>Multivariable manipulations<a href="matrix-algebra.html#multivariable-manipulations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>As we saw in the previous chapter, calculus is important for <a href="optimization.html#optimization">finding optimal solutions</a>. When multiple variables are present, however, we need to simultaneously solve over all the variables to find the maximum or minimum. For example, if there are two unknown parameters <span class="math inline">\(\theta_1\)</span> and <span class="math inline">\(\theta_2\)</span>, and we want to find the most likely values of <span class="math inline">\(\theta_1\)</span> and <span class="math inline">\(\theta_2\)</span> based on data we’ve collected, we can’t just find the most likely value of <span class="math inline">\(\theta_1\)</span> and then find the most likely value of <span class="math inline">\(\theta_2\)</span> – the most likely value of <span class="math inline">\(\theta_1\)</span> is going to <em>depend</em> on what <span class="math inline">\(\theta_2\)</span> is. If ten parameters are involved, this process is going to seem hopeless unless we can manipulate and solve all ten equations simultaneously.</p>
-<p>Thankfully, manipulating and solving multiple equations at the same time is what matrix algebra is all about.<br />
+<p>As we saw in the previous chapter, calculus is important for <a href="optimization.html#optimization">finding optimal solutions</a>. When multiple variables are present, however, we need to simultaneously solve over all the variables to find the maximum or minimum. For example, if there are two unknown parameters <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\theta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\theta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and we want to find the most likely values of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\theta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\theta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> based on data we&#x2019;ve collected, we can&#x2019;t just find the most likely value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\theta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> and then find the most likely value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\theta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> &#x2013; the most likely value of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\theta_1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is going to <em>depend</em> on what <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>&#x3B8;</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\theta_2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8444em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.02778em;">&#x3B8;</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0278em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">&#x200B;</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> is. If ten parameters are involved, this process is going to seem hopeless unless we can manipulate and solve all ten equations simultaneously.</p>
+<p>Thankfully, manipulating and solving multiple equations at the same time is what matrix algebra is all about.<br>
 </p>
 
 </div>
@@ -252,7 +253,7 @@ gitbook.start({
   (function () {
     var script = document.createElement("script");
     script.type = "text/javascript";
-    var src = "true";
+    var src = "";
     if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
     if (location.protocol !== "file:")
       if (/^https?:/.test(src))

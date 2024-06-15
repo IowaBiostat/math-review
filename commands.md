@@ -1,4 +1,5 @@
 \newcommand{\lam}{\lambda}
+\newcommand{\eps}{\epsilon}
 
 \newcommand{\A}{\mathbf{A}}
 \newcommand{\B}{\mathbf{B}}
@@ -24,4 +25,4 @@
 \newcommand{\dx}{\,dx}
 \newcommand{\dy}{\,dy}
 
-\newcommand{\eps}{\epsilon}
+\newcommand{\tcirc}[1]{\text{\textcircled{#1}}}

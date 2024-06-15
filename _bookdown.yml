@@ -29,4 +29,5 @@ rmd_files:
     "structured-proofs.md",
     "convergence.md",
     "continuity.md",
+    "analysis-solutions.md",
   ]

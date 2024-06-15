@@ -5,7 +5,7 @@ That was a lot of preliminary stuff, but it's very important to understand defin
 ::: {.proof}
 Let $\eps > 0$, and let $N = \lceil -\log \eps \rceil$. Then for all $n > N$,
 \begin{alignat*}{2}
-\abs{e^{-n}} &= e^{-n} &\hspace{6em}& e^{-n} \text{ is always positive} \\
+\abs{e^{-n}} &= e^{-n} &\hspace{4em}& e^{-n} \text{ is always positive} \\
   &< e^{-N} && e^{-n} \text{ is strictly decreasing}\\
   &= \exp\{-\lceil-\log \eps\rceil\} && \text{Definition of } N \\
   &\le e^{\log \eps} && e^{-n} \text{ decreasing} \\

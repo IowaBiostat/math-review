@@ -47,7 +47,7 @@ it is critical that these limits exist, or none of the results below necessarily
 \lim_{x \to a} \{f(x)^n\} &= s^n
 \end{align*}
 
-### Continuity {-}
+### Continuity {.unnumbered #calculus-continuity}
 
 You may have noticed that with limits, the value of $f(x)$ at $a$ is irrelevant. For example, if $f(x)=x^2$ everywhere except $x=2$, where $f(2) = -10$, it would still be the case that $\lim_{x \to 2} f(x) = 4$. In fact, $f(x)$ wouldn't even need to be *defined* at 2 for this to work. If we add the requirement that $f(a)$ has to equal its limit, we end up with continuity.
 
