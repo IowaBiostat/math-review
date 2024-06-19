@@ -9,4 +9,5 @@ bookdown::gitbook:
     download: [["math-review.pdf", "PDF"]]
     info: false
     sharing: false
+
 bookdown::pdf_book: default
