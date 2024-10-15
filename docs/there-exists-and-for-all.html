@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>4.1 There exists and For all | Math review for new biostatistics students</title>
   <meta name="description" content="4.1 There exists and For all | Math review for new biostatistics students">
-  <meta name="generator" content="bookdown 0.39.2 and GitBook 2.6.7">
+  <meta name="generator" content="bookdown 0.40 and GitBook 2.6.7">
 
   <meta property="og:title" content="4.1 There exists and For all | Math review for new biostatistics students">
   <meta property="og:type" content="book">
@@ -65,7 +65,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -122,7 +122,7 @@ code span.wa { color: #ffff00; font-weight: bold; } /* Warning */
   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 </style>
 
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.3/dist/katex.min.css" data-external="1"></head>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" data-external="1"></head>
 
 <body>
 
@@ -209,11 +209,11 @@ n &amp;&gt; -\log \epsilon.
 <p>So, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mo stretchy="false">&#x2308;</mo><mo>&#x2212;</mo><mi>log</mi><mo>&#x2061;</mo><mi>&#x3F5;</mi><mo stretchy="false">&#x2309;</mo></mrow><annotation encoding="application/x-tex">N = \lceil -\log \epsilon\rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">&#x2308;</span><span class="mord">&#x2212;</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">lo<span style="margin-right:0.01389em;">g</span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal">&#x3F5;</span><span class="mclose">&#x2309;</span></span></span></span>, where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false">&#x2308;</mo><mo>&#x22C5;</mo><mo stretchy="false">&#x2309;</mo></mrow><annotation encoding="application/x-tex">\lceil \cdot \rceil</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">&#x2308;</span><span class="mord">&#x22C5;</span><span class="mclose">&#x2309;</span></span></span></span> denotes the ceiling function (i.e., round up the number inside to the next integer). To make things even more concrete, one could think of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false">(</mo><mi>&#x3F5;</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">N(\epsilon)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">N</span><span class="mopen">(</span><span class="mord mathnormal">&#x3F5;</span><span class="mclose">)</span></span></span></span> as a function:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="there-exists-and-for-all.html#cb1-1" tabindex="-1"></a>n <span class="ot">&lt;-</span> <span class="cf">function</span>(eps) {<span class="fu">ceiling</span>(<span class="sc">-</span><span class="fu">log</span>(eps))}</span>
 <span id="cb1-2"><a href="there-exists-and-for-all.html#cb1-2" tabindex="-1"></a><span class="fu">n</span>(<span class="fl">0.001</span>)</span>
-<span id="cb1-3"><a href="there-exists-and-for-all.html#cb1-3" tabindex="-1"></a><span class="do">## [1] 7</span></span></code></pre></div>
-<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="there-exists-and-for-all.html#cb2-1" tabindex="-1"></a><span class="fu">n</span>(<span class="fl">0.0000001</span>)</span>
-<span id="cb2-2"><a href="there-exists-and-for-all.html#cb2-2" tabindex="-1"></a><span class="do">## [1] 17</span></span></code></pre></div>
-<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="there-exists-and-for-all.html#cb3-1" tabindex="-1"></a><span class="fu">n</span>(<span class="fl">0.00000000000000001</span>)</span>
-<span id="cb3-2"><a href="there-exists-and-for-all.html#cb3-2" tabindex="-1"></a><span class="do">## [1] 40</span></span></code></pre></div>
+<span id="cb1-3"><a href="there-exists-and-for-all.html#cb1-3" tabindex="-1"></a><span class="do">## [1] 7</span></span>
+<span id="cb1-4"><a href="there-exists-and-for-all.html#cb1-4" tabindex="-1"></a><span class="fu">n</span>(<span class="fl">0.0000001</span>)</span>
+<span id="cb1-5"><a href="there-exists-and-for-all.html#cb1-5" tabindex="-1"></a><span class="do">## [1] 17</span></span>
+<span id="cb1-6"><a href="there-exists-and-for-all.html#cb1-6" tabindex="-1"></a><span class="fu">n</span>(<span class="fl">0.00000000000000001</span>)</span>
+<span id="cb1-7"><a href="there-exists-and-for-all.html#cb1-7" tabindex="-1"></a><span class="do">## [1] 40</span></span></code></pre></div>
 
 </div>
             </section>
