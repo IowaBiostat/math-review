@@ -30,8 +30,8 @@ First, let's establish an identity:
 \end{align*}    
 Now, let $\eps>0$.
 \begin{alignat*}{2}
-\tcirc{1} \quad \exists N_x: n>N_x \implies &\abs{x_n - x} < \frac{\sqrt{\eps}}{3} + \frac{\eps}{3\abs{y}} &\hspace{4em}& x_n \to x \\
-\tcirc{2} \quad \exists N_y: n>N_y \implies &\abs{y_n - y} < \frac{\sqrt{\eps}}{3} + \frac{\eps}{3\abs{x}} && y_n \to y
+\tcirc{1} \quad \exists N_x: n>N_x \implies &\abs{x_n - x} < \min\left(\frac{\sqrt{\eps}}{3}, \frac{\eps}{3\abs{y}}\right) &\hspace{4em}& x_n \to x \\
+\tcirc{2} \quad \exists N_y: n>N_y \implies &\abs{y_n - y} < \min\left(\frac{\sqrt{\eps}}{3}, \frac{\eps}{3\abs{x}}\right) && y_n \to y
 \end{alignat*}
 Thus, for all $n>N=\max(N_x,N_y)$, we have
 \begin{alignat*}{2}
