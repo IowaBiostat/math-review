@@ -2,7 +2,7 @@ bookdown::gitbook:
   split_by: section
   toc_depth: 2
   math_method: r-katex
-  highlight: espresso
+  css: "extra.css"  
   config:
     fontsettings:
       theme: night

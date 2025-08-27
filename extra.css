@@ -1,0 +1,33 @@
+.color-theme-2 pre code { color: #f8f8f2 }
+.color-theme-2 pre code span.al { color: #ff858f; background-color: #2a0f15; font-weight: bold } /* alert */
+.color-theme-2 pre code span.an { color: #f8f8f2} /* annotation */
+.color-theme-2 pre code span.at { color: #00e0e0} /* attribute */
+.color-theme-2 pre code span.bn { color: #61cc33} /* base n */
+.color-theme-2 pre code span.bu { color: #61cc33} /* builtin */
+.color-theme-2 pre code span.cf { color: #df9af4; font-weight: bold} /* control flow */
+.color-theme-2 pre code span.ch { color: #61cc33} /* character */
+.color-theme-2 pre code span.cn { color: #61cc33} /* constant */
+.color-theme-2 pre code span.r-in span.co { color: #6abafb; font-style: italic } /* comment */
+.color-theme-2 pre code span.r-out.co { color: #ccc; font-style: italic } /* comment */
+.color-theme-2 pre code span.cv { color: #61cc33} /* comment variable */
+.color-theme-2 pre code span.do { color: #f8f8f2} /* documentation */
+.color-theme-2 pre code span.dt { color: #df9af4} /* data type */
+.color-theme-2 pre code span.dv { color: #61cc33} /* decimal value */
+.color-theme-2 pre code span.er { color: #ff858f; text-decoration: underline} /* error */
+.color-theme-2 pre code span.ex { color: #00e0e0; font-weight: bold} /* extension */
+.color-theme-2 pre code span.fl { color: #61cc33} /* float */
+.color-theme-2 pre code span.fu { color: #ff858f} /* function */
+.color-theme-2 pre code span.im { color: #61cc33} /* import */
+.color-theme-2 pre code span.in { color: #f8f8f2} /* information */
+.color-theme-2 pre code span.kw { color: #df9af4; font-weight: bold} /* keyword */
+.color-theme-2 pre code span.op { color: #df9af4} /* operator */
+.color-theme-2 pre code span.ot { color: #00e0e0} /* other */
+.color-theme-2 pre code span.pp { color: #f8f8f2} /* preprocessor */
+.color-theme-2 pre code span.re { color: #00e0e0; background-color: #f8f8f2} /* regular expression? */
+.color-theme-2 pre code span.sc { color: #61cc33} /* special character */
+.color-theme-2 pre code span.ss { color: #61cc33} /* special string */
+.color-theme-2 pre code span.st { color: #61cc33} /* string */
+.color-theme-2 pre code span.va { color: #f8f8f2} /* variable */
+.color-theme-2 pre code span.vs { color: #61cc33} /* verbatim string */
+.color-theme-2 pre code span.wa { color: #dcc6e0} /* warning */
+.color-theme-2 pre code .r-pr { color: #777 } /* prompt */

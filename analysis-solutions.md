@@ -30,8 +30,8 @@ First, let's establish an identity:
 \end{align*}    
 Now, let $\eps>0$.
 \begin{alignat*}{2}
-\tcirc{1} \quad \exists N_x: n>N_x \implies &\abs{x_n - x} < \min\left(\frac{\sqrt{\eps}}{3}, \frac{\eps}{3\abs{y}}\right) &\hspace{4em}& x_n \to x \\
-\tcirc{2} \quad \exists N_y: n>N_y \implies &\abs{y_n - y} < \min\left(\frac{\sqrt{\eps}}{3}, \frac{\eps}{3\abs{x}}\right) && y_n \to y
+\tcirc{1} \quad \exists N_x: n>N_x \implies &\abs{x_n - x} < \min\left(\sqrt{\frac{\eps}{3}}, \frac{\eps}{3\abs{y}}\right) &\hspace{4em}& x_n \to x \\
+\tcirc{2} \quad \exists N_y: n>N_y \implies &\abs{y_n - y} < \min\left(\sqrt{\frac{\eps}{3}}, \frac{\eps}{3\abs{x}}\right) && y_n \to y
 \end{alignat*}
 Thus, for all $n>N=\max(N_x,N_y)$, we have
 \begin{alignat*}{2}
@@ -60,7 +60,7 @@ The cases where $b<0$ follow the same reasoning. Now, let $\eps>0$.
 Thus, for all $n>N=\max(N_1, N_2)$, we have
 \begin{alignat*}{2}
 \abs{\frac{1}{x_n} - \frac{1}{x}} &= \abs{\frac{x-x_n}{x_n x}} \\ 
-  &\le \frac{2}{\abs{x}^2}\abs{x_n-x} &\hspace{8em}& \tcirc{3} \\
+  &< \frac{2}{\abs{x}^2}\abs{x_n-x} &\hspace{8em}& \tcirc{3} \\
   &< \eps && \tcirc{1}
 \end{alignat*}
 Note that in this third theorem, the requirement that $x_n \ne 0$ is unnecessary. As we see from $\tcirc{3}$, if $x_n \to x$ and $x \ne 0$, then there is an $N$ such that $x_n \ne 0$ for all $n>N$.
