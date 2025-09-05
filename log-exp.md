@@ -2,7 +2,7 @@
 
 ### Exponential definition {-}
 
-The exponential function is $f(x) = a^x$; the *base* $a$ must be a positive real number but the *exponent* $x$ can be any real number. The precise definition doesn't come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is [continuous](#calculus-continuity):
+The exponential function is $f(x) = a^x$; the *base* $a$ must be a positive real number but the *exponent* $x$ can be any real number. The precise definition doesn't come up often, but here it is in case you ever need it (defining all these cases is necessary in order to ensure that the resulting function is [continuous](#calculus-continuity)):
 
 1. If $x$ is a positive integer $n$, then $a^n = a \cdot a \cdots a \quad (n$ times)
 2. If $x=0$, then $a^0 = 1$
