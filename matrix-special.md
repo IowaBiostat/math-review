@@ -1,6 +1,6 @@
 ## Special matrices
 
-In the special case where a matrix has the same numbers of rows and columns, it is said to be *square*.  If $\A \Tr=\A$, the matrix is said to be *symmetric*.
+In the special case where a matrix has the same numbers of rows and columns, it is said to be *square*.  If $\A \tp=\A$, the matrix is said to be *symmetric*.
 
 $$ \text{Symmetric:}
 \left[ \begin{array}{rr}
@@ -53,4 +53,4 @@ $$ \e_2 = \left[ \begin{array}{rrr}
 0
 \end{array} \right]. $$
 
-This is useful for selecting a single element of a vector: $\u \Tr \e_3 = u_3$.
+This is useful for selecting a single element of a vector: $\u \tp \e_3 = u_3$.

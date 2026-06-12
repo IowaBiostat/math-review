@@ -2,7 +2,7 @@
 
 ### Transposition {-}
 
-It is often useful to switch the rows and columns of a matrix around.  The resulting matrix is called the *transpose* of the original matrix, and denoted with a superscript $\Tr$ or an apostrophe $'$:
+It is often useful to switch the rows and columns of a matrix around.  The resulting matrix is called the *transpose* of the original matrix, and denoted with a superscript $\tp$ or an apostrophe $'$:
 
 $$ \M = \left[ \begin{array}{rr}
 3 & 2 \\
@@ -10,12 +10,12 @@ $$ \M = \left[ \begin{array}{rr}
 -1 & 2
 \end{array} \right]
 \qquad
-\M \Tr=\left[ \begin{array}{rrr}
+\M \tp=\left[ \begin{array}{rrr}
 3 & 4 & -1 \\
 2 & -1 & 2
 \end{array} \right] $$
 
-Note that $M_{ij}=M \Tr_{ji}$, and that if $\M$ is an $r \times c$ matrix, $\M \Tr$ is a $c \times r$ matrix.
+Note that $M_{ij}=M \tp_{ji}$, and that if $\M$ is an $r \times c$ matrix, $\M \tp$ is a $c \times r$ matrix.
 
 ### Addition {-}
 
@@ -101,10 +101,10 @@ One important exception, however, is that $\A\B \neq \B\A$; the order of matrix 
 
 Suppose $\u$ and $\v$ are two $n \times 1$ vectors. We can't multiply them in the sense defined above, $\u\v$, because the number of columns of $\u$, 1, doesn't match the number of rows of $\v$, n. However, there are two ways in which vectors of the same dimension can be multiplied.
 
-The first is called the *inner product* (also, the "cross product"):
+The first is called the *inner product*:
 
 \begin{align*}
-\u\Tr\v &= \sum_j u_j v_j \\
+\u\tp\v &= \sum_j u_j v_j \\
 \left[\begin{array}{rr}
   3 & 2
   \end{array} \right]
@@ -119,7 +119,7 @@ Note that when we multiply matrices, the element $(\A\B)_{ij}$ is equal to the i
 The second way of multiplying two vectors is called the *outer product*:
 
 \begin{align*}
-(\u\v\Tr)_{ij} &= u_i v_j \\
+(\u\v\tp)_{ij} &= u_i v_j \\
 \left[\begin{array}{r}
   3 \\
   2

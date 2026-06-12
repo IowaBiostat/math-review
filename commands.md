@@ -16,7 +16,7 @@
 \renewcommand{\v}{\mathbf{v}}
 \newcommand{\x}{\mathbf{x}}
 
-\newcommand{\Tr}{^{\scriptstyle\top}}
+\newcommand{\tp}{^{\scriptstyle\top}}
 \newcommand{\one}{\mathbf{1}}
 \newcommand{\zero}{\mathbf{0}}
 
