@@ -124,7 +124,7 @@ As another example, suppose we need to find
 
 $$ \int_{-\infty}^\infty e^{-x^2} \dx. $$
 
-This is actually impossible to solve using any of the integration techniques above -- there is no elementary form form for its antiderivative. However, it has the kernel of a normal distribution:
+This is actually impossible to solve using any of the integration techniques above -- there is no elementary form for its antiderivative. However, it has the kernel of a normal distribution:
 
 $$ \frac{1}{\sigma \sqrt{2\pi}} \exp\left\{ -\frac{1}{2} \left( \frac{x - \mu}{\sigma} \right)^2 \right\} $$
 
