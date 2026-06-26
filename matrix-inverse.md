@@ -4,7 +4,7 @@ Suppose $\A\x=\B$ and we want to solve for $\x$ ... can we "divide" by $\A$? The
 
 If two vectors $\u$ and $\v$ satisfy $\u \tp\v=0$, they are said to be *orthogonal* to each other. If all the columns and rows of a matrix $\A$ are orthogonal to each other and satisfy $\a\tp\a = 1$, then $\A$ (transposed) can serve as its own inverse: $\A \tp\A=\A\A \tp=\I$. In this case, the matrix $\A$ is said to be an *orthogonal matrix*.  If a matrix $\X$ is not square, then it is possible that $\X \tp\X=\I$ but $\X\X \tp \neq \I$; in this case, the matrix is said to be *column orthogonal*, although in statistics it is common to refer to these matrices as orthogonal also.  A somewhat related definition is that a matrix is said to be *idempotent* if $\A\A=\A$.
 
-Does every matrix have one and only one inverse?  If a matrix has an inverse, it is said to be *invertible* -- all invertible matrices have exactly one, unique inverse.  However, not every matrix is invertible.  For example, there are no values of $a, b, c$, and $d$ that satisfy
+Does every matrix have one and only one inverse?  If a matrix has an inverse, it is said to be *invertible* --- all invertible matrices have exactly one, unique inverse.  However, not every matrix is invertible.  For example, there are no values of $a, b, c$, and $d$ that satisfy
 
 $$ \left[ \begin{array}{rr}
 2 & 4 \\

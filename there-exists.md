@@ -21,9 +21,9 @@ For example, suppose we consider the point $x=0.001$: does $x_n$ converge to 0.0
 \ldots
 \end{align*}
 
-However, this isn't enough -- we need to be able to find a suitable $N$ for *all* positive $\eps$. If $\eps=0.0005$, for example, we would never be able find an $N$ that works. Therefore, $x_n$ does not converge to 0.001.
+However, this isn't enough --- we need to be able to find a suitable $N$ for *all* positive $\eps$. If $\eps=0.0005$, for example, we would never be able find an $N$ that works. Therefore, $x_n$ does not converge to 0.001.
 
-One final important point to note here is that the order of these clauses matters. For every $\eps$, there exists a suitable $N$. We choose $\eps$ first, and can then find an $N$ that works for that $\eps$ -- we don't need to find an $N$ that works for all $\eps$ (and in fact, there typically isn't such a $N$). If $\eps=0.001$, then $N=7$ works. If $\eps=0.00000000000000000000000001$, we are going to have to choose a much larger $N$ (but we can *always* find such an $N$).
+One final important point to note here is that the order of these clauses matters. For every $\eps$, there exists a suitable $N$. We choose $\eps$ first, and can then find an $N$ that works for that $\eps$ --- we don't need to find an $N$ that works for all $\eps$ (and in fact, there typically isn't such a $N$). If $\eps=0.001$, then $N=7$ works. If $\eps=0.00000000000000000000000001$, we are going to have to choose a much larger $N$ (but we can *always* find such an $N$).
 
 Finding $N$ is fairly simple in this case; we can simply take the log of both sides:
 

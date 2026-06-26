@@ -94,7 +94,7 @@ Evaluating the integral, we therefore have:
   &= \frac{1}{15}
 \end{align*}
 
-Intuitively, this makes sense -- our region is smaller, so the volume should be smaller (1/15 instead of 1/6).
+Intuitively, this makes sense --- our region is smaller, so the volume should be smaller (1/15 instead of 1/6).
 
 As we mentioned earlier, the order of integration doesn't matter. As practice, integrate $x^2 y$ over the region $0 \leq x \leq y \leq 1$, but this time start by integrating over $y$. Obviously, you should still get 1/15. Hint: to help visualize things, you should draw a figure that looks like this:
 

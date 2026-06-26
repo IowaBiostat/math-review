@@ -30,7 +30,7 @@ How can we know if a function is integrable?
 
 > If $f$ is either continuous or monotonic on $[a, b]$, then $f$ is integrable on $[a, b]$.
 
-If $f$ is jumping up and down discontinuously, then anything can happen -- $f$ may or may not be integrable, and we would need a deep dive into the theory of integration to really answer this question. Thankfully, as a first-year graduate student, you will only ever need to integrate continuous functions.
+If $f$ is jumping up and down discontinuously, then anything can happen --- $f$ may or may not be integrable, and we would need a deep dive into the theory of integration to really answer this question. Thankfully, as a first-year graduate student, you will only ever need to integrate continuous functions.
 
 ### Properties of integrals {-}
 
@@ -91,11 +91,11 @@ This "equation" means the same thing, that $F'(x) = f(x)$ for all $x$. However, 
 \int 2x \dx &= x^2 + 5. \\
 \end{align*}
 
-This is potentially confusing because the left hand side is the same in each case, but the right hand side is different -- hence the scare quotes around "equation". Some people prefer to write
+This is potentially confusing because the left hand side is the same in each case, but the right hand side is different --- hence the scare quotes around "equation". Some people prefer to write
 
 $$ \int 2x \dx = x^2 + C $$
 
-to emphasize this point. Whether you do this or not is up to you, but either way, it is critical to understand the distinction between $\int_a^b f(x) \dx$ and $\int f(x) \dx$. The first quantity (with the integration limits) is a known as a **definite integral**, and it is a number. The second quantity (without the limits) is known as an **indefinite integral**, and it is *not* a number -- it is a function (or more precisely, a collection of an infinite number of functions)^[Students sometimes have a tendency to think of the indefinite integral as the "true" integral and the definite integral as an application of it. This is completely backwards. The indefinite integral is actually a statement about derivatives. We don't even need to define the concept of an integral in order to say that $\int 2x \dx = x^2$. It is only once the integral has been defined and the fundamental theorem of calculus has been proven that indefinite integrals have any purpose. The "definite" integral defines the concept of the integral; the only reason we add the "definite" modifier to distinguish them from indefinite integrals.].
+to emphasize this point. Whether you do this or not is up to you, but either way, it is critical to understand the distinction between $\int_a^b f(x) \dx$ and $\int f(x) \dx$. The first quantity (with the integration limits) is a known as a **definite integral**, and it is a number. The second quantity (without the limits) is known as an **indefinite integral**, and it is *not* a number --- it is a function (or more precisely, a collection of an infinite number of functions)^[Students sometimes have a tendency to think of the indefinite integral as the "true" integral and the definite integral as an application of it. This is completely backwards. The indefinite integral is actually a statement about derivatives. We don't even need to define the concept of an integral in order to say that $\int 2x \dx = x^2$. It is only once the integral has been defined and the fundamental theorem of calculus has been proven that indefinite integrals have any purpose. The "definite" integral defines the concept of the integral; the only reason we add the "definite" modifier to distinguish them from indefinite integrals.].
 
 So what's the point of antiderivatives/primitives/indefinite integrals? If we have one, we can easily calculate (definite) integrals. For example,
 

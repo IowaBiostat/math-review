@@ -26,4 +26,4 @@ $$ \log \left( \prod_{i=1}^n P(A_i) \right) = \sum_{i=1}^n \log P(A_i). $$
 
 To see why, go ahead and multiply a bunch of probabilities together and see how useful the result is to work with. The same trick can be used with dependent terms as well, although the results are messier.
 
-It is hard to overstate how often you will do this. This isn't some occasional trick -- this is standard operating procedure, so it is critical that you know the properties of [exponents and logs][logarithm and exponential] extremely well.
+It is hard to overstate how often you will do this. This isn't some occasional trick --- this is standard operating procedure, so it is critical that you know the properties of [exponents and logs][logarithm and exponential] extremely well.

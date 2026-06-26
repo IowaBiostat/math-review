@@ -33,4 +33,4 @@ provided that both improper integrals exist. To see why, suppose we wanted to ca
   &= 2
 \end{align*}
 
-Note that in this case, if we failed to realize that $f$ was not bounded over the integration region and blindly plugged in 0 anyway, it wouldn't make a difference -- we'd get the same answer. However, this is not always true and if you ever run into a situation where this arises, it's important to know the proper definition.
+Note that in this case, if we failed to realize that $f$ was not bounded over the integration region and blindly plugged in 0 anyway, it wouldn't make a difference --- we'd get the same answer. However, this is not always true and if you ever run into a situation where this arises, it's important to know the proper definition.

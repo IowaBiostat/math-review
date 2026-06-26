@@ -17,7 +17,7 @@ $$ \left[ \begin{array}{r}
 -1
 \end{array} \right] $$
 
-Conventionally, vectors and matrices are denoted in lower- and upper-case boldface, respectively (e.g., $x$ is a scalar, $\x$ is a vector, and $\X$ is a matrix).  In addition, vectors are taken to be *column vectors* -- i.e., a vector of $n$ numbers is an $n \times 1$ matrix, not a $1 \times n$ matrix.
+Conventionally, vectors and matrices are denoted in lower- and upper-case boldface, respectively (e.g., $x$ is a scalar, $\x$ is a vector, and $\X$ is a matrix).  In addition, vectors are taken to be *column vectors* --- i.e., a vector of $n$ numbers is an $n \times 1$ matrix, not a $1 \times n$ matrix.
 
 The $ij$th element of a matrix $\M$ is denoted by $M_{ij}$ or $(\M)_{ij}$.
 

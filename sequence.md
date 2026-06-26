@@ -31,7 +31,7 @@ $$ \lim_{n \to \infty} \{ a_n b_n \} = ab, $$
 
 just like we did for functions.
 
-**Techniques:** It is often unclear what the limit of a ratio is -- both numerator and denominator could be going to infinity, or both going to zero. Two techniques to remember are dividing by the largest power and L'Hôpital's rule.
+**Techniques:** It is often unclear what the limit of a ratio is --- both numerator and denominator could be going to infinity, or both going to zero. Two techniques to remember are dividing by the largest power and L'Hôpital's rule.
 
 To illustrate the first:
 
