@@ -13,6 +13,8 @@ $$ \text{Symmetric:}
 
 Note that a matrix cannot be symmetric unless it is square.
 
+A matrix is said to be *idempotent* if $\A \A=\A$. Note that only square matrices can be idempotent. Idempotent matrices play a huge role in statistics, where they are typically referred to as *projection* matrices. Conceptually, the idea is that $\A$ defines a transformation and if $\A$ is idempotent, then applying it twice has the same effect as applying it once. In other words, you can project a vector onto a new space, but projecting it again doesn't do anything, because it's already been projected into that space.
+
 The elements $A_{ii}$ of a matrix are called its *diagonal entries*; a matrix for which $A_{ij} = 0$ for all $i \neq j$ is said to be a *diagonal matrix*:
 
 $$ \left[ \begin{array}{rrr}

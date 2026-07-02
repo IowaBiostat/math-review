@@ -2,7 +2,7 @@
 
 The concept of a function is not difficult or foreign, but since it's the most important concept in all of mathematics, it's worth reviewing and knowing the formal definition.
 
-**Definition:** Given two sets, $A$ and $B$, a *function* (or *map*) is a rule that assigns, to each element in $A$, exactly one element from $B$. The set $A$ is called the *domain* of the function and the set $B$ is called the *range*. This is represented by the mathematical notation $f: A \mapsto B$.
+**Definition:** Given two sets, $A$ and $B$, a *function* (or *map*) is a rule that assigns, to each element in $A$, exactly one element from $B$. The set $A$ is called the *domain* of the function and the set $B$ is called the *range*^[Some fields use the term "codomain" here, reserving "range" for the subset of $B$ that the values of $A$ actually map to. For example, if $f(x) = e^x$ and the domain is $\real$, then some authors would say that the codomain is $\real$ and the range is $(0, \infty)$. In statistics and other applied fields, it is common to just call $\real$ the range, since the distinction is typically irrelevant outside of pure mathematics.]. This is represented by the mathematical notation $f: A \mapsto B$.
 
 ### Commentary {-}
 

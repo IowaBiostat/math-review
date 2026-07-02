@@ -31,7 +31,7 @@ $$ \lim_{n \to \infty} \{ a_n b_n \} = ab, $$
 
 just like we did for functions.
 
-**Techniques:** It is often unclear what the limit of a ratio is --- both numerator and denominator could be going to infinity, or both going to zero. Two techniques to remember are dividing by the largest power and L'Hôpital's rule.
+**Techniques:** It is often unclear what the limit of a ratio is --- both numerator and denominator could be going to infinity, or both going to zero. Two techniques to remember are dividing by the largest power that appears in the denominator and L'Hôpital's rule.
 
 To illustrate the first:
 
@@ -79,7 +79,7 @@ Similarly, we say that the series $\sum_{i=1}^\infty a_i$ **converges** if the s
 
 Note that if the series $\sum_{n=1}^\infty a_n$ converges, then $a_n \to 0$. The converse, however, is not true. For example, the following is known as the **harmonic series:**
 
-$$ \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{n} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} \cdots = \infty. $$
+$$ \lim_{n \to \infty} \sum_{i=1}^n \frac{1}{i} = 1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} \cdots = \infty. $$
 
 Note that series obey some of the limit rules, but not all of them. For example, the following are true if $\sum_{n=1}^\infty a_n = a$ and $\sum_{n=1}^\infty b_n = b$:
 

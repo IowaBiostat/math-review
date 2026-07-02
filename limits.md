@@ -19,7 +19,7 @@ $$ \lim_{x \to a} f(x) = \infty. $$
 
 This means that as $x$ gets closer to $a$, $f(x)$ keeps getting bigger, with no bound. For example, we can make $1/x^2$ be as large as we want by moving $x$ closer to 0, so $\lim_{x \to 0} 1/x^2 = \infty$ (limits of $-\infty$ are defined similarly).
 
-**One-sided limit:** Sometimes, different things happen if we approach $a$ from the left or right. We say that the **left-hand limit** of $f(x)$ as $x$ approaches $a$ "from the left" is $L$ if $f(x)$ we can make the values of $f(x)$ as close to $L$ as we want by moving $x$ closer to $a$, but only considering points such that $x < a$. We denote this by
+**One-sided limit:** Sometimes, different things happen if we approach $a$ from the left or right. We say that the **left-hand limit** of $f(x)$ as $x$ approaches $a$ "from the left" is $L$ if we can make the values of $f(x)$ as close to $L$ as we want by moving $x$ closer to $a$, but only considering points such that $x < a$. We denote this by
 
 $$ \lim_{x \to a^-} f(x) = L. $$
 

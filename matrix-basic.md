@@ -19,42 +19,44 @@ Note that $M_{ij}=M \tp_{ji}$, and that if $\M$ is an $r \times c$ matrix, $\M \
 
 ### Addition {-}
 
-There are two kinds of addition operations for matrices.  The first is *scalar addition*:
+Matrix addition is defined element by element. If $\A$ and $\B$ are matrices with the same dimensions, then
 
-$$ \M + 2 = \left[ \begin{array}{rr}
-3+2 & 2+2 \\
-4+2 & -1+2 \\
--1+2 & 2+2
-\end{array} \right] =
-\left[ \begin{array}{rr }
-5 & 4 \\
-6 & 1 \\
-1 & 4
-\end{array} \right] $$
+$$ (\A+\B)*{ij} = A*{ij} + B_{ij}. $$
 
-The other kind is *matrix addition*:
+For example,
 
-$$ \M + \M = \left[ \begin{array}{rr}
+$$
+\M + \M = \left[
+\begin{array}{rr}
 3 & 2 \\
 4 & -1 \\
 -1 & 2
-\end{array} \right] + \left[ \begin{array}{rr}
+\end{array}
+\right]
++
+\left[
+\begin{array}{rr}
 3 & 2 \\
 4 & -1 \\
 -1 & 2
-\end{array} \right]= \left[ \begin{array}{rr}
+\end{array}
+\right] = 
+\left[
+\begin{array}{rr}
 6 & 4 \\
 8 & -2 \\
 -2 & 4
-\end{array} \right] $$
+\end{array}
+\right].
+$$
 
-Formally, $(\A+\B)_{ij} = A_{ij} + B_{ij}$.
+Only matrices of the same dimension can be added to each other --- there is no such thing as adding a $4 \times 5$ matrix to a $2 \times 9$ matrix.
 
-Note that only matrices of the same dimension can be added to each other --- there is no such thing as adding a $4 \times 5$ matrix to a $2 \times 9$ matrix.
+In many software packages such as R and Python, you can write $\M + 2$, meaning "add 2 to every entry of $\M$." However, this is not standard notation in linear algebra, which takes a more explicit approach: first define a symbol to represent a matrix of 2's and then add that to $\M$.
 
 ### Multiplication {-}
 
-There are also two common kinds of multiplication for matrices.  The first is *scalar multiplication*:
+There are two common kinds of multiplication for matrices.  The first is *scalar multiplication*:
 
 $$ 4\M = 4\left[ \begin{array}{rr}
 3 & 2 \\

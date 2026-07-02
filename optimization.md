@@ -25,7 +25,7 @@ A point $c$ satisfying $f'(c) = 0$ is called a *critical point* of $f$. Practica
 
 More information about caveats 3 and 4 is given below.
 
-Don't led these caveats obscure the main result, though --- this is arguably the most useful thing in all of calculus.
+Don't let these caveats obscure the main result, though --- this is arguably the most useful thing in all of calculus.
 
 ### Monotonicity and convexity {-}
 

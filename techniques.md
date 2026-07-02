@@ -20,7 +20,7 @@ By far the most important technique to be aware of is substitution. For example,
 
 In this case, it's also fairly clear what we need to do in order to fix the problem: $\int e^{2x} \dx$ must be $\tfrac{1}{2}e^{2x}$: there must be a 1/2 present to cancel the 2 that comes from the chain rule.
 
-Conceptually, letting $u=2x$, we can visualize what's going on here as follows. Each unit of $u$ covers twice as much ground as a unit of $x$. If we don't do something to correct for this, we're going to artificially inflate the area under the curve integral (i.e., the integral). This is what's going on in the red region below, which clearly has greater area than the blue region (the integral we're trying to calculate).
+Conceptually, letting $u=2x$, we can visualize what's going on here as follows. Each unit of $u$ covers twice as much ground as a unit of $x$. If we don't do something to correct for this, we're going to artificially inflate the area under the curve (i.e., the integral). This is what's going on in the red region below, which clearly has greater area than the blue region (the integral we're trying to calculate).
 
 ```{r, fig.height=3, fig.width=6, echo=FALSE}
 x <- seq(0, 1, len=99)

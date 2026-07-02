@@ -1,4 +1,4 @@
-_book/index.html: index.Rmd *.md
+docs/index.html: index.Rmd *.md
 	@rm -f math-review.*
 	R -e "bookdown::render_book('.', 'all')"
-	@rm -f math-review.log
+	@rm -f math-review.*
