@@ -21,7 +21,7 @@ Note that $M_{ij}=M \tp_{ji}$, and that if $\M$ is an $r \times c$ matrix, $\M \
 
 Matrix addition is defined element by element. If $\A$ and $\B$ are matrices with the same dimensions, then
 
-$$ (\A+\B)*{ij} = A*{ij} + B_{ij}. $$
+$$ (\A+\B)_{ij} = A_{ij} + B_{ij}. $$
 
 For example,
 
